@@ -112,6 +112,9 @@ var items_computer = 12
 var uncommon_frequency = 1.2
 var delivery_speed_mult = 1
 
+var playing = false
+var mintora = false
+
 func _process(delta):
 	if money != current_money:
 		SaveLoad._save()

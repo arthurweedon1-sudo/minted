@@ -3,7 +3,7 @@ extends Control
 var mail_user_scene = preload("res://scenes/mail_user.tscn")
 var shipping_status = preload("res://scenes/shipping_status.tscn")
 @onready var user_container = $VBoxContainer/Sections/MarginContainer/ScrollContainer/Users
-@onready var message_container = $VBoxContainer/Sections/MarginContainer2/ScrollContainer/Message
+@onready var message_container = $VBoxContainer/Sections/MarginContainer2/Control3/ScrollContainer/Message
 
 func _ready():
 	Inventory.current_ui_type = "shipping"

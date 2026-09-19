@@ -16,14 +16,10 @@ grow_vertical = 2
 script = ExtResource("1_j6a7c")
 
 [node name="Home" parent="." unique_id=1623614779 instance=ExtResource("3_okuri")]
-layout_mode = 0
-offset_left = -30.0
-offset_top = 75.0
-offset_right = 10.0
-offset_bottom = 115.0
+layout_mode = 1
 
 [node name="Newspaper" parent="." unique_id=1782061001 instance=ExtResource("5_kyx1g")]
-layout_mode = 0
+layout_mode = 1
 
 [node name="Mintora" parent="." unique_id=1932963451 instance=ExtResource("5_scoti")]
 layout_mode = 1

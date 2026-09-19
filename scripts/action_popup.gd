@@ -9,7 +9,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Global.playing:
+		$CanvasLayer/VBoxContainer.show()
+	else:
+		$CanvasLayer/VBoxContainer.hide()
 
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):
@@ -45,3 +48,7 @@ func _on_quit_title_pressed() -> void:
 	Global.SPEED_MULT = 1
 	$pause_menu.hide()
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+
+
+func _on_close_pressed() -> void:
+	$CanvasLayer/info.hide()

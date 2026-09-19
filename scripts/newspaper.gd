@@ -1,6 +1,6 @@
 extends Control
 
-@onready var grid_container = $PanelContainer/PanelContainer/VBoxContainer/HBoxContainer/News/GridContainer
+@onready var grid_container = $CenterContainer/Control/PanelContainer/PanelContainer/VBoxContainer/HBoxContainer/News/GridContainer
 
 func _ready() -> void:
 	SignalBus.articles_changed.connect(_load_articles)

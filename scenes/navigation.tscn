@@ -108,6 +108,6 @@ expand_icon = true
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Home/Home" to="." method="_on_home_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Mintora/Mintora" to="." method="_on_mintora_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Newspaper/Newspaper" to="." method="_on_newspaper_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/Options/Skill_tree" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Options/Skill_tree" to="." method="_on_skill_tree_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/Options/Skill_tree" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MarginContainer/HBoxContainer/Power/PanelContainer6/Exit" to="." method="_on_exit_pressed"]

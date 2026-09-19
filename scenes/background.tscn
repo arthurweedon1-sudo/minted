@@ -27,7 +27,11 @@ fill_to = Vector2(0.49658704, 0)
 
 [node name="background" type="Control" unique_id=223626562]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ParallaxLayer" type="Parallax2D" parent="." unique_id=311581631]
 repeat_size = Vector2(128, 128)
@@ -44,18 +48,31 @@ texture = SubResource("AnimatedTexture_fih1l")
 stretch_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1595393390]
-layout_mode = 0
-offset_right = 1300.0
-offset_bottom = 713.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = SubResource("GradientTexture2D_6snss")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=638903344]
-top_level = true
-position = Vector2(640, 360)
-scale = Vector2(3, 3)
-texture = ExtResource("6_wax1t")
 
 [node name="Control" type="Control" parent="." unique_id=412700075]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=170702604]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer" unique_id=494081475]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CenterContainer/MarginContainer" unique_id=1616181241]
+position = Vector2(0, 23)
+scale = Vector2(3, 3)
+texture = ExtResource("6_wax1t")

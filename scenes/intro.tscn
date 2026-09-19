@@ -72,55 +72,49 @@ script = ExtResource("1_4bx60")
 
 [node name="warp_background" type="ColorRect" parent="." unique_id=442933447]
 material = ExtResource("5_wfs7u")
-layout_mode = 0
-offset_right = 1280.0
-offset_bottom = 720.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Label2" type="Label" parent="." unique_id=519936632]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=71579360]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="CenterContainer" unique_id=487823666]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="CenterContainer/Control" unique_id=519936632]
 layout_mode = 0
-offset_left = 512.0
-offset_top = 124.0
-offset_right = 758.0
-offset_bottom = 208.0
+offset_left = -120.0
+offset_top = -230.0
+offset_right = 132.0
+offset_bottom = -146.0
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("4_wfs7u")
 theme_override_font_sizes/font_size = 30
 text = "A game by:"
 
-[node name="Label3" type="Label" parent="." unique_id=1657839715]
+[node name="Label3" type="Label" parent="CenterContainer/Control" unique_id=1657839715]
 layout_mode = 0
-offset_left = 392.0
-offset_top = 462.0
-offset_right = 884.0
-offset_bottom = 546.0
+offset_left = -244.0
+offset_top = 111.0
+offset_right = 248.0
+offset_bottom = 195.0
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("4_wfs7u")
 theme_override_font_sizes/font_size = 30
 text = "Peppermint Studios"
 
-[node name="studio_logo" type="Sprite2D" parent="." unique_id=833658682]
-position = Vector2(633, 349)
+[node name="studio_logo" type="Sprite2D" parent="CenterContainer/Control" unique_id=833658682]
 scale = Vector2(3, 3)
 texture = ExtResource("4_es01l")
-
-[node name="godot_logo" type="Sprite2D" parent="." unique_id=597884680]
-position = Vector2(97, 633)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("3_i2l1n")
-
-[node name="Label" type="Label" parent="." unique_id=930453614]
-layout_mode = 0
-offset_left = 31.0
-offset_top = 542.0
-offset_right = 167.0
-offset_bottom = 570.0
-theme_override_fonts/font = ExtResource("4_wfs7u")
-theme_override_font_sizes/font_size = 10
-text = "Made with Godot"
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1122780310]
-layout_mode = 0
-color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=66262219]
 libraries/ = SubResource("AnimationLibrary_t1qkj")
@@ -128,3 +122,37 @@ libraries/ = SubResource("AnimationLibrary_t1qkj")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1728658937]
 stream = ExtResource("6_es01l")
 autoplay = true
+
+[node name="godot_logo_node" type="Control" parent="." unique_id=851837252]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 107.0
+offset_top = -80.0
+offset_right = 147.0
+offset_bottom = -40.0
+grow_vertical = 0
+
+[node name="godot_logo" type="Sprite2D" parent="godot_logo_node" unique_id=597884680]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("3_i2l1n")
+
+[node name="Label" type="Label" parent="godot_logo_node" unique_id=930453614]
+layout_mode = 0
+offset_left = -64.0
+offset_top = -92.0
+offset_right = 72.0
+offset_bottom = -64.0
+theme_override_fonts/font = ExtResource("4_wfs7u")
+theme_override_font_sizes/font_size = 10
+text = "Made with Godot"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1122780310]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

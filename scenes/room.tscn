@@ -12,7 +12,6 @@
 [ext_resource type="FontFile" uid="uid://gwi3hcl35u7m" path="res://fonts/Pixeled.ttf" id="11_w68ji"]
 [ext_resource type="Texture2D" uid="uid://ckfaa8maa1gw6" path="res://assets/hotbar/dor.png" id="12_23wr2"]
 [ext_resource type="Texture2D" uid="uid://w5vi05v5cwoc" path="res://assets/os/icons/down.png" id="12_tk5fv"]
-[ext_resource type="PackedScene" uid="uid://b6x7w416aqb1l" path="res://scenes/top_bar.tscn" id="13_w68ji"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6snss"]
 bg_color = Color(0, 0.1764706, 0, 1)
@@ -667,11 +666,5 @@ texture = ExtResource("12_23wr2")
 region_rect = Rect2(0, 2, 8, 6)
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
-
-[node name="PanelContainer" parent="." unique_id=1234875554 instance=ExtResource("13_w68ji")]
-offset_left = -640.0
-offset_top = -335.0
-offset_right = 648.0
-offset_bottom = -265.0
 
 [connection signal="pressed" from="left_bar/sleep/slide" to="." method="_on_slide_pressed"]

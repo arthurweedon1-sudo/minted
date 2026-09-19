@@ -13,7 +13,7 @@ func show_page(page_name: String) -> void:
 func _on_button_pressed() -> void:
 	show_page("Market")
 
-func generate_items(grid: GridContainer, category: String, amount: int):
+func generate_items(grid: HFlowContainer, category: String, amount: int):
 	Inventory.current_ui_type = "market"
 	var packed = preload("res://scenes/item_ui.tscn")
 	
@@ -36,16 +36,16 @@ func generate_items(grid: GridContainer, category: String, amount: int):
 			item_ui.get_node("item").load_data(data)
 			
 func _ready():
-	
+	Global.mintora = true
 	$Mintora/VBoxContainer/Control3/TabContainer/Selling/selling.page_requested.connect(show_page)
-	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer/Sections/Centre/TabContainer/All/ScrollContainer/GridContainer, "All", 12)
-	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer/Sections/Centre/TabContainer/Clothes/ScrollContainer/GridContainer, "Clothes", 12)
-	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer/Sections/Centre/TabContainer/Toys/ScrollContainer/GridContainer, "Toys", 12)
-	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer/Sections/Centre/TabContainer/Home/ScrollContainer/GridContainer, "Home", 12)
-	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer/Sections/Centre/TabContainer/Electronics/ScrollContainer/GridContainer, "Electronics", 12)
-	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer/Sections/Centre/TabContainer/BooksMedia/ScrollContainer/GridContainer, "BooksMedia", 12)
-	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer/Sections/Centre/TabContainer/Collectables/ScrollContainer/GridContainer, "Collectables", 12)
-	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer/Sections/Centre/TabContainer/Sports/ScrollContainer/GridContainer, "Sports", 12)
+	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer/All/ScrollContainer/GridContainer, "All", 12)
+	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer/Clothes/ScrollContainer/GridContainer, "Clothes", 12)
+	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer/Toys/ScrollContainer/GridContainer, "Toys", 12)
+	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer/Home/ScrollContainer/GridContainer, "Home", 12)
+	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer/Electronics/ScrollContainer/GridContainer, "Electronics", 12)
+	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer/BooksMedia/ScrollContainer/GridContainer, "BooksMedia", 12)
+	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer/Collectables/ScrollContainer/GridContainer, "Collectables", 12)
+	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer/Sports/ScrollContainer/GridContainer, "Sports", 12)
 	
 	if Inventory.bidding_items.size() == 0:
 		for i in range(4):
@@ -88,11 +88,11 @@ func _ready():
 	Global.news_interest = 1
 	
 func reload_market():
-	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer/Sections/Centre/TabContainer/All/ScrollContainer/GridContainer, "All", 15)
-	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer/Sections/Centre/TabContainer/Clothes/ScrollContainer/GridContainer, "Clothes", 15)
-	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer/Sections/Centre/TabContainer/Toys/ScrollContainer/GridContainer, "Toys", 15)
-	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer/Sections/Centre/TabContainer/Home/ScrollContainer/GridContainer, "Home", 15)
-	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer/Sections/Centre/TabContainer/Electronics/ScrollContainer/GridContainer, "Electronics", 15)
-	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer/Sections/Centre/TabContainer/BooksMedia/ScrollContainer/GridContainer, "BooksMedia", 15)
-	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer/Sections/Centre/TabContainer/Collectables/ScrollContainer/GridContainer, "Collectables", 15)
-	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer/Sections/Centre/TabContainer/Sports/ScrollContainer/GridContainer, "Sports", 15)
+	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer/All/ScrollContainer/GridContainer, "All", 15)
+	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer/Clothes/ScrollContainer/GridContainer, "Clothes", 15)
+	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer/Toys/ScrollContainer/GridContainer, "Toys", 15)
+	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer/Home/ScrollContainer/GridContainer, "Home", 15)
+	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer/Electronics/ScrollContainer/GridContainer, "Electronics", 15)
+	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer/BooksMedia/ScrollContainer/GridContainer, "BooksMedia", 15)
+	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer/Collectables/ScrollContainer/GridContainer, "Collectables", 15)
+	generate_items($Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer/Sports/ScrollContainer/GridContainer, "Sports", 15)

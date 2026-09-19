@@ -22,9 +22,11 @@ grow_vertical = 2
 script = ExtResource("1_de5vt")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1140796848]
-layout_mode = 0
-offset_right = 1280.0
-offset_bottom = 32.0
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_de5vt")
 
 [node name="Left" type="HBoxContainer" parent="PanelContainer" unique_id=1714269120]

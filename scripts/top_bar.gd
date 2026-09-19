@@ -6,19 +6,18 @@ extends PanelContainer
 @onready var level_display: MarginContainer = $Left/Level_Display
 @onready var level_rank_label: Label = $Left/MarginContainer/VBoxContainer/VBoxContainer2/MarginContainer/Label
 @onready var stars: Control = $Left/MarginContainer/VBoxContainer/VBoxContainer2/MarginContainer/Stars
-@export var mintora: bool = false
 
 var money_string: String = ""
 
-func _ready() -> void:
-	if mintora:
+
+func _process(delta):
+	if Global.mintora:
 		%background_mintora.show()
 		%background.hide()
 	else:
 		%background_mintora.hide()
 		%background.show()
-
-func _process(delta):
+	
 	money_string = " "
 	money_string += format_with_commas(Global.money)
 	

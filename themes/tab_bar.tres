@@ -1,0 +1,136 @@
+[gd_resource type="Theme" format=3 uid="uid://d2a0o831invtv"]
+
+[ext_resource type="FontFile" uid="uid://gwi3hcl35u7m" path="res://fonts/Pixeled.ttf" id="1_oua8x"]
+
+[sub_resource type="DPITexture" id="DPITexture_8ftyy"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"6\" fill=\"#fefffe\" fill-opacity=\".75\"/><path fill=\"none\" stroke=\"#1a1a1a\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-opacity=\".65\" stroke-width=\"2\" d=\"m9 5-3 3 3 3\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_btrsg"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"6\" fill=\"#fefffe\"/><path fill=\"none\" stroke=\"#1a1a1a\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m9 5-3 3 3 3\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_1vooj"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"32\"><path fill=\"#d3d3d3\" d=\"m5 1h6v30h-6z\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_ysedy"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"6\" fill=\"#fefffe\" fill-opacity=\".75\"/><path fill=\"none\" stroke=\"#1a1a1a\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-opacity=\".65\" stroke-width=\"2\" d=\"m7 5 3 3-3 3\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_7qm20"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"6\" fill=\"#fefffe\"/><path fill=\"none\" stroke=\"#1a1a1a\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"m7 5 3 3-3 3\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_fyypl"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#b2b2b2\" fill-opacity=\".45\" d=\"M8 0a2 2 0 0 0 0 4 2 2 0 0 0 0-4zm0 6a2 2 0 0 0 0 4 2 2 0 0 0 0-4zm0 6a2 2 0 0 0 0 4 2 2 0 0 0 0-4z\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_a0bn4"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><path fill=\"#b2b2b2\" fill-opacity=\".65\" d=\"M8 0a2 2 0 0 0 0 4 2 2 0 0 0 0-4zm0 6a2 2 0 0 0 0 4 2 2 0 0 0 0-4zm0 6a2 2 0 0 0 0 4 2 2 0 0 0 0-4z\"/></svg>
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oju13"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4cfa5"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.3)
+border_width_left = 1
+border_width_right = 1
+border_color = Color(0.175, 0.175, 0.175, 1)
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x6k0t"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g01sx"]
+content_margin_left = 30.0
+content_margin_top = 5.0
+content_margin_right = 30.0
+content_margin_bottom = 5.0
+bg_color = Color(5.565118e-08, 0.07140266, 0.016983919, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t4xgv"]
+content_margin_left = 30.0
+content_margin_top = 5.0
+content_margin_right = 30.0
+content_margin_bottom = 5.0
+bg_color = Color(0, 0, 0, 0.972549)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dto42"]
+content_margin_left = 30.0
+content_margin_top = 5.0
+content_margin_right = 30.0
+content_margin_bottom = 5.0
+bg_color = Color(0, 0, 0, 0.972549)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jljod"]
+bg_color = Color(0.007843138, 0.043137256, 0, 0.972549)
+border_width_top = 3
+border_width_bottom = 3
+border_color = Color(0.007843138, 0.043137256, 0, 0.972549)
+
+[resource]
+TabContainer/colors/drop_mark_color = Color(1, 1, 1, 1)
+TabContainer/colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+TabContainer/colors/font_hovered_color = Color(1, 1, 1, 1)
+TabContainer/colors/font_outline_color = Color(0, 0, 0, 1)
+TabContainer/colors/font_selected_color = Color(0.5411765, 0.9607843, 0.7058824, 1)
+TabContainer/colors/font_unselected_color = Color(0.59607846, 0.59607846, 0.59607846, 1)
+TabContainer/colors/icon_disabled_color = Color(1, 1, 1, 1)
+TabContainer/colors/icon_hovered_color = Color(1, 1, 1, 1)
+TabContainer/colors/icon_selected_color = Color(1, 1, 1, 1)
+TabContainer/colors/icon_unselected_color = Color(1, 1, 1, 1)
+TabContainer/constants/icon_max_width = 0
+TabContainer/constants/icon_separation = 4
+TabContainer/constants/outline_size = 0
+TabContainer/constants/side_margin = 8
+TabContainer/font_sizes/font_size = 10
+TabContainer/fonts/font = ExtResource("1_oua8x")
+TabContainer/icons/decrement = SubResource("DPITexture_8ftyy")
+TabContainer/icons/decrement_highlight = SubResource("DPITexture_btrsg")
+TabContainer/icons/drop_mark = SubResource("DPITexture_1vooj")
+TabContainer/icons/increment = SubResource("DPITexture_ysedy")
+TabContainer/icons/increment_highlight = SubResource("DPITexture_7qm20")
+TabContainer/icons/menu = SubResource("DPITexture_fyypl")
+TabContainer/icons/menu_highlight = SubResource("DPITexture_a0bn4")
+TabContainer/styles/panel = SubResource("StyleBoxFlat_oju13")
+TabContainer/styles/tab_disabled = SubResource("StyleBoxFlat_4cfa5")
+TabContainer/styles/tab_focus = SubResource("StyleBoxFlat_x6k0t")
+TabContainer/styles/tab_hovered = SubResource("StyleBoxFlat_g01sx")
+TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_t4xgv")
+TabContainer/styles/tab_unselected = SubResource("StyleBoxFlat_dto42")
+TabContainer/styles/tabbar_background = SubResource("StyleBoxFlat_jljod")

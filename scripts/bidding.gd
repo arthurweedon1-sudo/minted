@@ -1,7 +1,7 @@
 extends Control
 
 @onready var progress = $Button/TextureProgressBar 
-@onready var bidding_display =  $Bidding/ScrollContainer/GridContainer
+@onready var bidding_display = $Bidding/GridContainer
 func _build_page():
 	Inventory.current_ui_type = "display_bidding"
 	for child in bidding_display.get_children():

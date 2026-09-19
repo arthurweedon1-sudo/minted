@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cf5wjv4sgbdrx" path="res://assets/background/small_box.png" id="2_6bfad"]
 [ext_resource type="Texture2D" uid="uid://cby1p15dip2xb" path="res://assets/background/med_box.png" id="3_lygu6"]
 [ext_resource type="Texture2D" uid="uid://cvgjujuefur1t" path="res://assets/background/large_box.png" id="4_ucyl2"]
-[ext_resource type="PackedScene" uid="uid://e4k1pjv1n7b0" path="res://scenes/BackgroundBox.tscn" id="5_car4i"]
+[ext_resource type="PackedScene" uid="uid://e4k1pjv1n7b0" path="res://scenes/backgroundBox.tscn" id="5_car4i"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oxfo6"]
 bg_color = Color(0.6784314, 0.6117647, 0.50980395, 1)
@@ -16,10 +16,19 @@ box_skins = Array[Texture2D]([ExtResource("2_6bfad"), ExtResource("3_lygu6"), Ex
 particle_scale = 5.0
 
 [node name="Background" type="PanelContainer" parent="." unique_id=388083245]
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 1281.0
-offset_bottom = 721.0
+custom_minimum_size = Vector2(50, 50)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50183.0
+offset_top = -34016.0
+offset_right = -48831.0
+offset_bottom = -33095.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(99, 99)
+size_flags_horizontal = 3
+size_flags_vertical = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_oxfo6")
 
 [node name="BackgroundBox" parent="." unique_id=1257211255 instance=ExtResource("5_car4i")]

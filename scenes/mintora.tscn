@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://exx8ateuuuc0"]
 
 [ext_resource type="PackedScene" uid="uid://31wk6mw8xgsp" path="res://scenes/background.tscn" id="1_6srp7"]
-[ext_resource type="PackedScene" uid="uid://b6x7w416aqb1l" path="res://scenes/top_bar.tscn" id="1_y8p56"]
 [ext_resource type="PackedScene" uid="uid://b4apwjm4ouory" path="res://scenes/navigation.tscn" id="2_cek5a"]
 [ext_resource type="PackedScene" uid="uid://cxbgcv0xjeqmn" path="res://scenes/market.tscn" id="2_vytop"]
 [ext_resource type="Texture2D" uid="uid://cc3vkacie3oae" path="res://assets/tab_background.png" id="3_3xwq2"]
@@ -52,34 +51,31 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="background" parent="." unique_id=223626562 instance=ExtResource("1_6srp7")]
-layout_mode = 0
+layout_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1791497820]
 top_level = true
 custom_minimum_size = Vector2(1280, 720)
-layout_mode = 0
-offset_right = 1280.0
-offset_bottom = 720.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 alignment = 2
-
-[node name="Control" type="Control" parent="VBoxContainer" unique_id=16520528]
-layout_mode = 2
-
-[node name="PanelContainer2" parent="VBoxContainer/Control" unique_id=1234875554 instance=ExtResource("1_y8p56")]
-layout_mode = 0
-offset_top = -712.0
-offset_right = 1285.0
-offset_bottom = -642.0
-mintora = true
 
 [node name="Control3" type="Control" parent="VBoxContainer" unique_id=234152939]
 layout_mode = 2
 
 [node name="TabContainer" type="TabContainer" parent="VBoxContainer/Control3" unique_id=1632207118]
-layout_mode = 0
-offset_top = -652.0
-offset_right = 1280.0
-offset_bottom = -65.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -573.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_selected_color = Color(0.23137255, 0.5764706, 0.38039216, 1)
 theme_override_colors/font_unselected_color = Color(0.1866667, 0.47858804, 0.31278473, 1)
 theme_override_colors/icon_unselected_color = Color(0.6789437, 0.6789437, 0.6789437, 1)
@@ -99,7 +95,6 @@ tab_3/icon = ExtResource("8_egard")
 script = ExtResource("3_f86in")
 
 [node name="Home" type="MarginContainer" parent="VBoxContainer/Control3/TabContainer" unique_id=121694614]
-custom_minimum_size = Vector2(0, 540)
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -136,11 +131,8 @@ layout_mode = 2
 [node name="Control2" type="Control" parent="VBoxContainer" unique_id=2021714799]
 layout_mode = 2
 
-[node name="PanelContainer" parent="VBoxContainer/Control2" unique_id=156462522 instance=ExtResource("2_cek5a")]
+[node name="PanelContainer" parent="VBoxContainer" unique_id=156462522 instance=ExtResource("2_cek5a")]
 z_index = 5
-layout_mode = 0
-offset_top = -68.0
-offset_right = 1280.0
-offset_bottom = 0.0
+layout_mode = 2
 
 [connection signal="tab_selected" from="VBoxContainer/Control3/TabContainer" to="VBoxContainer/Control3/TabContainer" method="_on_tab_selected"]

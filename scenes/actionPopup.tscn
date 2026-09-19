@@ -9,12 +9,20 @@
 [ext_resource type="Texture2D" uid="uid://d2uyc6gslcxxs" path="res://minty/minty_default.png" id="7_mfj8q"]
 [ext_resource type="Texture2D" uid="uid://cc3vkacie3oae" path="res://assets/tab_background.png" id="8_n32bj"]
 [ext_resource type="FontFile" uid="uid://dkvrhel3prpcm" path="res://fonts/Aller_Bd.ttf" id="9_kq67g"]
+[ext_resource type="PackedScene" uid="uid://b6x7w416aqb1l" path="res://scenes/top_bar.tscn" id="10_n32bj"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f1jqx"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s7fk1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mfj8q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kq67g"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 5.0
+bg_color = Color(0, 0, 0, 1)
 
 [node name="ActionPopup" type="CanvasLayer" unique_id=1676356803]
 layer = 10
@@ -268,9 +276,117 @@ bbcode_enabled = true
 text = "Come back!"
 autowrap_mode = 2
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1782407012]
+layer = 99
+
+[node name="info" type="ColorRect" parent="CanvasLayer" unique_id=957214226]
+visible = false
+offset_left = 921.0
+offset_top = 5.0
+offset_right = 1321.0
+offset_bottom = 725.0
+
+[node name="Close" type="Button" parent="CanvasLayer/info" unique_id=2016661960]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 68.0
+offset_right = 62.0
+offset_bottom = 147.0
+theme_override_colors/font_color = Color(0.7992127, 0.0019698713, 0.08457186, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_kq67g")
+text = "X"
+
+[node name="Buy" type="Button" parent="CanvasLayer/info" unique_id=547084622]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 535.0
+offset_right = 224.0
+offset_bottom = 614.0
+theme_override_colors/font_color = Color(0.72156864, 0.8117647, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_kq67g")
+text = "BUY"
+
+[node name="title" type="Label" parent="CanvasLayer/info" unique_id=316702435]
+unique_name_in_owner = true
+custom_maximum_size = Vector2(300, -1)
+layout_mode = 0
+offset_left = 22.0
+offset_top = 159.0
+offset_right = 322.0
+offset_bottom = 207.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Title"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="description" type="RichTextLabel" parent="CanvasLayer/info" unique_id=886171596]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 200)
+custom_maximum_size = Vector2(300, 200)
+layout_mode = 0
+offset_left = 19.0
+offset_top = 268.0
+offset_right = 319.0
+offset_bottom = 468.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Description"
+
+[node name="price" type="Label" parent="CanvasLayer/info" unique_id=1120322996]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 12.0
+offset_top = 449.0
+offset_right = 168.0
+offset_bottom = 505.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_bfc7f")
+theme_override_font_sizes/font_size = 20
+text = "Price:"
+
+[node name="price2" type="Label" parent="CanvasLayer/info" unique_id=1430999769]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 95.0
+offset_top = 454.0
+offset_right = 219.0
+offset_bottom = 510.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_bfc7f")
+theme_override_font_sizes/font_size = 20
+text = "$999"
+horizontal_alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=1097798514]
+custom_minimum_size = Vector2(1280, 720)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+mouse_filter = 2
+alignment = 2
+
+[node name="Control" type="Control" parent="CanvasLayer/VBoxContainer" unique_id=2139343210]
+layout_mode = 2
+
+[node name="PanelContainer2" parent="CanvasLayer/VBoxContainer/Control" unique_id=1234875554 instance=ExtResource("10_n32bj")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = -720.0
+offset_right = 4.0
+offset_bottom = -653.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [connection signal="mouse_entered" from="username_change/confirmButton" to="." method="_on_confirm_button_mouse_entered"]
 [connection signal="mouse_exited" from="username_change/confirmButton" to="." method="_on_confirm_button_mouse_exited"]
 [connection signal="pressed" from="username_change/confirmButton" to="." method="_on_confirm_button_pressed"]
 [connection signal="pressed" from="pause_menu/VBoxContainer/resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="pause_menu/VBoxContainer/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="pause_menu/VBoxContainer/quit_title" to="." method="_on_quit_title_pressed"]
+[connection signal="pressed" from="CanvasLayer/info/Close" to="." method="_on_close_pressed"]

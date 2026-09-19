@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ro5g3sj2lshk" path="res://scripts/selling.gd" id="1_3jkmn"]
 [ext_resource type="PackedScene" uid="uid://bl2hjfsjnp4kq" path="res://scenes/search_bar.tscn" id="2_d3n2a"]
 [ext_resource type="PackedScene" uid="uid://b7b6um4sspyeh" path="res://scenes/sell_item.tscn" id="3_3jkmn"]
+[ext_resource type="Theme" uid="uid://d2a0o831invtv" path="res://themes/tab_bar.tres" id="3_d3n2a"]
 
 [node name="selling" type="Control" unique_id=2079572264]
 layout_mode = 3
@@ -24,11 +25,16 @@ url = "https://minted.io/items/new"
 
 [node name="Sections" type="HBoxContainer" parent="." unique_id=1432721250]
 custom_minimum_size = Vector2(1300, 560)
-layout_mode = 0
-offset_left = 13.0
-offset_top = 45.0
-offset_right = 1313.0
-offset_bottom = 726.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 31.0
+offset_right = 25.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Centre" type="VBoxContainer" parent="Sections" unique_id=1258116480]
 custom_maximum_size = Vector2(-1, 500)
@@ -37,6 +43,7 @@ size_flags_horizontal = 3
 
 [node name="TabContainer" type="TabContainer" parent="Sections/Centre" unique_id=183984604]
 layout_mode = 2
+theme = ExtResource("3_d3n2a")
 current_tab = 0
 tab_1/title = "Sell List"
 tab_2/title = "Sold List"

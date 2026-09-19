@@ -378,4 +378,4 @@ func _on_loan_button_ls_2s_pressed() -> void:
 
 func _on_loan_button_ls_2l_pressed() -> void:
 	if ls2:
-		selected = "ls2s"
+		selected = "ls2s" 

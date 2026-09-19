@@ -2,12 +2,10 @@
 
 [ext_resource type="Script" uid="uid://rpc3422o50py" path="res://scripts/skill_tree.gd" id="1_tnam6"]
 [ext_resource type="Texture2D" uid="uid://k2pkwfchvggn" path="res://assets/background/skill_tree_1.png" id="2_51bdh"]
-[ext_resource type="PackedScene" uid="uid://b6x7w416aqb1l" path="res://scenes/top_bar.tscn" id="2_tnam6"]
 [ext_resource type="Texture2D" uid="uid://hov5ek5g3t40" path="res://assets/background/skill_tree_2.png" id="3_6awrb"]
 [ext_resource type="PackedScene" uid="uid://b4apwjm4ouory" path="res://scenes/navigation.tscn" id="3_a302t"]
 [ext_resource type="Shader" uid="uid://lha8oonp4j48" path="res://shaders/skill_tree.gdshader" id="3_h52vt"]
 [ext_resource type="Texture2D" uid="uid://yv4b1koxprex" path="res://assets/background/repeating_unit_sleep.png" id="4_003p6"]
-[ext_resource type="FontFile" uid="uid://gwi3hcl35u7m" path="res://fonts/Pixeled.ttf" id="4_tyjg3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h52vt"]
 shader = ExtResource("3_h52vt")
@@ -16,13 +14,6 @@ shader_parameter/screen_height = 270.0
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6awrb"]
 shader = ExtResource("3_h52vt")
 shader_parameter/screen_height = 270.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tyjg3"]
-content_margin_left = 10.0
-content_margin_top = 5.0
-content_margin_right = 10.0
-content_margin_bottom = 5.0
-bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h52vt"]
 
@@ -77,119 +68,6 @@ offset_bottom = 357.0
 scale = Vector2(2, 2)
 texture = ExtResource("3_6awrb")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=589978637]
-
-[node name="info" type="ColorRect" parent="CanvasLayer" unique_id=1921204348]
-visible = false
-offset_left = 921.0
-offset_top = 5.0
-offset_right = 1321.0
-offset_bottom = 725.0
-
-[node name="Close" type="Button" parent="CanvasLayer/info" unique_id=2077533833]
-layout_mode = 0
-offset_left = 11.0
-offset_top = 68.0
-offset_right = 62.0
-offset_bottom = 147.0
-theme_override_colors/font_color = Color(0.7992127, 0.0019698713, 0.08457186, 1)
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_tyjg3")
-text = "X"
-
-[node name="Buy" type="Button" parent="CanvasLayer/info" unique_id=1242449362]
-layout_mode = 0
-offset_left = 111.0
-offset_top = 535.0
-offset_right = 224.0
-offset_bottom = 614.0
-theme_override_colors/font_color = Color(0.72156864, 0.8117647, 0, 1)
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_tyjg3")
-text = "BUY"
-
-[node name="title" type="Label" parent="CanvasLayer/info" unique_id=1712556758]
-unique_name_in_owner = true
-custom_maximum_size = Vector2(300, -1)
-layout_mode = 0
-offset_left = 22.0
-offset_top = 159.0
-offset_right = 322.0
-offset_bottom = 207.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-text = "Title"
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="decription" type="RichTextLabel" parent="CanvasLayer/info" unique_id=937059847]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 200)
-custom_maximum_size = Vector2(300, 200)
-layout_mode = 0
-offset_left = 19.0
-offset_top = 268.0
-offset_right = 319.0
-offset_bottom = 468.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 20
-text = "Description"
-
-[node name="price" type="Label" parent="CanvasLayer/info" unique_id=1072418699]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 12.0
-offset_top = 449.0
-offset_right = 168.0
-offset_bottom = 505.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_tyjg3")
-theme_override_font_sizes/font_size = 20
-text = "Price:"
-
-[node name="price2" type="Label" parent="CanvasLayer/info" unique_id=1564378148]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 95.0
-offset_top = 454.0
-offset_right = 219.0
-offset_bottom = 510.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_tyjg3")
-theme_override_font_sizes/font_size = 20
-text = "$999"
-horizontal_alignment = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=1185537181]
-custom_minimum_size = Vector2(1280, 720)
-offset_right = 1280.0
-offset_bottom = 720.0
-mouse_filter = 2
-alignment = 2
-
-[node name="Control" type="Control" parent="CanvasLayer/VBoxContainer" unique_id=85995014]
-layout_mode = 2
-
-[node name="PanelContainer2" parent="CanvasLayer/VBoxContainer/Control" unique_id=1557691227 instance=ExtResource("2_tnam6")]
-layout_mode = 0
-offset_top = -648.0
-offset_right = 1285.0
-offset_bottom = -578.0
-mintora = true
-
-[node name="PanelContainer" parent="CanvasLayer/VBoxContainer" unique_id=156462522 instance=ExtResource("3_a302t")]
-layout_mode = 2
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=80189817]
-layout_mode = 0
-offset_left = 126.0
-offset_top = 110.0
-offset_right = 626.0
-offset_bottom = 360.0
-scale = Vector2(2, 2)
-mouse_filter = 2
-color = Color(0, 0, 0, 0.23137255)
-
 [node name="dragging_button" type="Button" parent="." unique_id=1991036773]
 layout_mode = 1
 anchors_preset = 15
@@ -243,10 +121,24 @@ offset_bottom = 617.0
 theme_override_font_sizes/font_size = 50
 text = "+"
 
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=389407645]
+top_level = true
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+alignment = 2
+
+[node name="PanelContainer" parent="VBoxContainer" unique_id=156462522 instance=ExtResource("3_a302t")]
+z_index = 5
+layout_mode = 2
+
 [connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
 [connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
-[connection signal="pressed" from="CanvasLayer/info/Close" to="." method="_on_close_pressed"]
-[connection signal="pressed" from="CanvasLayer/info/Buy" to="." method="_on_buy_pressed"]
 [connection signal="button_down" from="dragging_button" to="." method="_on_dragging_button_button_down"]
 [connection signal="button_up" from="dragging_button" to="." method="_on_dragging_button_button_up"]
 [connection signal="pressed" from="dragging_button" to="." method="_on_dragging_button_pressed"]

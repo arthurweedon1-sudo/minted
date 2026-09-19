@@ -24,9 +24,13 @@ layout_mode = 1
 url = "https://royalmint.mail/u/1/inbox"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=820746613]
-layout_mode = 0
-offset_right = 1416.0
-offset_bottom = 645.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 136.0
+grow_horizontal = 2
+grow_vertical = 2
 offset_transform_enabled = true
 
 [node name="Sections" type="HBoxContainer" parent="VBoxContainer" unique_id=178959929]
@@ -62,6 +66,7 @@ layout_mode = 2
 [node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/Sections" unique_id=998178463]
 custom_minimum_size = Vector2(1000, 0)
 layout_mode = 2
+size_flags_horizontal = 3
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 100
 theme_override_constants/margin_bottom = 20
@@ -70,40 +75,58 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="VBoxContainer/Sections/MarginContainer2/Control" unique_id=1398443035]
-layout_mode = 0
-offset_left = -20.0
-offset_top = -68.0
-offset_right = 848.0
-offset_bottom = 548.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -17.0
+offset_top = -67.0
+offset_right = -17.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_4pjmv")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/Sections/MarginContainer2" unique_id=1438590497]
-custom_maximum_size = Vector2(835, 400)
+[node name="Control3" type="Control" parent="VBoxContainer/Sections/MarginContainer2" unique_id=1148188147]
 layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer/Sections/MarginContainer2/Control3" unique_id=1438590497]
+custom_maximum_size = Vector2(835, 400)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -41.0
+offset_right = -146.0
+offset_bottom = -241.0
+grow_horizontal = 2
+grow_vertical = 2
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 2
 
-[node name="Message" type="VBoxContainer" parent="VBoxContainer/Sections/MarginContainer2/ScrollContainer" unique_id=510965892]
+[node name="Message" type="VBoxContainer" parent="VBoxContainer/Sections/MarginContainer2/Control3/ScrollContainer" unique_id=510965892]
 custom_minimum_size = Vector2(800, 0)
 layout_mode = 2
 
 [node name="Control2" type="Control" parent="VBoxContainer/Sections/MarginContainer2" unique_id=1374035084]
 layout_mode = 2
+size_flags_vertical = 8
 
 [node name="LineEdit" type="LineEdit" parent="VBoxContainer/Sections/MarginContainer2/Control2" unique_id=701613267]
 layout_mode = 0
-offset_left = 5.0
-offset_top = 373.0
-offset_right = 711.0
-offset_bottom = 429.0
+offset_left = 24.0
+offset_top = -166.0
+offset_right = 730.0
+offset_bottom = -110.0
 placeholder_text = "You can not reply to this message"
 editable = false
 
 [node name="TextureButton" type="TextureButton" parent="VBoxContainer/Sections/MarginContainer2/Control2" unique_id=143174968]
 layout_mode = 0
-offset_left = 717.0
-offset_top = 368.0
-offset_right = 749.0
-offset_bottom = 400.0
+offset_left = 736.0
+offset_top = -171.0
+offset_right = 768.0
+offset_bottom = -139.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("4_mhtwx")
