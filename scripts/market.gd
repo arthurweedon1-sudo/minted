@@ -1,17 +1,17 @@
 extends Control
 
-@onready var selected = $VBoxContainer/Sections/Centre/TabContainer
+@onready var selected = %TabContainer
 @onready var progress = $Button/TextureProgressBar
 
 @onready var grids: Dictionary = {
-	"All": $VBoxContainer/Sections/Centre/TabContainer/All/ScrollContainer/GridContainer,
-	"Clothes": $VBoxContainer/Sections/Centre/TabContainer/Clothes/ScrollContainer/GridContainer,
-	"Toys": $VBoxContainer/Sections/Centre/TabContainer/Toys/ScrollContainer/GridContainer,
-	"Electronics": $VBoxContainer/Sections/Centre/TabContainer/Electronics/ScrollContainer/GridContainer,
-	"Home": $VBoxContainer/Sections/Centre/TabContainer/Home/ScrollContainer/GridContainer,
-	"BooksMedia": $VBoxContainer/Sections/Centre/TabContainer/BooksMedia/ScrollContainer/GridContainer,
-	"Collectables": $VBoxContainer/Sections/Centre/TabContainer/Collectables/ScrollContainer/GridContainer,
-	"Sports": $VBoxContainer/Sections/Centre/TabContainer/Sports/ScrollContainer/GridContainer
+	"All": %All/ScrollContainer/GridContainer,
+	"Clothes": %Clothes/ScrollContainer/GridContainer,
+	"Toys": %Toys/ScrollContainer/GridContainer,
+	"Electronics": %Electronics/ScrollContainer/GridContainer,
+	"Home": %Home/ScrollContainer/GridContainer,
+	"BooksMedia": %BooksMedia/ScrollContainer/GridContainer,
+	"Collectables": %Collectables/ScrollContainer/GridContainer,
+	"Sports": %Sports/ScrollContainer/GridContainer
 }
 
 var packed = preload("res://scenes/item_ui.tscn")

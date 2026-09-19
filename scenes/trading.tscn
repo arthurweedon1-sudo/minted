@@ -16,9 +16,11 @@ fill_from = Vector2(0.4761092, 0.48976108)
 
 [node name="Trading" type="Control" unique_id=2081727713]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_25nfe")
 
@@ -35,11 +37,12 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 5.0
-offset_top = 9.0
+offset_top = -240.0
 offset_right = 5.0
-offset_bottom = 529.0
+offset_bottom = 280.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 0
 metadata/_tab_index = 4
 
 [node name="GridContainer" type="GridContainer" parent="Bidding" unique_id=1611250182]
@@ -47,7 +50,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 offset_transform_enabled = true
-offset_transform_position = Vector2(0, -250)
 theme_override_constants/h_separation = 35
 theme_override_constants/v_separation = 15
 columns = 4
@@ -55,11 +57,15 @@ columns = 4
 [node name="Button" type="Button" parent="." unique_id=1741050459]
 custom_minimum_size = Vector2(100, 100)
 custom_maximum_size = Vector2(100, 100)
-layout_mode = 0
-offset_left = 1206.0
-offset_top = 69.0
-offset_right = 1306.0
-offset_bottom = 169.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 47.0
+offset_right = 14.0
+offset_bottom = 147.0
+grow_horizontal = 0
 scale = Vector2(0.5, 0.5)
 icon = ExtResource("21_td24l")
 expand_icon = true

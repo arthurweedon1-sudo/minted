@@ -77,6 +77,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="TabContainer" type="TabContainer" parent="VBoxContainer2/VBoxContainer/Sections/Centre" unique_id=1364613776]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 650)
 layout_mode = 2
 size_flags_vertical = 3
@@ -93,6 +94,7 @@ theme_override_styles/tab_selected = SubResource("StyleBoxFlat_1j1t4")
 current_tab = 0
 
 [node name="All" type="MarginContainer" parent="VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer" unique_id=764952681]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 560)
 layout_mode = 2
 theme_override_constants/margin_left = 47
@@ -115,6 +117,7 @@ theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 15
 
 [node name="Clothes" type="MarginContainer" parent="VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer" unique_id=147803316]
+unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(0, 560)
 layout_mode = 2
@@ -138,6 +141,7 @@ theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 15
 
 [node name="Toys" type="MarginContainer" parent="VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer" unique_id=1874659325]
+unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(0, 590)
 layout_mode = 2
@@ -161,6 +165,7 @@ theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 15
 
 [node name="Home" type="MarginContainer" parent="VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer" unique_id=450006888]
+unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(0, 560)
 layout_mode = 2
@@ -184,6 +189,7 @@ theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 15
 
 [node name="Electronics" type="MarginContainer" parent="VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer" unique_id=1226039065]
+unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(0, 560)
 layout_mode = 2
@@ -207,6 +213,7 @@ theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 15
 
 [node name="BooksMedia" type="MarginContainer" parent="VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer" unique_id=413864740]
+unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(0, 560)
 layout_mode = 2
@@ -230,6 +237,7 @@ theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 15
 
 [node name="Collectables" type="MarginContainer" parent="VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer" unique_id=1549802885]
+unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(0, 560)
 layout_mode = 2
@@ -253,6 +261,7 @@ theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 15
 
 [node name="Sports" type="MarginContainer" parent="VBoxContainer2/VBoxContainer/Sections/Centre/TabContainer" unique_id=1290849622]
+unique_name_in_owner = true
 visible = false
 custom_minimum_size = Vector2(0, 560)
 layout_mode = 2
