@@ -106,7 +106,7 @@ horizontal_scroll_mode = 0
 vertical_scroll_mode = 2
 
 [node name="Message" type="VBoxContainer" parent="VBoxContainer/Sections/MarginContainer2/Control3/ScrollContainer" unique_id=510965892]
-custom_minimum_size = Vector2(800, 0)
+custom_minimum_size = Vector2(800, 400)
 layout_mode = 2
 
 [node name="Control2" type="Control" parent="VBoxContainer/Sections/MarginContainer2" unique_id=1374035084]

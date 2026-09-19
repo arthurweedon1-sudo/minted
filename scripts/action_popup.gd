@@ -52,3 +52,7 @@ func _on_quit_title_pressed() -> void:
 
 func _on_close_pressed() -> void:
 	$CanvasLayer/info.hide()
+
+
+func _on_buy_pressed() -> void:
+	SignalBus.emit_signal("skill_bought")

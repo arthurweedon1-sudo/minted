@@ -60,6 +60,7 @@ func _load_page() -> void:
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	SignalBus.show_skill.connect(_show_skill)
+	SignalBus.skill_bought.connect(on_buy_pressed)
 	_load_page()
 	$background2.self_modulate =Color(1,1,1,0.5)
 
@@ -140,7 +141,8 @@ func center_on_node(target_node: Control) -> void:
 		.set_ease(Tween.EASE_OUT)
 	await tween.finished
 
-func _on_buy_pressed() -> void:
+func on_buy_pressed() -> void:
+	print("ahh")
 	var current_price = data[current_id]["price"]
 	if Global.money >= current_price:
 		Global.skill_tree_unlocked.append(current_id)

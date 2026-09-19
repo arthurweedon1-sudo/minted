@@ -2,7 +2,7 @@ extends Control
 
 @onready var button: Button = $Button
 @onready var title_text = $Button/PanelContainer/VBoxContainer/NamenTime
-@onready var shipping_status_container = get_node("/root/MainUI/Mintora/VBoxContainer/Control3/TabContainer/Mail/Mail/VBoxContainer/Sections/MarginContainer2/ScrollContainer/Message")
+@onready var shipping_status_container = get_node("/root/MainUI/Mintora/VBoxContainer/Control3/TabContainer/Mail/Mail/VBoxContainer/Sections/MarginContainer2/Control3/ScrollContainer/Message")
 
 static var shipping_button_group := ButtonGroup.new()
 
