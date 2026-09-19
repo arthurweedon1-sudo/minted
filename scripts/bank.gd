@@ -329,7 +329,7 @@ func _on_texture_button_2_pressed() -> void:
 	current_popup = "invest"
 
 func _on_invest_button_pressed() -> void:
-	if Global.money >= invest_request and Global.invest_claimed:
+	if Global.money >= invest_request and Global.invest_claimed and Global.max_investment >= invest_request:
 		Global.money -= invest_request
 		%investButton.disabled = true
 		if invest_selected == 1:
@@ -348,6 +348,11 @@ func _on_invest_button_pressed() -> void:
 			Global.future = Global.add_to_date(0,3)
 			Global.bank_money += invest_calc(invest_request, 5)
 		Global.invested = true
+	
+	elif Global.max_investment <= invest_request:
+		%landlord_text.text = "Sorry, you can only invest a maximum of $ " + str(Global.max_investment) + ".00."
+		%landlord_text2.text = "Sorry, you can only invest a maximum of $ " + str(Global.max_investment) + ".00."
+		
 	elif Global.invest_claimed == false:
 		Global.money += Global.bank_money
 		Global.bank_money = 0
