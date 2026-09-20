@@ -84,6 +84,7 @@ sprite_frames = SubResource("SpriteFrames_psfx0")
 frame_progress = 0.97984284
 
 [node name="shippley_van" type="Control" parent="." unique_id=1847586453]
+y_sort_enabled = true
 layout_mode = 3
 anchors_preset = 0
 offset_left = 73.0
@@ -92,17 +93,20 @@ offset_right = 113.0
 offset_bottom = 59.0
 
 [node name="Sprite2D" type="Sprite2D" parent="shippley_van" unique_id=1567522902]
+y_sort_enabled = true
 position = Vector2(2, -7)
 scale = Vector2(2, 2)
 texture = ExtResource("2_d0fkt")
 
 [node name="wheel1" type="AnimatedSprite2D" parent="shippley_van/Sprite2D" unique_id=1332940584]
 z_index = -1
+y_sort_enabled = true
 position = Vector2(-71.66669, 49.66667)
 sprite_frames = SubResource("SpriteFrames_psfx0")
 
 [node name="wheel2" type="AnimatedSprite2D" parent="shippley_van/Sprite2D" unique_id=616610585]
 z_index = -1
+y_sort_enabled = true
 position = Vector2(80.66667, 49.66667)
 sprite_frames = SubResource("SpriteFrames_psfx0")
 
