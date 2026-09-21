@@ -47,7 +47,11 @@
 [ext_resource type="Texture2D" uid="uid://b6as3mbewdpjp" path="res://assets/cds/smooth_jazz_2.png" id="32_bqkql"]
 [ext_resource type="Texture2D" uid="uid://b0rc41gwkl30k" path="res://assets/items/polo.png" id="33_muevd"]
 [ext_resource type="Texture2D" uid="uid://cdm1jst2diklu" path="res://assets/items/silver_ring.png" id="34_usmfy"]
-[ext_resource type="Texture2D" uid="uid://dwjbbaxoamx0x" path="res://assets/icon.svg" id="35_kj5vo"]
+[ext_resource type="Texture2D" uid="uid://c3xonj0opalyg" path="res://assets/items/scrap_fabric.png" id="35_64ler"]
+[ext_resource type="Texture2D" uid="uid://ceca1l6pjy0ak" path="res://assets/items/scrap_metal.png" id="35_tx0ew"]
+[ext_resource type="Texture2D" uid="uid://bm7deopa0dab1" path="res://assets/cds/blank_cd.png" id="36_bh008"]
+[ext_resource type="Texture2D" uid="uid://b3adqkwcc46io" path="res://assets/items/scrap_plastic.png" id="36_vkro1"]
+[ext_resource type="Texture2D" uid="uid://b2ghxwbifqg2m" path="res://assets/items/scrap_paper.png" id="37_vkro1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ccrme"]
 animations = [{
@@ -1808,11 +1812,119 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_65mhj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_tx0ew")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xdlbw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_vkro1")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65mhj"]
+atlas = ExtResource("37_vkro1")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdlbw"]
+atlas = ExtResource("37_vkro1")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qtua0"]
+atlas = ExtResource("37_vkro1")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lg1y"]
+atlas = ExtResource("37_vkro1")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1poqk"]
+atlas = ExtResource("37_vkro1")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qtua0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65mhj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdlbw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qtua0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lg1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1poqk")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvfio"]
+atlas = ExtResource("35_64ler")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3qvv"]
+atlas = ExtResource("35_64ler")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjw5y"]
+atlas = ExtResource("35_64ler")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqgrv"]
+atlas = ExtResource("35_64ler")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvsgd"]
+atlas = ExtResource("35_64ler")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1lg1y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvfio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3qvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vjw5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqgrv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvsgd")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_64ler"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("35_kj5vo")
+"texture": ExtResource("36_bh008")
 }],
 "loop": 1,
 "name": &"default",
@@ -2525,31 +2637,26 @@ frame_progress = 0.14178859
 [node name="scrap_metal" type="AnimatedSprite2D" parent="TextureButton" unique_id=10207879 groups=["clothes"]]
 use_parent_material = true
 position = Vector2(40, 40)
-scale = Vector2(0.5, 0.5)
-sprite_frames = SubResource("SpriteFrames_64ler")
+sprite_frames = SubResource("SpriteFrames_65mhj")
 
 [node name="scrap_plastic" type="AnimatedSprite2D" parent="TextureButton" unique_id=961410015 groups=["clothes"]]
 use_parent_material = true
 position = Vector2(40, 40)
-scale = Vector2(0.5, 0.5)
-sprite_frames = SubResource("SpriteFrames_64ler")
+sprite_frames = SubResource("SpriteFrames_xdlbw")
 
 [node name="scrap_paper" type="AnimatedSprite2D" parent="TextureButton" unique_id=13545546 groups=["clothes"]]
 use_parent_material = true
 position = Vector2(40, 40)
-scale = Vector2(0.5, 0.5)
-sprite_frames = SubResource("SpriteFrames_64ler")
+sprite_frames = SubResource("SpriteFrames_qtua0")
 
 [node name="scrap_fabric" type="AnimatedSprite2D" parent="TextureButton" unique_id=1843672841 groups=["clothes"]]
 use_parent_material = true
 position = Vector2(40, 40)
-scale = Vector2(0.5, 0.5)
-sprite_frames = SubResource("SpriteFrames_64ler")
+sprite_frames = SubResource("SpriteFrames_1lg1y")
 
 [node name="blank_cd" type="AnimatedSprite2D" parent="TextureButton" unique_id=804334669 groups=["clothes"]]
 use_parent_material = true
 position = Vector2(40, 40)
-scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_64ler")
 
 [node name="overlays" type="Control" parent="." unique_id=1252589936]
