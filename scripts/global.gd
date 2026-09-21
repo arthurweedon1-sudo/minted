@@ -97,7 +97,7 @@ const refresh_news_2_at = 16
 var player_pos = Vector2(0,0)
 
 # Debug
-var debug_enabled: bool = true
+var debug_enabled: bool = false
 
 # Skill Tree
 var skill_tree_unlocked = [0]
@@ -683,7 +683,7 @@ func reset_to_defaults() -> void:
 	player_rating = 0.0
 	MARKUPCOOLDOWN = 24*60*3  # 3 in game days
 	markup_progress = 0
-	debug_enabled = true
+	debug_enabled = false
 	
 	invested = false
 	future

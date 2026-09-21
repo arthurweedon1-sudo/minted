@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cc3vkacie3oae" path="res://assets/tab_background.png" id="8_n32bj"]
 [ext_resource type="FontFile" uid="uid://dkvrhel3prpcm" path="res://fonts/Aller_Bd.ttf" id="9_kq67g"]
 [ext_resource type="PackedScene" uid="uid://b6x7w416aqb1l" path="res://scenes/top_bar.tscn" id="10_n32bj"]
+[ext_resource type="PackedScene" uid="uid://bcgnfguo71fb1" path="res://scenes/Debug.tscn" id="11_kq67g"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f1jqx"]
 
@@ -382,6 +383,13 @@ offset_right = 4.0
 offset_bottom = -653.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Debug" parent="." unique_id=1680222546 instance=ExtResource("11_kq67g")]
+visible = false
+offset_left = -157.0
+offset_top = 72.0
+offset_right = -157.0
+offset_bottom = 72.0
 
 [connection signal="mouse_entered" from="username_change/confirmButton" to="." method="_on_confirm_button_mouse_entered"]
 [connection signal="mouse_exited" from="username_change/confirmButton" to="." method="_on_confirm_button_mouse_exited"]

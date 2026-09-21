@@ -9,10 +9,10 @@
 [ext_resource type="FontFile" uid="uid://d27f0kxbi0qvo" path="res://fonts/Daydream.otf" id="6_qtoah"]
 [ext_resource type="Texture2D" uid="uid://b5otyytahqibf" path="res://themes/progress.tres" id="6_qvc4m"]
 [ext_resource type="Texture2D" uid="uid://dog20d6b2p7oq" path="res://assets/os/icons/sleep.png" id="7_7dqbv"]
+[ext_resource type="Texture2D" uid="uid://cnoviwtqlxfc" path="res://assets/reciept.png" id="11_23wr2"]
 [ext_resource type="FontFile" uid="uid://gwi3hcl35u7m" path="res://fonts/Pixeled.ttf" id="11_w68ji"]
 [ext_resource type="Texture2D" uid="uid://ckfaa8maa1gw6" path="res://assets/hotbar/dor.png" id="12_23wr2"]
 [ext_resource type="Texture2D" uid="uid://w5vi05v5cwoc" path="res://assets/os/icons/down.png" id="12_tk5fv"]
-[ext_resource type="PackedScene" uid="uid://bcgnfguo71fb1" path="res://scenes/Debug.tscn" id="13_w68ji"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6snss"]
 bg_color = Color(0, 0.1764706, 0, 1)
@@ -29,22 +29,6 @@ colors = PackedColorArray(0.5058824, 1, 0.54509807, 1, 0.7058824, 1, 0.63529414,
 gradient = SubResource("Gradient_tk5fv")
 fill_from = Vector2(0.48293516, 0)
 fill_to = Vector2(0.4010239, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w68ji"]
-bg_color = Color(0.4392157, 0.35686275, 0, 1)
-border_color = Color(0, 0, 0, 1)
-expand_margin_left = 5.0
-expand_margin_top = 5.0
-expand_margin_right = 5.0
-expand_margin_bottom = 5.0
-
-[sub_resource type="Gradient" id="Gradient_eom3m"]
-colors = PackedColorArray(1.0257685, 0.6128339, 0, 1, 0.68068385, 0.810979, 0.101048104, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_eom3m"]
-gradient = SubResource("Gradient_eom3m")
-fill_from = Vector2(0.48293516, 0)
-fill_to = Vector2(0.48976108, 1)
 
 [node name="Room" type="Node2D" unique_id=1370404577]
 position = Vector2(0, -45)
@@ -148,32 +132,19 @@ expand_icon = true
 
 [node name="rent" type="Control" parent="left_bar" unique_id=1155611528]
 anchors_preset = 0
-offset_left = 411.0
-offset_top = 99.0
-offset_right = 451.0
-offset_bottom = 139.0
+offset_left = 435.0
+offset_top = 93.0
+offset_right = 475.0
+offset_bottom = 133.0
 
-[node name="PanelContainer" type="PanelContainer" parent="left_bar/rent" unique_id=1434782355]
+[node name="TextureRect" type="TextureRect" parent="left_bar/rent" unique_id=430928885]
 layout_mode = 0
-offset_left = 375.0
-offset_top = -268.0
-offset_right = 575.0
-offset_bottom = 132.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_w68ji")
-
-[node name="ColorRect" type="TextureRect" parent="left_bar/rent/PanelContainer" unique_id=1426867837]
-layout_mode = 2
-texture = SubResource("GradientTexture2D_eom3m")
-
-[node name="rent_label" type="Label" parent="left_bar/rent" unique_id=1626575897]
-layout_mode = 0
-offset_left = 397.0
-offset_top = -265.0
-offset_right = 601.0
-offset_bottom = -196.0
-theme_override_fonts/font = ExtResource("6_qtoah")
-theme_override_font_sizes/font_size = 35
-text = "Rent:"
+offset_left = 306.0
+offset_top = -283.0
+offset_right = 406.0
+offset_bottom = -133.0
+scale = Vector2(3, 3)
+texture = ExtResource("11_23wr2")
 
 [node name="text" type="Control" parent="left_bar/rent" unique_id=199856649]
 anchors_preset = 0
@@ -184,44 +155,47 @@ offset_bottom = -125.0
 
 [node name="Building" type="Control" parent="left_bar/rent/text" unique_id=695588042]
 anchors_preset = 0
-offset_left = -482.0
-offset_top = -243.0
-offset_right = -442.0
-offset_bottom = -203.0
+offset_left = -506.0
+offset_top = -198.0
+offset_right = -466.0
+offset_bottom = -158.0
 
 [node name="text1" type="Label" parent="left_bar/rent/text/Building" unique_id=713261474]
 layout_mode = 0
-offset_left = 572.0
-offset_top = 218.0
-offset_right = 696.0
-offset_bottom = 246.0
+offset_left = 570.0
+offset_top = 222.0
+offset_right = 694.0
+offset_bottom = 250.0
+rotation = -0.026497398
 offset_transform_enabled = true
 offset_transform_position = Vector2(1, 1)
-theme_override_colors/font_color = Color(0.6789437, 0.6789437, 0.6789437, 1)
+theme_override_colors/font_color = Color(0.45882353, 0.45882353, 0.45882353, 1)
 theme_override_fonts/font = ExtResource("11_w68ji")
 theme_override_font_sizes/font_size = 10
 text = "Building:"
 
 [node name="text2" type="Label" parent="left_bar/rent/text/Building" unique_id=1222630394]
 layout_mode = 0
-offset_left = 572.0
-offset_top = 218.0
-offset_right = 696.0
-offset_bottom = 246.0
-theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
+offset_left = 570.0
+offset_top = 222.0
+offset_right = 694.0
+offset_bottom = 250.0
+rotation = -0.026497398
+theme_override_colors/font_color = Color(0.6666667, 0.6627451, 0.4392157, 1)
 theme_override_fonts/font = ExtResource("11_w68ji")
 theme_override_font_sizes/font_size = 10
 text = "Building:"
 
 [node name="price1" type="Label" parent="left_bar/rent/text/Building" unique_id=1207415466]
 layout_mode = 0
-offset_left = 618.0
-offset_top = 220.0
-offset_right = 742.0
-offset_bottom = 248.0
+offset_left = 620.0
+offset_top = 222.568
+offset_right = 744.0
+offset_bottom = 250.568
+rotation = -0.028778046
 offset_transform_enabled = true
 offset_transform_position = Vector2(1, 1)
-theme_override_colors/font_color = Color(0.6784314, 0.6784314, 0, 1)
+theme_override_colors/font_color = Color(0.6666667, 0.6627451, 0.4392157, 1)
 theme_override_fonts/font = ExtResource("11_w68ji")
 theme_override_font_sizes/font_size = 10
 text = "$99"
@@ -229,11 +203,12 @@ horizontal_alignment = 2
 
 [node name="price2" type="Label" parent="left_bar/rent/text/Building" unique_id=1727550616]
 layout_mode = 0
-offset_left = 618.0
-offset_top = 220.0
-offset_right = 742.0
-offset_bottom = 248.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 620.0
+offset_top = 222.568
+offset_right = 744.0
+offset_bottom = 250.568
+rotation = -0.028778046
+theme_override_colors/font_color = Color(0.18882024, 0.47044212, 0.16877729, 1)
 theme_override_fonts/font = ExtResource("11_w68ji")
 theme_override_font_sizes/font_size = 10
 text = "$99"
@@ -255,60 +230,10 @@ axis_stretch_vertical = 1
 
 [node name="Electrical" type="Control" parent="left_bar/rent/text" unique_id=1555669283]
 anchors_preset = 0
-offset_left = -482.0
-offset_top = -216.0
-offset_right = -442.0
-offset_bottom = -176.0
-
-[node name="text1" type="Label" parent="left_bar/rent/text/Electrical" unique_id=1697644217]
-layout_mode = 0
-offset_left = 572.0
-offset_top = 218.0
-offset_right = 696.0
-offset_bottom = 246.0
-offset_transform_enabled = true
-offset_transform_position = Vector2(1, 1)
-theme_override_colors/font_color = Color(0.6789437, 0.6789437, 0.6789437, 1)
-theme_override_fonts/font = ExtResource("11_w68ji")
-theme_override_font_sizes/font_size = 10
-text = "Electrical:"
-
-[node name="text2" type="Label" parent="left_bar/rent/text/Electrical" unique_id=48054766]
-layout_mode = 0
-offset_left = 572.0
-offset_top = 218.0
-offset_right = 696.0
-offset_bottom = 246.0
-theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
-theme_override_fonts/font = ExtResource("11_w68ji")
-theme_override_font_sizes/font_size = 10
-text = "Electrical:"
-
-[node name="price1" type="Label" parent="left_bar/rent/text/Electrical" unique_id=1370075987]
-layout_mode = 0
-offset_left = 618.0
-offset_top = 220.0
-offset_right = 742.0
-offset_bottom = 248.0
-offset_transform_enabled = true
-offset_transform_position = Vector2(1, 1)
-theme_override_colors/font_color = Color(0.6784314, 0.6784314, 0, 1)
-theme_override_fonts/font = ExtResource("11_w68ji")
-theme_override_font_sizes/font_size = 10
-text = "$99"
-horizontal_alignment = 2
-
-[node name="price2" type="Label" parent="left_bar/rent/text/Electrical" unique_id=179502109]
-layout_mode = 0
-offset_left = 618.0
-offset_top = 220.0
-offset_right = 742.0
-offset_bottom = 248.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("11_w68ji")
-theme_override_font_sizes/font_size = 10
-text = "$99"
-horizontal_alignment = 2
+offset_left = -506.0
+offset_top = -171.0
+offset_right = -466.0
+offset_bottom = -131.0
 
 [node name="dots2" type="NinePatchRect" parent="left_bar/rent/text/Electrical" unique_id=978478849]
 visible = false
@@ -324,62 +249,66 @@ region_rect = Rect2(0, 2, 8, 6)
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
+[node name="text1" type="Label" parent="left_bar/rent/text/Electrical" unique_id=1850996395]
+layout_mode = 0
+offset_left = 568.0
+offset_top = 222.6684
+offset_right = 692.0
+offset_bottom = 250.6684
+rotation = -0.045728765
+offset_transform_enabled = true
+offset_transform_position = Vector2(1, 1)
+theme_override_colors/font_color = Color(0.45882353, 0.45882353, 0.45882353, 1)
+theme_override_fonts/font = ExtResource("11_w68ji")
+theme_override_font_sizes/font_size = 10
+text = "Electrical: "
+
+[node name="text2" type="Label" parent="left_bar/rent/text/Electrical" unique_id=2037560878]
+layout_mode = 0
+offset_left = 568.0
+offset_top = 222.6684
+offset_right = 692.0
+offset_bottom = 250.6684
+rotation = -0.045728765
+theme_override_colors/font_color = Color(0.6666667, 0.6627451, 0.4392157, 1)
+theme_override_fonts/font = ExtResource("11_w68ji")
+theme_override_font_sizes/font_size = 10
+text = "Electrical: "
+
+[node name="price1" type="Label" parent="left_bar/rent/text/Electrical" unique_id=1641422186]
+layout_mode = 0
+offset_left = 618.0
+offset_top = 220.0
+offset_right = 742.0
+offset_bottom = 248.0
+rotation = -0.022649964
+offset_transform_enabled = true
+offset_transform_position = Vector2(1, 1)
+theme_override_colors/font_color = Color(0.6666667, 0.6627451, 0.4392157, 1)
+theme_override_fonts/font = ExtResource("11_w68ji")
+theme_override_font_sizes/font_size = 10
+text = "$99"
+horizontal_alignment = 2
+
+[node name="price2" type="Label" parent="left_bar/rent/text/Electrical" unique_id=1037041095]
+layout_mode = 0
+offset_left = 618.0
+offset_top = 220.0
+offset_right = 742.0
+offset_bottom = 248.0
+rotation = -0.022649964
+theme_override_colors/font_color = Color(0.18882024, 0.47044212, 0.16877729, 1)
+theme_override_fonts/font = ExtResource("11_w68ji")
+theme_override_font_sizes/font_size = 10
+text = "$99"
+horizontal_alignment = 2
+
 [node name="Utilities" type="Control" parent="left_bar/rent/text" unique_id=347304800]
 anchors_preset = 0
-offset_left = -481.0
-offset_top = -187.0
-offset_right = -441.0
-offset_bottom = -147.0
-
-[node name="text1" type="Label" parent="left_bar/rent/text/Utilities" unique_id=961411607]
-layout_mode = 0
-offset_left = 572.0
-offset_top = 218.0
-offset_right = 696.0
-offset_bottom = 246.0
-offset_transform_enabled = true
-offset_transform_position = Vector2(1, 1)
-theme_override_colors/font_color = Color(0.6789437, 0.6789437, 0.6789437, 1)
-theme_override_fonts/font = ExtResource("11_w68ji")
-theme_override_font_sizes/font_size = 10
-text = "Utilities:"
-
-[node name="text2" type="Label" parent="left_bar/rent/text/Utilities" unique_id=1743699923]
-layout_mode = 0
-offset_left = 572.0
-offset_top = 218.0
-offset_right = 696.0
-offset_bottom = 246.0
-theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
-theme_override_fonts/font = ExtResource("11_w68ji")
-theme_override_font_sizes/font_size = 10
-text = "Utilities:"
-
-[node name="price1" type="Label" parent="left_bar/rent/text/Utilities" unique_id=2142608590]
-layout_mode = 0
-offset_left = 618.0
-offset_top = 220.0
-offset_right = 742.0
-offset_bottom = 248.0
-offset_transform_enabled = true
-offset_transform_position = Vector2(1, 1)
-theme_override_colors/font_color = Color(0.6784314, 0.6784314, 0, 1)
-theme_override_fonts/font = ExtResource("11_w68ji")
-theme_override_font_sizes/font_size = 10
-text = "$99"
-horizontal_alignment = 2
-
-[node name="price2" type="Label" parent="left_bar/rent/text/Utilities" unique_id=787197785]
-layout_mode = 0
-offset_left = 618.0
-offset_top = 220.0
-offset_right = 742.0
-offset_bottom = 248.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("11_w68ji")
-theme_override_font_sizes/font_size = 10
-text = "$99"
-horizontal_alignment = 2
+offset_left = -505.0
+offset_top = -142.0
+offset_right = -465.0
+offset_bottom = -102.0
 
 [node name="dots2" type="NinePatchRect" parent="left_bar/rent/text/Utilities" unique_id=1909270271]
 visible = false
@@ -395,62 +324,64 @@ region_rect = Rect2(0, 2, 8, 6)
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
+[node name="text1" type="Label" parent="left_bar/rent/text/Utilities" unique_id=367347300]
+layout_mode = 0
+offset_left = 567.0
+offset_top = 220.43433
+offset_right = 691.0
+offset_bottom = 248.43433
+rotation = -0.019632932
+offset_transform_enabled = true
+offset_transform_position = Vector2(1, 1)
+theme_override_colors/font_color = Color(0.45882353, 0.45882353, 0.45882353, 1)
+theme_override_fonts/font = ExtResource("11_w68ji")
+theme_override_font_sizes/font_size = 10
+text = "Utilities: "
+
+[node name="text2" type="Label" parent="left_bar/rent/text/Utilities" unique_id=2040137377]
+layout_mode = 0
+offset_left = 567.0
+offset_top = 220.43433
+offset_right = 691.0
+offset_bottom = 248.43433
+rotation = -0.019632932
+theme_override_colors/font_color = Color(0.6666667, 0.6627451, 0.4392157, 1)
+theme_override_fonts/font = ExtResource("11_w68ji")
+theme_override_font_sizes/font_size = 10
+text = "Utilities: "
+
+[node name="price1" type="Label" parent="left_bar/rent/text/Utilities" unique_id=1658538207]
+layout_mode = 0
+offset_left = 618.0
+offset_top = 217.0
+offset_right = 742.0
+offset_bottom = 245.0
+offset_transform_enabled = true
+offset_transform_position = Vector2(1, 1)
+theme_override_colors/font_color = Color(0.6666667, 0.6627451, 0.4392157, 1)
+theme_override_fonts/font = ExtResource("11_w68ji")
+theme_override_font_sizes/font_size = 10
+text = "$99"
+horizontal_alignment = 2
+
+[node name="price2" type="Label" parent="left_bar/rent/text/Utilities" unique_id=2101466587]
+layout_mode = 0
+offset_left = 618.0
+offset_top = 217.0
+offset_right = 742.0
+offset_bottom = 245.0
+theme_override_colors/font_color = Color(0.18882024, 0.47044212, 0.16877729, 1)
+theme_override_fonts/font = ExtResource("11_w68ji")
+theme_override_font_sizes/font_size = 10
+text = "$99"
+horizontal_alignment = 2
+
 [node name="Maintenance" type="Control" parent="left_bar/rent/text" unique_id=1548024984]
 anchors_preset = 0
-offset_left = -480.0
-offset_top = -157.0
-offset_right = -440.0
-offset_bottom = -117.0
-
-[node name="text1" type="Label" parent="left_bar/rent/text/Maintenance" unique_id=861270043]
-layout_mode = 0
-offset_left = 562.0
-offset_top = 217.0
-offset_right = 686.0
-offset_bottom = 245.0
-offset_transform_enabled = true
-offset_transform_position = Vector2(1, 1)
-theme_override_colors/font_color = Color(0.6789437, 0.6789437, 0.6789437, 1)
-theme_override_fonts/font = ExtResource("11_w68ji")
-theme_override_font_sizes/font_size = 10
-text = "Maintenance:"
-
-[node name="text2" type="Label" parent="left_bar/rent/text/Maintenance" unique_id=174798280]
-layout_mode = 0
-offset_left = 562.0
-offset_top = 217.0
-offset_right = 686.0
-offset_bottom = 245.0
-theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
-theme_override_fonts/font = ExtResource("11_w68ji")
-theme_override_font_sizes/font_size = 10
-text = "Maintenance:"
-
-[node name="price1" type="Label" parent="left_bar/rent/text/Maintenance" unique_id=973716115]
-layout_mode = 0
-offset_left = 618.0
-offset_top = 220.0
-offset_right = 742.0
-offset_bottom = 248.0
-offset_transform_enabled = true
-offset_transform_position = Vector2(1, 1)
-theme_override_colors/font_color = Color(0.6784314, 0.6784314, 0, 1)
-theme_override_fonts/font = ExtResource("11_w68ji")
-theme_override_font_sizes/font_size = 10
-text = "$99"
-horizontal_alignment = 2
-
-[node name="price2" type="Label" parent="left_bar/rent/text/Maintenance" unique_id=1393805087]
-layout_mode = 0
-offset_left = 618.0
-offset_top = 220.0
-offset_right = 742.0
-offset_bottom = 248.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("11_w68ji")
-theme_override_font_sizes/font_size = 10
-text = "$99"
-horizontal_alignment = 2
+offset_left = -504.0
+offset_top = -112.0
+offset_right = -464.0
+offset_bottom = -72.0
 
 [node name="dots2" type="NinePatchRect" parent="left_bar/rent/text/Maintenance" unique_id=1107852856]
 visible = false
@@ -466,62 +397,64 @@ region_rect = Rect2(0, 2, 8, 6)
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
+[node name="text1" type="Label" parent="left_bar/rent/text/Maintenance" unique_id=1253890845]
+layout_mode = 0
+offset_left = 564.0
+offset_top = 219.0
+offset_right = 688.0
+offset_bottom = 247.0
+offset_transform_enabled = true
+offset_transform_position = Vector2(1, 1)
+theme_override_colors/font_color = Color(0.45882353, 0.45882353, 0.45882353, 1)
+theme_override_fonts/font = ExtResource("11_w68ji")
+theme_override_font_sizes/font_size = 10
+text = "Maintenance:"
+
+[node name="text2" type="Label" parent="left_bar/rent/text/Maintenance" unique_id=144881031]
+layout_mode = 0
+offset_left = 564.0
+offset_top = 219.0
+offset_right = 688.0
+offset_bottom = 247.0
+theme_override_colors/font_color = Color(0.6666667, 0.6627451, 0.4392157, 1)
+theme_override_fonts/font = ExtResource("11_w68ji")
+theme_override_font_sizes/font_size = 10
+text = "Maintenance:"
+
+[node name="price1" type="Label" parent="left_bar/rent/text/Maintenance" unique_id=1495984896]
+layout_mode = 0
+offset_left = 615.0
+offset_top = 221.77731
+offset_right = 739.0
+offset_bottom = 249.77731
+rotation = -0.030466855
+offset_transform_enabled = true
+offset_transform_position = Vector2(1, 1)
+theme_override_colors/font_color = Color(0.6666667, 0.6627451, 0.4392157, 1)
+theme_override_fonts/font = ExtResource("11_w68ji")
+theme_override_font_sizes/font_size = 10
+text = "$99"
+horizontal_alignment = 2
+
+[node name="price2" type="Label" parent="left_bar/rent/text/Maintenance" unique_id=536768242]
+layout_mode = 0
+offset_left = 615.0
+offset_top = 221.77731
+offset_right = 739.0
+offset_bottom = 249.77731
+rotation = -0.030466855
+theme_override_colors/font_color = Color(0.18882024, 0.47044212, 0.16877729, 1)
+theme_override_fonts/font = ExtResource("11_w68ji")
+theme_override_font_sizes/font_size = 10
+text = "$99"
+horizontal_alignment = 2
+
 [node name="Broadband" type="Control" parent="left_bar/rent/text" unique_id=898194725]
 anchors_preset = 0
-offset_left = -477.0
-offset_top = -129.0
-offset_right = -437.0
-offset_bottom = -89.0
-
-[node name="text1" type="Label" parent="left_bar/rent/text/Broadband" unique_id=1542098465]
-layout_mode = 0
-offset_left = 572.0
-offset_top = 218.0
-offset_right = 696.0
-offset_bottom = 246.0
-offset_transform_enabled = true
-offset_transform_position = Vector2(1, 1)
-theme_override_colors/font_color = Color(0.6789437, 0.6789437, 0.6789437, 1)
-theme_override_fonts/font = ExtResource("11_w68ji")
-theme_override_font_sizes/font_size = 10
-text = "Broadband:"
-
-[node name="text2" type="Label" parent="left_bar/rent/text/Broadband" unique_id=25052798]
-layout_mode = 0
-offset_left = 572.0
-offset_top = 218.0
-offset_right = 696.0
-offset_bottom = 246.0
-theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
-theme_override_fonts/font = ExtResource("11_w68ji")
-theme_override_font_sizes/font_size = 10
-text = "Broadband:"
-
-[node name="price1" type="Label" parent="left_bar/rent/text/Broadband" unique_id=69890452]
-layout_mode = 0
-offset_left = 618.0
-offset_top = 220.0
-offset_right = 742.0
-offset_bottom = 248.0
-offset_transform_enabled = true
-offset_transform_position = Vector2(1, 1)
-theme_override_colors/font_color = Color(0.6784314, 0.6784314, 0, 1)
-theme_override_fonts/font = ExtResource("11_w68ji")
-theme_override_font_sizes/font_size = 10
-text = "$99"
-horizontal_alignment = 2
-
-[node name="price2" type="Label" parent="left_bar/rent/text/Broadband" unique_id=2047350567]
-layout_mode = 0
-offset_left = 618.0
-offset_top = 220.0
-offset_right = 742.0
-offset_bottom = 248.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("11_w68ji")
-theme_override_font_sizes/font_size = 10
-text = "$99"
-horizontal_alignment = 2
+offset_left = -501.0
+offset_top = -84.0
+offset_right = -461.0
+offset_bottom = -44.0
 
 [node name="dots2" type="NinePatchRect" parent="left_bar/rent/text/Broadband" unique_id=1110821851]
 visible = false
@@ -537,16 +470,59 @@ region_rect = Rect2(0, 2, 8, 6)
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[node name="dots2" type="NinePatchRect" parent="left_bar/rent/text" unique_id=808169006]
+[node name="text1" type="Label" parent="left_bar/rent/text/Broadband" unique_id=948625229]
 layout_mode = 0
-offset_left = 89.0
-offset_top = 158.0
-offset_right = 269.0
-offset_bottom = 164.0
-texture = ExtResource("12_23wr2")
-region_rect = Rect2(0, 2, 8, 6)
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
+offset_left = 563.0
+offset_top = 221.25023
+offset_right = 687.0
+offset_bottom = 249.25023
+rotation = -0.026214512
+offset_transform_enabled = true
+offset_transform_position = Vector2(1, 1)
+theme_override_colors/font_color = Color(0.45882353, 0.45882353, 0.45882353, 1)
+theme_override_fonts/font = ExtResource("11_w68ji")
+theme_override_font_sizes/font_size = 10
+text = "Broadband: "
+
+[node name="text2" type="Label" parent="left_bar/rent/text/Broadband" unique_id=1709649368]
+layout_mode = 0
+offset_left = 563.0
+offset_top = 221.25023
+offset_right = 687.0
+offset_bottom = 249.25023
+rotation = -0.026214512
+theme_override_colors/font_color = Color(0.6666667, 0.6627451, 0.4392157, 1)
+theme_override_fonts/font = ExtResource("11_w68ji")
+theme_override_font_sizes/font_size = 10
+text = "Broadband: "
+
+[node name="price1" type="Label" parent="left_bar/rent/text/Broadband" unique_id=2098077443]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 218.91681
+offset_right = 737.0
+offset_bottom = 246.91681
+rotation = -0.023524785
+offset_transform_enabled = true
+offset_transform_position = Vector2(1, 1)
+theme_override_colors/font_color = Color(0.6666667, 0.6627451, 0.4392157, 1)
+theme_override_fonts/font = ExtResource("11_w68ji")
+theme_override_font_sizes/font_size = 10
+text = "$99"
+horizontal_alignment = 2
+
+[node name="price2" type="Label" parent="left_bar/rent/text/Broadband" unique_id=53149033]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 218.91681
+offset_right = 737.0
+offset_bottom = 246.91681
+rotation = -0.023524785
+theme_override_colors/font_color = Color(0.18882024, 0.47044212, 0.16877729, 1)
+theme_override_fonts/font = ExtResource("11_w68ji")
+theme_override_font_sizes/font_size = 10
+text = "$99"
+horizontal_alignment = 2
 
 [node name="Total" type="Control" parent="left_bar/rent/text" unique_id=860613567]
 anchors_preset = 0
@@ -557,37 +533,37 @@ offset_bottom = -270.0
 
 [node name="text1" type="Label" parent="left_bar/rent/text/Total" unique_id=1447818625]
 layout_mode = 0
-offset_left = 601.0
-offset_top = 463.0
-offset_right = 757.0
-offset_bottom = 519.0
+offset_left = 538.0
+offset_top = 520.0
+offset_right = 694.0
+offset_bottom = 576.0
 offset_transform_enabled = true
 offset_transform_position = Vector2(1, 1)
-theme_override_colors/font_color = Color(0.6789437, 0.6789437, 0.6789437, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("11_w68ji")
 theme_override_font_sizes/font_size = 20
 text = "Total:"
 
 [node name="text2" type="Label" parent="left_bar/rent/text/Total" unique_id=910970723]
 layout_mode = 0
-offset_left = 601.0
-offset_top = 463.0
-offset_right = 757.0
-offset_bottom = 519.0
-theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
+offset_left = 538.0
+offset_top = 520.0
+offset_right = 694.0
+offset_bottom = 576.0
+theme_override_colors/font_color = Color(0.1386401, 0.13863647, 0.1386374, 1)
 theme_override_fonts/font = ExtResource("11_w68ji")
 theme_override_font_sizes/font_size = 20
 text = "Total:"
 
 [node name="price1" type="Label" parent="left_bar/rent/text/Total" unique_id=1753010668]
 layout_mode = 0
-offset_left = 569.0
-offset_top = 504.0
-offset_right = 693.0
-offset_bottom = 560.0
+offset_left = 620.0
+offset_top = 520.0
+offset_right = 744.0
+offset_bottom = 576.0
 offset_transform_enabled = true
 offset_transform_position = Vector2(1, 1)
-theme_override_colors/font_color = Color(0.6784314, 0.6784314, 0, 1)
+theme_override_colors/font_color = Color(0.10856039, 0.36637157, 0, 1)
 theme_override_fonts/font = ExtResource("11_w68ji")
 theme_override_font_sizes/font_size = 20
 text = "$999"
@@ -595,11 +571,11 @@ horizontal_alignment = 2
 
 [node name="price2" type="Label" parent="left_bar/rent/text/Total" unique_id=1834218442]
 layout_mode = 0
-offset_left = 568.0
-offset_top = 504.0
-offset_right = 692.0
-offset_bottom = 560.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 619.0
+offset_top = 520.0
+offset_right = 743.0
+offset_bottom = 576.0
+theme_override_colors/font_color = Color(2.5027991e-06, 0.49926436, 2.8878452e-07, 1)
 theme_override_fonts/font = ExtResource("11_w68ji")
 theme_override_font_sizes/font_size = 20
 text = "$999"
@@ -607,79 +583,61 @@ horizontal_alignment = 2
 
 [node name="Days" type="Control" parent="left_bar/rent/text" unique_id=1050040866]
 anchors_preset = 0
-offset_left = -486.0
-offset_top = 32.0
-offset_right = -446.0
-offset_bottom = 72.0
+offset_left = -499.0
+offset_top = -55.0
+offset_right = -459.0
+offset_bottom = -15.0
 
-[node name="text1" type="Label" parent="left_bar/rent/text/Days" unique_id=1413764672]
+[node name="text1" type="Label" parent="left_bar/rent/text/Days" unique_id=1621890189]
 layout_mode = 0
-offset_left = 597.0
-offset_top = 202.0
-offset_right = 727.0
-offset_bottom = 230.0
+offset_left = 559.0
+offset_top = 220.0
+offset_right = 689.0
+offset_bottom = 248.0
 offset_transform_enabled = true
 offset_transform_position = Vector2(1, 1)
-theme_override_colors/font_color = Color(0.6789437, 0.6789437, 0.6789437, 1)
+theme_override_colors/font_color = Color(0.45882353, 0.45882353, 0.45882353, 1)
 theme_override_fonts/font = ExtResource("11_w68ji")
 theme_override_font_sizes/font_size = 10
-text = "Days Until Rent:"
+text = "Days until rent:"
 
-[node name="text2" type="Label" parent="left_bar/rent/text/Days" unique_id=1636783586]
+[node name="text2" type="Label" parent="left_bar/rent/text/Days" unique_id=1211587691]
 layout_mode = 0
-offset_left = 597.0
-offset_top = 202.0
-offset_right = 727.0
-offset_bottom = 230.0
-theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
+offset_left = 559.0
+offset_top = 220.0
+offset_right = 689.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0.6666667, 0.6627451, 0.4392157, 1)
 theme_override_fonts/font = ExtResource("11_w68ji")
 theme_override_font_sizes/font_size = 10
-text = "Days Until Rent:"
+text = "Days until rent:"
 
-[node name="price1" type="Label" parent="left_bar/rent/text/Days" unique_id=330662450]
+[node name="price1" type="Label" parent="left_bar/rent/text/Days" unique_id=1197045233]
 layout_mode = 0
-offset_left = 604.0
-offset_top = 224.0
-offset_right = 728.0
-offset_bottom = 252.0
+offset_left = 623.0
+offset_top = 218.98276
+offset_right = 747.0
+offset_bottom = 246.98276
+rotation = -0.007925532
 offset_transform_enabled = true
 offset_transform_position = Vector2(1, 1)
-theme_override_colors/font_color = Color(0.6784314, 0.6784314, 0, 1)
+theme_override_colors/font_color = Color(0.6666667, 0.6627451, 0.4392157, 1)
 theme_override_fonts/font = ExtResource("11_w68ji")
 theme_override_font_sizes/font_size = 10
 text = "0"
-horizontal_alignment = 1
+horizontal_alignment = 2
 
-[node name="price2" type="Label" parent="left_bar/rent/text/Days" unique_id=1573701829]
+[node name="price2" type="Label" parent="left_bar/rent/text/Days" unique_id=301196760]
 layout_mode = 0
-offset_left = 604.0
-offset_top = 224.0
-offset_right = 728.0
-offset_bottom = 252.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 623.0
+offset_top = 218.98276
+offset_right = 747.0
+offset_bottom = 246.98276
+rotation = -0.007925532
+theme_override_colors/font_color = Color(0.18882024, 0.47044212, 0.16877729, 1)
 theme_override_fonts/font = ExtResource("11_w68ji")
 theme_override_font_sizes/font_size = 10
 text = "0"
-horizontal_alignment = 1
-
-[node name="dots2" type="NinePatchRect" parent="left_bar/rent/text/Days" unique_id=1900452686]
-visible = false
-modulate = Color(1, 1, 1, 0.15686275)
-layout_mode = 0
-offset_left = 356.0
-offset_top = 240.0
-offset_right = 972.0
-offset_bottom = 246.0
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("12_23wr2")
-region_rect = Rect2(0, 2, 8, 6)
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
-
-[node name="Debug" parent="." unique_id=1680222546 instance=ExtResource("13_w68ji")]
-offset_left = -822.0
-offset_top = -302.0
-offset_right = -822.0
-offset_bottom = -302.0
+horizontal_alignment = 2
 
 [connection signal="pressed" from="left_bar/sleep/slide" to="." method="_on_slide_pressed"]

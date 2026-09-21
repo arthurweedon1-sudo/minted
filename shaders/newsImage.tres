@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bhi6rdwhptwmt"]
+
+[ext_resource type="Shader" uid="uid://b73k71t8swubd" path="res://shaders/newsImage.gdshader" id="1_x4mtr"]
+
+[resource]
+shader = ExtResource("1_x4mtr")

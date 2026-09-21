@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://di6we0plbswek" path="res://scenes/item.tscn" id="1_fn3lw"]
 [ext_resource type="Script" uid="uid://k2gwek6ftqwp" path="res://scripts/ad.gd" id="1_wbmsd"]
 [ext_resource type="Texture2D" uid="uid://cxaelqidjs36f" path="res://assets/hotbar/hotbar_item_template.png" id="3_6cjuh"]
+[ext_resource type="Material" uid="uid://bhi6rdwhptwmt" path="res://shaders/newsImage.tres" id="3_cdgc2"]
 
 [node name="ad" type="Control" unique_id=2028049715]
 layout_mode = 3
@@ -15,6 +16,8 @@ script = ExtResource("1_wbmsd")
 
 [node name="item" parent="." unique_id=942505978 instance=ExtResource("1_fn3lw")]
 z_index = 1
+material = ExtResource("3_cdgc2")
+use_parent_material = false
 position = Vector2(52, 16)
 scale = Vector2(2, 2)
 
