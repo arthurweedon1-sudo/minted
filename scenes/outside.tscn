@@ -8,7 +8,6 @@
 [ext_resource type="Script" uid="uid://tgenu28eqqe0" path="res://scripts/vehicle_container.gd" id="7_lt5my"]
 [ext_resource type="PackedScene" uid="uid://kjbeye4v6bjr" path="res://scenes/locker.tscn" id="7_uaw8k"]
 [ext_resource type="PackedScene" uid="uid://vqmdbs2bs2d3" path="res://scenes/traffic_light.tscn" id="8_lt5my"]
-[ext_resource type="PackedScene" uid="uid://b6x7w416aqb1l" path="res://scenes/top_bar.tscn" id="9_5tstl"]
 [ext_resource type="Script" uid="uid://brb33k0ofomi2" path="res://scripts/sub_viewport.gd" id="10_lt7nq"]
 [ext_resource type="FontFile" uid="uid://d27f0kxbi0qvo" path="res://fonts/Daydream.otf" id="10_tjkqt"]
 [ext_resource type="Texture2D" uid="uid://dbkygic0v4ck5" path="res://assets/player/minimap_icon.png" id="11_v7x2m"]
@@ -18,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://w5vi05v5cwoc" path="res://assets/os/icons/down.png" id="13_pu366"]
 [ext_resource type="Texture2D" uid="uid://ch67o1t37wkhb" path="res://assets/os/icons/home_icon.png" id="13_x3una"]
 [ext_resource type="Texture2D" uid="uid://dkdfnn4jclghs" path="res://assets/os/icons/bank_icon.png" id="14_nxbbw"]
+[ext_resource type="Texture2D" uid="uid://cay8l7wyk36pw" path="res://assets/bank.png" id="19_xq4d2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4c3da"]
 size = Vector2(26.89616, 18.6732)
@@ -180,8 +180,6 @@ debug_color = Color(0.9795752, 0, 0.39078584, 0.41960785)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2033593751]
 
-[node name="PanelContainer" parent="CanvasLayer" unique_id=1234875554 instance=ExtResource("9_5tstl")]
-
 [node name="sleep" type="Control" parent="CanvasLayer" unique_id=1781225485]
 layout_mode = 3
 anchors_preset = 0
@@ -319,6 +317,15 @@ collision_mask = 2
 position = Vector2(674.5, 395.75)
 shape = SubResource("RectangleShape2D_qnalp")
 debug_color = Color(0.62831336, 0.36791223, 0.9626203, 0.41960785)
+
+[node name="TextureRect" type="TextureRect" parent="bank" unique_id=1269188519]
+layout_mode = 0
+offset_left = 234.0
+offset_top = -392.0
+offset_right = 650.0
+offset_bottom = 52.0
+scale = Vector2(2, 2)
+texture = ExtResource("19_xq4d2")
 
 [connection signal="area_entered" from="building_area" to="." method="_on_building_area_area_entered"]
 [connection signal="area_exited" from="building_area" to="." method="_on_building_area_area_exited"]
