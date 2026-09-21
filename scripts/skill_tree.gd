@@ -205,6 +205,8 @@ func buy_skill(effect):
 		Global.uncommon_frequency = 1.2
 	elif effect == "faster_deliveries_2" or effect == "faster_deliveries_1":
 		Global.delivery_speed_mult -= 0.1
+	elif effect == "markup":#
+		Global.markup_progress = 95
 									
 func _on_dragging_button_button_up() -> void:
 	dragging = false

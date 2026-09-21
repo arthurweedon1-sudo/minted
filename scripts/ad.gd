@@ -8,7 +8,10 @@ func create_ad(inventory_index):
 	item.initialize_item("Ad")
 	while Inventory.ad_items.size() <= inventory_index:
 		Inventory.ad_items.append({})
-	Inventory.ad_items[inventory_index] = item.get_data()
+		
+	var item_val = item.get_data()
+	item_val["number"] = 0
+	Inventory.ad_items[inventory_index] = item_val
 	var data = item.get_data()
 	var rng = RandomNumberGenerator.new()
 	var ad_effect = snapped(randf_range(1.2,1.4),0.01)

@@ -34,7 +34,7 @@ func _process(delta: float) -> void:
 						entry["default_price"] = 35
 						entry["color1"] = "grey"
 						entry["color2"] = ""
-						entry["rarity"] = "epic"
+						entry["rarity"] = "rare"
 						
 					elif type == "tshirt" or type == "polo_shirt":
 						entry["brand"] = "none"

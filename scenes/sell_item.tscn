@@ -14,6 +14,14 @@ expand_margin_left = 10.0
 expand_margin_top = 10.0
 expand_margin_right = 10.0
 
+[sub_resource type="Gradient" id="Gradient_m35c4"]
+offsets = PackedFloat32Array(0, 0.744382, 1)
+colors = PackedColorArray(0.6658291, 0.6633614, 0, 1, 0.6310706, 0.6926754, 0.037563343, 1, 0.26666668, 1, 0.43137255, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_m35c4"]
+gradient = SubResource("Gradient_m35c4")
+width = 128
+
 [node name="sell_item" type="Control" unique_id=1742411866]
 layout_mode = 3
 anchors_preset = 15
@@ -30,6 +38,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -311,6 +320,27 @@ value = 3.0
 tick_count = 7
 ticks_on_borders = true
 
+[node name="MarkupButton" type="Button" parent="ScrollContainer/Sections/PricingSection/SliderRow" unique_id=1636799663]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 79.0
+offset_top = -1.0
+offset_right = 209.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.7820769, 0.8179783, 0.20497873, 1)
+theme_override_font_sizes/font_size = 20
+text = "Markup"
+
+[node name="ProgressBar" type="TextureProgressBar" parent="ScrollContainer/Sections/PricingSection/SliderRow/MarkupButton" unique_id=73074418]
+unique_name_in_owner = true
+z_index = 5
+layout_mode = 0
+offset_right = 130.0
+offset_bottom = 30.0
+value = 30.0
+nine_patch_stretch = true
+texture_progress = SubResource("GradientTexture1D_m35c4")
+
 [node name="ErrorLabel" type="Label" parent="ScrollContainer/Sections" unique_id=1080723145]
 unique_name_in_owner = true
 layout_mode = 2
@@ -326,3 +356,4 @@ theme_override_font_sizes/font_size = 30
 text = "Sell"
 
 [connection signal="value_changed" from="ScrollContainer/Sections/PricingSection/SliderRow/stinge_slider" to="." method="_on_stinge_slider_value_changed"]
+[connection signal="pressed" from="ScrollContainer/Sections/PricingSection/SliderRow/MarkupButton" to="." method="_on_markup_button_pressed"]

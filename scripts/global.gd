@@ -82,6 +82,8 @@ var SPEED_MULT = 1 # just makes time even faster, default to 1.
 const months_31 = [1,3,5,7,8,10,12]
 const months_30 = [4,6,9,11]
 var REFRESHTIME: float = 6*60 # 6 in game hours
+var MARKUPCOOLDOWN = 24*60*3  # 3 in game days
+var markup_progress = 0
 
 # newspaper
 var last_article = -1
@@ -136,6 +138,8 @@ func _process(delta):
 	clock_timer += delta
 	if clock_timer >= CLOCK_SPEED and not paused and not dialogue_ongoing and not scene_loading:
 		refreshProgress += 100/REFRESHTIME
+		markup_progress += 100/MARKUPCOOLDOWN
+		
 		clock_timer -= CLOCK_SPEED
 		new_time_calc(SPEED_MULT)
 	elif dialogue_ongoing or paused or scene_loading:
@@ -331,7 +335,16 @@ func item_name_generator(data) -> String:
 	elif type == "gold_ring":
 		display_color = ""
 		display_type = "Gold Ring"
-	
+	elif type == "silver_ring":
+		display_color = ""
+		display_type = "Silver Ring"
+	elif type == "red_nose_pop":
+		display_type = "Red Nose Pop CD"
+		display_color = ""
+	elif type == "red_nose_pop":
+		display_type = "Red Nose Pop CD"
+		display_color = ""
+			
 	if data["overlay_animation"] == "ele_minimalistic_white" or data["overlay_animation"] == "ele_minimalistic_black":
 		brand_print = "elemental minimalistic "
 	
@@ -519,6 +532,15 @@ func get_save_data() -> Dictionary:
 		"future": future,
 		"debug_enabled": debug_enabled,
 		"invest_claimed": invest_claimed,
+		"markup_progress": markup_progress,
+		"max_investment": max_investment,
+		"interest_boost": interest_boost,
+		"likability_score": likability_score,
+		"sleep_mult": sleep_mult,
+		"items_computer": items_computer,
+		"uncommon_frequency": uncommon_frequency,
+		"delivery_speed_mult": delivery_speed_mult,
+		"suspicion": suspicion
 	}
 
 func load_save_data(data: Dictionary) -> void:
@@ -588,6 +610,15 @@ func load_save_data(data: Dictionary) -> void:
 	invested = data.get("invested", invested)
 	future = data.get("future", future)
 	invest_claimed = data.get("invest_claimed", invest_claimed)
+	
+	markup_progress = data.get("markup_progress",markup_progress)
+	max_investment = data.get("max_investment",max_investment)
+	sleep_mult = data.get("sleep_mult",sleep_mult)
+	suspicion = data.get("suspicion",suspicion)
+	interest_boost = data.get("interest_boost",interest_boost)
+	likability_score = data.get("likability_score",likability_score)
+	uncommon_frequency = data.get("uncommon_frequency",uncommon_frequency)
+	delivery_speed_mult  = data.get("delivery_speed_mult",delivery_speed_mult)
 
 func reset_to_defaults() -> void:
 	money = 50.00
@@ -650,7 +681,8 @@ func reset_to_defaults() -> void:
 	player_pos = Vector2(0,0)
 	player_ratings = [3.5]
 	player_rating = 0.0
-	
+	MARKUPCOOLDOWN = 24*60*3  # 3 in game days
+	markup_progress = 0
 	debug_enabled = true
 	
 	invested = false

@@ -222,7 +222,28 @@ func name_generator(data) -> String:
 		display_type = "Family House"
 		display_color = ""
 		display_color2 = ""
-		
+	elif type == "silver_ring":
+		display_color = ""
+		display_type = "Silver Ring"
+	elif type == "red_nose_pop":
+		display_type = "Red Nose Pop CD"
+		display_color = ""	
+	elif type == "blank_cd":
+		display_type = "Blank CD"
+		display_color = ""	
+	elif type == "scrap_plastic":
+		display_type = "Scrap Plastic"
+		display_color = ""	
+	elif type == "scrap_metal":
+		display_type = "Scrap Metal"
+		display_color = ""	
+	elif type == "scrap_fabric":
+		display_type = "Scrap Fabric"
+		display_color = ""	
+	elif type == "scrap_paper":
+		display_type = "Scrap Paper"
+		display_color = ""	
+			
 	if data["overlay_animation"] == "ele_minimalistic_white" or data["overlay_animation"] == "ele_minimalistic_black":
 		brand_print = "elemental minimalistic "
 	

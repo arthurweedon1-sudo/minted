@@ -19,6 +19,7 @@ const CONDITION_PRICE_MULTIPLIERS := {
 var colors: Array = ["black", "grey", "white", "cream", "beige", "apricot", "orange", "coral", "red", "burgundy", "pink", "rose", "purple", "lilac", "light_blue", "blue", "navy", "turquoise", "mint", "green", "dark_green", "khaki", "brown", "mustard", "yellow", "silver", "gold", "multi", "clear"]
 
 var current_condition_text: String = ""
+var markup = false
 
 #we can use % for scene unique nodes this is awesome.
 @onready var inventory_grid: GridContainer = %InventoryGrid
@@ -48,7 +49,10 @@ func _ready() -> void:
 	for button in color_buttons:
 		button.toggled.connect(_on_color_button_toggled.bind(button))
 	rebuild_inventory()
-
+	if 13 in Global.skill_tree_unlocked:
+		%MarkupButton.show()
+	else:
+		%MarkupButton.hide()
 
 
 func rebuild_inventory() -> void:
@@ -203,7 +207,14 @@ func _submit_listing(price_written: float) -> void:
 		"price": price_written,
 		"brand": brand_edit.text,
 		"description": description_edit.text,
+		"markup": markup
 	}
+	
+	if markup:
+		markup = false
+		Global.markup_progress = 0 
+		%MarkupButton.self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+		
 	sell_requested.emit(item_data)
 
 
@@ -213,3 +224,29 @@ func _on_stinge_slider_value_changed(value: float) -> void:
 	
 	if Inventory.display_item.size() >= 1:
 		_on_suggest_price_pressed()
+
+func _process(_delta: float) -> void:
+	%ProgressBar.value = min(Global.markup_progress,100)
+	if Global.markup_progress < 100:
+		%MarkupButton.text = ""
+		%ProgressBar.show()
+	else:
+		%ProgressBar.hide()
+		%MarkupButton.text = "Markup"
+	
+	if 13 in Global.skill_tree_unlocked:
+		%MarkupButton.show()
+	else:
+		%MarkupButton.hide()
+
+
+func _on_markup_button_pressed() -> void:
+	if Global.markup_progress >= 100:
+		markup = !markup
+		
+		if markup:
+			%MarkupButton.self_modulate = Color(0.953, 0.949, 0.286, 1.0)
+		else:
+			%MarkupButton.self_modulate = Color(1.0, 1.0, 1.0, 1.0)
+	
+	
