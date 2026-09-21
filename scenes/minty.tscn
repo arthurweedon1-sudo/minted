@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://dsnoqta6hhh8n" path="res://scripts/dialogue_minty.gd" id="4_qeod4"]
 [ext_resource type="AudioStream" uid="uid://digoufspwtoaw" path="res://audio/SFX/click.wav" id="5_cbmdh"]
 [ext_resource type="Texture2D" uid="uid://cc3vkacie3oae" path="res://assets/tab_background.png" id="5_pdb0s"]
+[ext_resource type="FontFile" uid="uid://gwi3hcl35u7m" path="res://fonts/Pixeled.ttf" id="6_mut1l"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6snss"]
 animations = [{
@@ -83,14 +84,24 @@ offset_left = 24.0
 offset_top = 27.0
 offset_right = 274.0
 offset_bottom = 147.0
-theme_override_font_sizes/normal_font_size = 20
-theme_override_font_sizes/bold_font_size = 20
+theme_override_fonts/normal_font = ExtResource("6_mut1l")
+theme_override_fonts/bold_font = ExtResource("6_mut1l")
+theme_override_font_sizes/normal_font_size = 10
+theme_override_font_sizes/bold_font_size = 10
 
 [node name="choices" parent="dialogue/ColorRect" index="2" unique_id=1412240598]
 offset_left = 26.0
 offset_top = 8.0
 offset_right = 66.0
 offset_bottom = 48.0
+
+[node name="choiceA" parent="dialogue/ColorRect/choices" index="0" unique_id=340283519]
+theme_override_fonts/font = ExtResource("6_mut1l")
+theme_override_font_sizes/font_size = 10
+
+[node name="choiceB" parent="dialogue/ColorRect/choices" index="1" unique_id=2133144025]
+theme_override_fonts/font = ExtResource("6_mut1l")
+theme_override_font_sizes/font_size = 10
 
 [node name="Label" parent="dialogue" index="1" unique_id=1747820778]
 visible = false
