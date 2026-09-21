@@ -31,6 +31,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_00qdj")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer3" unique_id=343274930]
 layout_mode = 2
+theme_override_constants/separation = 4
 
 [node name="title" type="Label" parent="PanelContainer3/VBoxContainer" unique_id=1315382604]
 custom_minimum_size = Vector2(600, 50)
@@ -55,6 +56,8 @@ autowrap_mode = 3
 [node name="advertisement_container" type="Control" parent="PanelContainer3/VBoxContainer" unique_id=954877976]
 visible = false
 layout_mode = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, -20)
 
 [node name="ad_text" type="RichTextLabel" parent="PanelContainer3/VBoxContainer/advertisement_container" unique_id=1630358950]
 layout_mode = 0

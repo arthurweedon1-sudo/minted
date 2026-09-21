@@ -23,6 +23,7 @@ signal visibility_toggled(is_visible, target)
 @onready var info_container = $mouse_hitbox/TooltipPanel/container
 @onready var rating_container: Control = $mouse_hitbox/TooltipPanel/rating
 @onready var money_trend = %money_trend
+@onready var code = $mouse_hitbox/TooltipPanel/code/sellerName_text
 
 var current_target = null
 var initial_y = 0
@@ -56,6 +57,7 @@ func show_tooltip(target):
 	
 	var item = target.get_data()
 	info = item
+	code.text = item.code
 	name_label.text = str(name_generator(item))
 	condition_bar.play(str(item.condition).to_lower())
 	condition_label.text = "Condition: " + str(item.condition)
@@ -143,9 +145,11 @@ func show_tooltip(target):
 		pos.x = target.global_position.x - panel_width - tooltip_offset.x - 70
 		tag_container.position = Vector2(17, 16)
 		info_container.position = Vector2(168, 38)
+		$mouse_hitbox/TooltipPanel/code.position = Vector2(-153,190)
 	else:
 		tag_container.position = Vector2(447, 12)
 		info_container.position = Vector2(278, 38)
+		$mouse_hitbox/TooltipPanel/code.position = Vector2(139,190)
 
 	var panel_height = max(panel.size.y, panel.custom_minimum_size.y)
 	if pos.y + panel_height > vp_size.y:

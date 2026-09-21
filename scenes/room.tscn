@@ -12,6 +12,7 @@
 [ext_resource type="FontFile" uid="uid://gwi3hcl35u7m" path="res://fonts/Pixeled.ttf" id="11_w68ji"]
 [ext_resource type="Texture2D" uid="uid://ckfaa8maa1gw6" path="res://assets/hotbar/dor.png" id="12_23wr2"]
 [ext_resource type="Texture2D" uid="uid://w5vi05v5cwoc" path="res://assets/os/icons/down.png" id="12_tk5fv"]
+[ext_resource type="PackedScene" uid="uid://bcgnfguo71fb1" path="res://scenes/Debug.tscn" id="13_w68ji"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6snss"]
 bg_color = Color(0, 0.1764706, 0, 1)
@@ -21,21 +22,29 @@ expand_margin_top = 5.0
 expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 
-[sub_resource type="Gradient" id="Gradient_w68ji"]
+[sub_resource type="Gradient" id="Gradient_tk5fv"]
 colors = PackedColorArray(0.5058824, 1, 0.54509807, 1, 0.7058824, 1, 0.63529414, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_ccrme"]
-gradient = SubResource("Gradient_w68ji")
+gradient = SubResource("Gradient_tk5fv")
 fill_from = Vector2(0.48293516, 0)
 fill_to = Vector2(0.4010239, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w68ji"]
+bg_color = Color(0.4392157, 0.35686275, 0, 1)
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
 [sub_resource type="Gradient" id="Gradient_eom3m"]
-colors = PackedColorArray(0.8617115, 0.9224456, 0.28572983, 1, 0.8392295, 0.9787957, 0.34512022, 1)
+colors = PackedColorArray(1.0257685, 0.6128339, 0, 1, 0.68068385, 0.810979, 0.101048104, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_eom3m"]
 gradient = SubResource("Gradient_eom3m")
 fill_from = Vector2(0.48293516, 0)
-fill_to = Vector2(0.4010239, 1)
+fill_to = Vector2(0.48976108, 1)
 
 [node name="Room" type="Node2D" unique_id=1370404577]
 position = Vector2(0, -45)
@@ -146,11 +155,11 @@ offset_bottom = 139.0
 
 [node name="PanelContainer" type="PanelContainer" parent="left_bar/rent" unique_id=1434782355]
 layout_mode = 0
-offset_left = 384.0
-offset_top = -277.0
-offset_right = 584.0
-offset_bottom = 123.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_6snss")
+offset_left = 375.0
+offset_top = -268.0
+offset_right = 575.0
+offset_bottom = 132.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_w68ji")
 
 [node name="ColorRect" type="TextureRect" parent="left_bar/rent/PanelContainer" unique_id=1426867837]
 layout_mode = 2
@@ -666,5 +675,11 @@ texture = ExtResource("12_23wr2")
 region_rect = Rect2(0, 2, 8, 6)
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
+
+[node name="Debug" parent="." unique_id=1680222546 instance=ExtResource("13_w68ji")]
+offset_left = -822.0
+offset_top = -302.0
+offset_right = -822.0
+offset_bottom = -302.0
 
 [connection signal="pressed" from="left_bar/sleep/slide" to="." method="_on_slide_pressed"]

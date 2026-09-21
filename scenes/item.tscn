@@ -46,6 +46,8 @@
 [ext_resource type="Texture2D" uid="uid://cp27lcvt2081s" path="res://assets/items/banana_poster.png" id="31_cf0sr"]
 [ext_resource type="Texture2D" uid="uid://b6as3mbewdpjp" path="res://assets/cds/smooth_jazz_2.png" id="32_bqkql"]
 [ext_resource type="Texture2D" uid="uid://b0rc41gwkl30k" path="res://assets/items/polo.png" id="33_muevd"]
+[ext_resource type="Texture2D" uid="uid://cdm1jst2diklu" path="res://assets/items/silver_ring.png" id="34_usmfy"]
+[ext_resource type="Texture2D" uid="uid://dwjbbaxoamx0x" path="res://assets/icon.svg" id="35_kj5vo"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ccrme"]
 animations = [{
@@ -1742,6 +1744,81 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6jdm"]
+atlas = ExtResource("34_usmfy")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvs15"]
+atlas = ExtResource("34_usmfy")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7g5el"]
+atlas = ExtResource("34_usmfy")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7ssj"]
+atlas = ExtResource("34_usmfy")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2ttm"]
+atlas = ExtResource("34_usmfy")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2cvdh"]
+atlas = ExtResource("34_usmfy")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0285"]
+atlas = ExtResource("34_usmfy")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jodom"]
+atlas = ExtResource("34_usmfy")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_muevd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a6jdm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tvs15")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7g5el")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x7ssj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2ttm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2cvdh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h0285")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jodom")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_64ler"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_kj5vo")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_gxq6w"]
 atlas = ExtResource("23_6rcit")
 region = Rect2(0, 0, 64, 64)
@@ -2405,6 +2482,36 @@ position = Vector2(40, 40)
 sprite_frames = SubResource("SpriteFrames_a6jdm")
 frame = 4
 frame_progress = 0.55246305
+
+[node name="silver_ring" type="AnimatedSprite2D" parent="TextureButton" unique_id=96252797 groups=["clothes"]]
+position = Vector2(40, 40)
+sprite_frames = SubResource("SpriteFrames_muevd")
+frame_progress = 0.124004826
+
+[node name="scrap_metal" type="AnimatedSprite2D" parent="TextureButton" unique_id=10207879 groups=["clothes"]]
+position = Vector2(40, 40)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_64ler")
+
+[node name="scrap_plastic" type="AnimatedSprite2D" parent="TextureButton" unique_id=961410015 groups=["clothes"]]
+position = Vector2(40, 40)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_64ler")
+
+[node name="scrap_paper" type="AnimatedSprite2D" parent="TextureButton" unique_id=13545546 groups=["clothes"]]
+position = Vector2(40, 40)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_64ler")
+
+[node name="scrap_fabric" type="AnimatedSprite2D" parent="TextureButton" unique_id=1843672841 groups=["clothes"]]
+position = Vector2(60, 60)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_64ler")
+
+[node name="blank_cd" type="AnimatedSprite2D" parent="TextureButton" unique_id=804334669 groups=["clothes"]]
+position = Vector2(40, 40)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_64ler")
 
 [node name="overlays" type="Control" parent="." unique_id=1252589936]
 layout_mode = 3

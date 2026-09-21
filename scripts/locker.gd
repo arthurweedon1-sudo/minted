@@ -79,18 +79,21 @@ func _process(delta: float) -> void:
 func fill_lockers(list):
 	for i in range(list.size() - 1, -1, -1):
 		var item = list[i]
+				
 		if item[1] == 1 or item[1] == 2:
 			chosen_locker = small_locker.pick_random()
 			ShippingHandler.locker_list.append([item, chosen_locker, item[1]])
-		elif item[1] == 3 or item[1] == 4:
+		elif item[1] == 3:
 			chosen_locker = medium_locker.pick_random()
 			ShippingHandler.locker_list.append([item, chosen_locker, item[1]])
-		elif item[1] == 5 or item[1] == 6:
+		elif item[1] == 4 or item[1] == 5:
 			chosen_locker = large_locker.pick_random()
 			ShippingHandler.locker_list.append([item, chosen_locker, item[1]])
 		elif item[1] > 6:
 			chosen_locker = extralarge_locker.pick_random()
 			ShippingHandler.locker_list.append([item, chosen_locker, item[1]])
+		
+		
 		list.remove_at(i)
 
 

@@ -228,8 +228,9 @@ func check_buy_items(buyer,id):
 		if actual_dict == actual_selling[i]:
 			dupes += 1
 	
+	var trust_mult = 1
 	if dupes > 1:
-		trust /= (dupes ** 0.7)
+		trust_mult = (dupes ** 0.7)
 		
 	var price_mult = 1
 	var price_affect_odds = 1
@@ -266,7 +267,7 @@ func check_buy_items(buyer,id):
 	elif buyer["buyer_type"] == "leniant":
 		default_price *= 1.2
 	price_affect_odds = get_buy_probability_sigmoid(price_given,default_price)
-	odds = 0.15 * trust * price_affect_odds	
+	odds = 0.15 * (trust/trust_mult) * price_affect_odds	
 	var numbar = rng.randf()
 	#print(odds, " ", numbar)
 	if odds * Global.news_interest >= numbar:
@@ -667,7 +668,6 @@ func load_save_data(data: Dictionary) -> void:
 	bidding_items = data.get("bidding_items", bidding_items)
 	bidding_details = data.get("bidding_details", bidding_details)
 	bidders = data.get("bidders", bidders)
-
 	item_id = data.get("item_id", item_id)
 	sell_id = data.get("sell_id", sell_id)
 	market_items = data.get("market_items", market_items)

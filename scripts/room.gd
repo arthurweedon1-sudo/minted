@@ -64,7 +64,6 @@ func _on_slide_pressed() -> void:
 		.set_ease(Tween.EASE_OUT)
 		
 func refresh_popup() -> void:
-	# Price
 	building_label1.text = "$" + "%.2f" % Global.rent_building
 	building_label2.text = "$" + "%.2f" % Global.rent_building
 	electrical_label1.text = "$" + "%.2f" % Global.rent_electrical

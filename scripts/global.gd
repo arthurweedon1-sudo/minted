@@ -48,7 +48,7 @@ var rent_triggered: bool = false
 
 var clock_timer = 0.0
 var paused = false
-var skip_dialogue = true
+var skip_dialogue = false
 var no_sleep = true
 var current_interactable = null
 var sleep = 90
@@ -95,7 +95,7 @@ const refresh_news_2_at = 16
 var player_pos = Vector2(0,0)
 
 # Debug
-var debug_enabled: bool
+var debug_enabled: bool = true
 
 # Skill Tree
 var skill_tree_unlocked = [0]
@@ -109,11 +109,15 @@ var interest_boost = 0
 var likability_score = 1
 var sleep_mult = 1
 var items_computer = 12
-var uncommon_frequency = 1.2
+var uncommon_frequency = 1
 var delivery_speed_mult = 1
 
 var playing = false
 var mintora = false
+
+# item codes
+var codes = []
+var suspicion = 1
 
 func _process(delta):
 	if money != current_money:
@@ -219,7 +223,8 @@ func new_time_calc(min_added: int) -> void:
 	if hour >= 24:
 		hour -= 24
 		day += 1
-		
+		suspicion -= 0.03
+		suspicion = max(1,suspicion)
 
 		var days_in_month = calc_days_in_month(month, year)
 	
@@ -646,8 +651,33 @@ func reset_to_defaults() -> void:
 	player_ratings = [3.5]
 	player_rating = 0.0
 	
-	debug_enabled = false
+	debug_enabled = true
 	
 	invested = false
 	future
 	invest_claimed = true
+	
+	var player_pos = Vector2(0,0)
+
+	var codes = []
+	var suspicion = 1
+	
+
+func create_code(tries):
+	var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+	var current_code = ""
+	var rng = RandomNumberGenerator.new()
+	rng.randomize()
+	for i in range(6):
+		var num = rng.randi_range(0,chars.length())
+		current_code = current_code + chars[num-1]
+	
+	if current_code in codes:
+		if tries < 10:
+			return create_code(tries + 1)
+		else:
+			codes= []
+			return create_code(0)
+	else:
+		codes.append(current_code)
+		return current_code

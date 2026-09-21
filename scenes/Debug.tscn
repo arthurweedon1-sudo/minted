@@ -1,16 +1,334 @@
 [gd_scene format=3 uid="uid://bcgnfguo71fb1"]
 
-[ext_resource type="Script" uid="uid://cldqw2yyohesa" path="res://scripts/debug.gd" id="1_5spvt"]
+[ext_resource type="Script" uid="uid://dgknu743pne73" path="res://scripts/debug_box.gd" id="1_2u27b"]
+[ext_resource type="FontFile" uid="uid://d27f0kxbi0qvo" path="res://fonts/Daydream.otf" id="2_2u27b"]
 [ext_resource type="FontFile" uid="uid://gwi3hcl35u7m" path="res://fonts/Pixeled.ttf" id="2_c2xgb"]
+[ext_resource type="Texture2D" uid="uid://bmnmvldc5uipc" path="res://assets/os/icons/dollar.png" id="3_b1f3y"]
 
-[node name="Debug" type="CanvasLayer" unique_id=373666288]
-script = ExtResource("1_5spvt")
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nykoc"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
 
-[node name="FPSLabel" type="Label" parent="." unique_id=107684935]
-unique_name_in_owner = true
-offset_left = 11.0
-offset_top = 179.0
-offset_right = 110.0
-offset_bottom = 225.0
+[sub_resource type="Gradient" id="Gradient_w68ji"]
+colors = PackedColorArray(0.0627451, 0.101960786, 0.10980392, 1, 0, 0.050980393, 0.043137256, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5spvt"]
+gradient = SubResource("Gradient_w68ji")
+fill_from = Vector2(0.48293516, 0)
+fill_to = Vector2(0.51365185, 1)
+
+[node name="Debug" type="Control" unique_id=1680222546]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_2u27b")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1928235543]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 75.0
+offset_right = 483.0
+offset_bottom = 575.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nykoc")
+
+[node name="ColorRect" type="TextureRect" parent="PanelContainer" unique_id=309948995]
+layout_mode = 2
+texture = SubResource("GradientTexture2D_5spvt")
+
+[node name="rent_label" type="Label" parent="." unique_id=1197359777]
+layout_mode = 0
+offset_left = 231.0
+offset_top = 75.0
+offset_right = 435.0
+offset_bottom = 144.0
+theme_override_fonts/font = ExtResource("2_2u27b")
+theme_override_font_sizes/font_size = 35
+text = "Debug:"
+
+[node name="Givemoney" type="Control" parent="." unique_id=747916966]
+anchors_preset = 0
+offset_left = -364.0
+offset_top = -27.0
+offset_right = -324.0
+offset_bottom = 13.0
+
+[node name="text2" type="Label" parent="Givemoney" unique_id=240265754]
+layout_mode = 0
+offset_left = 559.0
+offset_top = 199.0
+offset_right = 683.0
+offset_bottom = 227.0
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
 theme_override_fonts/font = ExtResource("2_c2xgb")
-text = "FPS: 100"
+theme_override_font_sizes/font_size = 10
+text = "Money:"
+
+[node name="Price" type="LineEdit" parent="Givemoney" unique_id=629716975]
+z_index = 1000
+layout_mode = 0
+offset_left = 641.0
+offset_top = 186.0
+offset_right = 841.0
+offset_bottom = 226.0
+size_flags_horizontal = 0
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 1, 1)
+theme_override_font_sizes/font_size = 20
+max_length = 15
+right_icon = ExtResource("3_b1f3y")
+icon_expand_mode = 1
+
+[node name="give" type="Button" parent="Givemoney" unique_id=435115274]
+z_index = 100
+layout_mode = 0
+offset_left = 705.0
+offset_top = 228.0
+offset_right = 775.0
+offset_bottom = 266.0
+theme_override_fonts/font = ExtResource("2_c2xgb")
+theme_override_font_sizes/font_size = 10
+text = "Give"
+
+[node name="TimeSpeed" type="Control" parent="." unique_id=1384201261]
+anchors_preset = 0
+offset_left = -277.0
+offset_top = 18.0
+offset_right = -237.0
+offset_bottom = 58.0
+
+[node name="text2" type="Label" parent="TimeSpeed" unique_id=1697203895]
+layout_mode = 0
+offset_left = 561.0
+offset_top = 220.0
+offset_right = 685.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
+theme_override_fonts/font = ExtResource("2_c2xgb")
+theme_override_font_sizes/font_size = 10
+text = "Clock Speed:"
+
+[node name="value" type="Label" parent="TimeSpeed" unique_id=1423149351]
+layout_mode = 0
+offset_left = 675.0
+offset_top = 219.0
+offset_right = 799.0
+offset_bottom = 247.0
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
+theme_override_fonts/font = ExtResource("2_c2xgb")
+theme_override_font_sizes/font_size = 10
+text = "0.2"
+
+[node name="timespeed" type="HSlider" parent="TimeSpeed" unique_id=1443373202]
+layout_mode = 0
+offset_left = 525.0
+offset_top = 262.0
+offset_right = 725.0
+offset_bottom = 278.0
+min_value = 0.01
+max_value = 1.0
+step = 0.01
+value = 0.2
+
+[node name="Timemult" type="Control" parent="." unique_id=2065231714]
+anchors_preset = 0
+offset_left = -289.0
+offset_top = 88.0
+offset_right = -249.0
+offset_bottom = 128.0
+
+[node name="text2" type="Label" parent="Timemult" unique_id=1241414100]
+layout_mode = 0
+offset_left = 561.0
+offset_top = 220.0
+offset_right = 685.0
+offset_bottom = 248.0
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
+theme_override_fonts/font = ExtResource("2_c2xgb")
+theme_override_font_sizes/font_size = 10
+text = "Time Mult:"
+
+[node name="value" type="Label" parent="Timemult" unique_id=726451862]
+layout_mode = 0
+offset_left = 662.0
+offset_top = 219.0
+offset_right = 786.0
+offset_bottom = 247.0
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
+theme_override_fonts/font = ExtResource("2_c2xgb")
+theme_override_font_sizes/font_size = 10
+text = "1"
+
+[node name="timemult" type="HSlider" parent="Timemult" unique_id=651189042]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 257.0
+offset_right = 740.0
+offset_bottom = 273.0
+max_value = 10.0
+value = 1.0
+
+[node name="rent_frequency" type="Control" parent="." unique_id=332542503]
+anchors_preset = 0
+offset_left = -305.0
+offset_top = 145.0
+offset_right = -265.0
+offset_bottom = 185.0
+
+[node name="text2" type="Label" parent="rent_frequency" unique_id=924790531]
+layout_mode = 0
+offset_left = 534.0
+offset_top = 219.0
+offset_right = 698.0
+offset_bottom = 247.0
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
+theme_override_fonts/font = ExtResource("2_c2xgb")
+theme_override_font_sizes/font_size = 10
+text = "Days Between Rent:"
+
+[node name="value" type="Label" parent="rent_frequency" unique_id=618991029]
+layout_mode = 0
+offset_left = 708.0
+offset_top = 221.0
+offset_right = 832.0
+offset_bottom = 249.0
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
+theme_override_fonts/font = ExtResource("2_c2xgb")
+theme_override_font_sizes/font_size = 10
+text = "10"
+
+[node name="HSlider" type="HSlider" parent="rent_frequency" unique_id=502398906]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 257.0
+offset_right = 740.0
+offset_bottom = 273.0
+min_value = 2.0
+max_value = 30.0
+value = 10.0
+
+[node name="sleep" type="Control" parent="." unique_id=48945889]
+anchors_preset = 0
+offset_left = -193.0
+offset_top = 214.0
+offset_right = -153.0
+offset_bottom = 254.0
+
+[node name="text2" type="Label" parent="sleep" unique_id=1433530763]
+layout_mode = 0
+offset_left = 544.0
+offset_top = 234.0
+offset_right = 668.0
+offset_bottom = 262.0
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
+theme_override_fonts/font = ExtResource("2_c2xgb")
+theme_override_font_sizes/font_size = 10
+text = "Sleep:"
+
+[node name="sleep" type="Button" parent="sleep" unique_id=469837048]
+z_index = 100
+layout_mode = 0
+offset_left = 601.0
+offset_top = 229.0
+offset_right = 671.0
+offset_bottom = 267.0
+theme_override_fonts/font = ExtResource("2_c2xgb")
+theme_override_font_sizes/font_size = 10
+text = "True"
+
+[node name="rent" type="Control" parent="." unique_id=481619472]
+anchors_preset = 0
+offset_left = -348.0
+offset_top = 212.0
+offset_right = -308.0
+offset_bottom = 252.0
+
+[node name="text2" type="Label" parent="rent" unique_id=1322891278]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 232.0
+offset_right = 669.0
+offset_bottom = 260.0
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
+theme_override_fonts/font = ExtResource("2_c2xgb")
+theme_override_font_sizes/font_size = 10
+text = "Rent:"
+
+[node name="button" type="Button" parent="rent" unique_id=1497867899]
+z_index = 100
+layout_mode = 0
+offset_left = 601.0
+offset_top = 229.0
+offset_right = 671.0
+offset_bottom = 267.0
+theme_override_fonts/font = ExtResource("2_c2xgb")
+theme_override_font_sizes/font_size = 10
+text = "True"
+
+[node name="dialogue" type="Control" parent="." unique_id=1001424262]
+anchors_preset = 0
+offset_left = -349.0
+offset_top = 277.0
+offset_right = -309.0
+offset_bottom = 317.0
+
+[node name="text2" type="Label" parent="dialogue" unique_id=1861816355]
+layout_mode = 0
+offset_left = 545.0
+offset_top = 232.0
+offset_right = 669.0
+offset_bottom = 260.0
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
+theme_override_fonts/font = ExtResource("2_c2xgb")
+theme_override_font_sizes/font_size = 10
+text = "Dialogue:"
+
+[node name="dialogue" type="Button" parent="dialogue" unique_id=1040644727]
+z_index = 100
+layout_mode = 0
+offset_left = 620.0
+offset_top = 231.0
+offset_right = 690.0
+offset_bottom = 269.0
+theme_override_fonts/font = ExtResource("2_c2xgb")
+theme_override_font_sizes/font_size = 10
+text = "True"
+
+[node name="hitboxes" type="Control" parent="." unique_id=1274494142]
+anchors_preset = 0
+offset_left = -208.0
+offset_top = 281.0
+offset_right = -168.0
+offset_bottom = 321.0
+
+[node name="text2" type="Label" parent="hitboxes" unique_id=684980543]
+layout_mode = 0
+offset_left = 556.0
+offset_top = 236.0
+offset_right = 680.0
+offset_bottom = 264.0
+theme_override_colors/font_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
+theme_override_fonts/font = ExtResource("2_c2xgb")
+theme_override_font_sizes/font_size = 8
+text = "Hitboxes:"
+
+[node name="hitboxes" type="Button" parent="hitboxes" unique_id=587762374]
+z_index = 100
+layout_mode = 0
+offset_left = 620.0
+offset_top = 231.0
+offset_right = 690.0
+offset_bottom = 269.0
+theme_override_fonts/font = ExtResource("2_c2xgb")
+theme_override_font_sizes/font_size = 10
+text = "True"
+
+[connection signal="pressed" from="Givemoney/give" to="." method="_on_give_pressed"]
+[connection signal="value_changed" from="TimeSpeed/timespeed" to="." method="_on_timespeed_value_changed"]
+[connection signal="value_changed" from="TimeSpeed/timespeed" to="." method="_on_h_slider_value_changed"]
+[connection signal="value_changed" from="Timemult/timemult" to="." method="_on_timemult_value_changed"]
+[connection signal="value_changed" from="rent_frequency/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="sleep/sleep" to="." method="_on_sleep_pressed"]
+[connection signal="pressed" from="rent/button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="dialogue/dialogue" to="." method="_on_dialogue_pressed"]

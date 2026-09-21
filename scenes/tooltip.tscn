@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://gwi3hcl35u7m" path="res://fonts/Pixeled.ttf" id="2_miqp6"]
 [ext_resource type="PackedScene" uid="uid://bk6xu7dvbhxas" path="res://scenes/stars.tscn" id="3_5byrc"]
 [ext_resource type="Texture2D" uid="uid://c07y8poot88eh" path="res://assets/condition_bar.png" id="4_eeh2b"]
+[ext_resource type="Texture2D" uid="uid://cjftbccknabr" path="res://assets/hotbar/item_code.png" id="4_tw8mu"]
 [ext_resource type="Texture2D" uid="uid://c1u0hw3e4dctl" path="res://assets/tooltip/colors/colour_tag_1.png" id="4_wstpj"]
 [ext_resource type="Texture2D" uid="uid://bopwkfna13uld" path="res://assets/tooltip/colors/colour_tag_2.png" id="5_5byrc"]
 [ext_resource type="Texture2D" uid="uid://cuno2fkd407tp" path="res://assets/tooltip/brand_icons/coma.png" id="5_wstpj"]
@@ -1607,6 +1608,37 @@ offset_left = 364.0
 offset_top = -27.0
 offset_right = 364.0
 offset_bottom = -27.0
+
+[node name="code" type="Control" parent="mouse_hitbox/TooltipPanel" unique_id=364954816]
+anchors_preset = 0
+offset_left = 139.0
+offset_top = 186.0
+offset_right = 179.0
+offset_bottom = 226.0
+
+[node name="seller_container" type="NinePatchRect" parent="mouse_hitbox/TooltipPanel/code" unique_id=1939021523]
+z_index = -1
+layout_mode = 0
+offset_left = 166.0
+offset_top = -37.0
+offset_right = 206.0
+offset_bottom = -17.25
+scale = Vector2(4, 4)
+texture = ExtResource("4_tw8mu")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="sellerName_text" type="Label" parent="mouse_hitbox/TooltipPanel/code" unique_id=1005047327]
+layout_mode = 0
+offset_left = 194.0
+offset_right = 726.0
+offset_bottom = 92.0
+theme_override_colors/font_color = Color(0.22350258, 0, 0.032663982, 1)
+theme_override_fonts/font = ExtResource("2_miqp6")
+theme_override_font_sizes/font_size = 12
+text = "seller_code"
 
 [node name="background" type="NinePatchRect" parent="mouse_hitbox/TooltipPanel" unique_id=954282358]
 layout_mode = 0

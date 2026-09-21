@@ -12,6 +12,7 @@ var shipping_entry = null
 func _ready() -> void:
 	visible = false
 	if shipping_entry:
+		item_display.code = shipping_entry[0]["code"]
 		item_display.load_data(shipping_entry[0])
 
 func _process(delta: float) -> void:

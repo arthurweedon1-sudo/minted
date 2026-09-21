@@ -22,6 +22,7 @@ extends Control
 signal page_requested(page_name: String)
 signal poster_selected(item_data: Dictionary)
 var market_type = ""
+var code = ""
 
 var inventory_index = 0
 var is_parcel = false
@@ -337,12 +338,15 @@ func _ready() -> void:
 		$PanelContainer2.hide()
 		item.rarity_ui.connect(_rarity_ui)
 		sold_container.hide()
-		
+		%code.show()
 	else:
 		$PanelContainer2.show()
-
+	
+	if Inventory.current_ui_type != "shipping":
+		%code.hide()
 
 func _process(_delta) -> void:
+	$code/sellerName_text.text = code
 	if not watching_hover:
 		return
 
@@ -787,3 +791,8 @@ func _item_sold(updated_market_type, found_index) -> void:
 		buy_button.show()
 		load_data(Inventory.market_items[updated_market_type][found_index])
 		
+func update_type():
+	if not is_node_ready():
+		await ready
+	if item:
+		item.update_type()

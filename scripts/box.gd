@@ -31,5 +31,6 @@ func load_list_objects() -> void:
 	for i in range(ShippingHandler.locker_list.size()):
 		var storage_ui = preload("res://scenes/item_ui.tscn").instantiate()
 		storage_ui.inventory_index = i
+		storage_ui.update_type()
 		storage_ui.is_parcel = true
 		grid.add_child(storage_ui)

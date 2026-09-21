@@ -8,11 +8,11 @@ var conceal_colours: Array = ["white","red","green","pink","black","blue"]
 var common_items: Array = ["tshirt","socks","trousers","shorts", "shoes","boxers", "smooth_jazz_1", "football","basketball","playing_cards","brickies_family_house", "banana_poster", "smooth_jazz_2"]
 var uncommon_items: Array = ["cd_player", "puzzle_cube", "spud_poster","potion_poster", "camera", "three_jelly","conceal_shoes","flip_flops","radio","polo_shirt"]
 var rare_items: Array = ["the_big_mint", "evil_pulsation", "jungle","christmas_lights","encyclopedia"]
-var epic_items: Array = ["beh_enclosed_shirt","red_nose_pop"]
+var epic_items: Array = ["beh_enclosed_shirt","red_nose_pop","sliver_ring"]
 var legendary_items: Array = ["gold_ring"]
 var all_items: Array = common_items + uncommon_items + rare_items + epic_items + legendary_items
 var items_with_regular_animation = ["cd_player", "puzzle_cube", "camera", "gold_ring", "radio", "the_big_mint", "smooth_jazz_1", "three_jelly", "evil_pulsation", "jungle", "red_nose_pop","encyclopedia"]
-var items_that_spin = ["the_big_mint", "smooth_jazz_1", "three_jelly", "evil_pulsation", "jungle", "red_nose_pop", "smooth_jazz_2"]
+var items_that_spin = ["the_big_mint", "smooth_jazz_1", "three_jelly", "evil_pulsation", "jungle", "red_nose_pop", "smooth_jazz_2","blank_cd"]
 var items_with_secondary = ["brickies_family_house"]
 var cds = items_that_spin
 var brands: Dictionary = {"none":100, "elemental":30,"conceal":20}
@@ -25,9 +25,9 @@ var toys: Array = ["puzzle_cube", "football","playing_cards", "brickies_family_h
 var home: Array = ["spud_poster","potion_poster","christmas_lights", "banana_poster"]
 var electronics: Array = ["cd_player", "the_big_mint", "smooth_jazz_1", "camera", "three_jelly", "evil_pulsation", "jungle","christmas_lights","radio","red_nose_pop", "smooth_jazz_2"]
 var books_and_media: Array = ["spud_poster","potion_poster", "the_big_mint", "smooth_jazz_1", "three_jelly", "evil_pulsation", "jungle","red_nose_pop","encyclopedia", "banana_poster", "smooth_jazz_2"]
-var collectables: Array = ["spud_poster", "beh_enclosed_shirt","gold_ring","encyclopedia"]
+var collectables: Array = ["spud_poster", "beh_enclosed_shirt","gold_ring","encyclopedia","silver_ring"]
 var sports: Array = ["beh_enclosed_shirt", "football","basketball"]
-var placeable_items = ["cd_player","camera","radio"]
+var placeable_items = ["cd_player","camera","radio","calculator"]
 var posters = ["spud_poster","potion_poster", "banana_poster"]
 # ---------------------------------------------
 var rng: RandomNumberGenerator = RandomNumberGenerator.new()
@@ -62,6 +62,11 @@ var placeable = false
 var poster = false
 var ad = false
 var market_category = ""
+var code = ""
+
+# scamming
+var scam = false
+var scam_type = "none"
 
 var rarities = {
 			"common": 500,
@@ -121,7 +126,13 @@ var flip_flop_texture = preload("res://shaders/tshirt_colours.png")
 	"brickies_family_house": $TextureButton/brickies_family_house,
 	"banana_poster": $TextureButton/banana_poster,
 	"smooth_jazz_2": $TextureButton/smooth_jazz_2,
-	"polo_shirt": $TextureButton/polo_shirt
+	"polo_shirt": $TextureButton/polo_shirt,
+	"silver_ring": $TextureButton/silver_ring,
+	"scrap_metal": $TextureButton/scrap_metal,
+	"scrap_paper": $TextureButton/scrap_paper,
+	"scrap_plastic": $TextureButton/scrap_plastic,
+	"scrap_fabric": $TextureButton/scrap_fabric,
+	"blank_cd": $TextureButton/blank_cd,
 }
 
 @onready var market_details_ui = get_node_or_null("/root/MainUI/Mintora/VBoxContainer/Control3/TabContainer/Home/Market/VBoxContainer/Sections/Product_Details")
@@ -158,7 +169,20 @@ func initialize_item(category := "All"):
 	genre = "none"
 	seller_name = Global.name_generator()
 	seller_rating = star_rating_bell_curve()
+	if category == "Bidding":
+		seller_rating = 5.0
 	rng.randomize()
+	scam = scam_chance(seller_rating)
+	if scam:
+		var roll = rng.randi_range(1,11)
+		if roll <= 2:
+			scam_type = "No Item"
+		elif roll <= 6:
+			scam_type = "Tampered"
+		elif roll <= 9:
+			scam_type = "Different"
+		else:
+			scam_type = "Wrong Code"
 	market_category = category
 	match category:
 		"Clothes":
@@ -221,7 +245,7 @@ func initialize_item(category := "All"):
 			}
 	generate_parameters(type)
 	set_item_type(type)
-	
+	code = Global.create_code(0)
 	if type in common_items:
 		rarity = "common"
 	elif type in uncommon_items:
@@ -770,8 +794,8 @@ func generate_parameters(type):
 		condition = conditions.pick_random()
 		condition_price_mult = condition_mult_calc(condition)
 		genre = "pop"
-		price = snapped(8 * condition_price_mult * rng.randf_range(0.8,1.2),0.01)
-		default_price = 8
+		price = snapped(11 * condition_price_mult * rng.randf_range(0.8,1.2),0.01)
+		default_price = 11
 	elif type == "encyclopedia":
 		shippingTime = rng.randi_range(1, 5.0)
 		shippingValue = 2
@@ -801,7 +825,13 @@ func generate_parameters(type):
 		condition_price_mult = condition_mult_calc(condition)
 		price = snapped(10.50 * condition_price_mult * rng.randf_range(0.8,1.2),0.01)
 		default_price = 10.50
-		
+	elif type == "silver_ring":
+		shippingTime = rng.randi_range(3, 8.0)
+		shippingValue = 1
+		condition = conditions.pick_random()
+		condition_price_mult = condition_mult_calc(condition)
+		price = snapped(35 * condition_price_mult * rng.randf_range(0.8,1.2),0.01)
+		default_price = 35	
 	if ad:
 		number = 0
 				
@@ -862,7 +892,13 @@ func generate_parameters(type):
 	if type in posters:
 		poster = true
 	
-	shippingTime = snapped(shippingTime/Global.delivery_speed_mult,0.1)		
+	shippingTime = snapped(shippingTime/Global.delivery_speed_mult,0.1)	
+	
+	price = snapped(price * min((seller_rating+1)/5.5,1),0.01)	
+	
+	if seller_rating < 3 and not scam:
+		price = snapped(price * rng.randf_range(1.0,2),0.01)
+		
 	# minimum price is £1
 	if price < 1:
 		price = 1.00
@@ -999,7 +1035,10 @@ func get_data() -> Dictionary:
 		"placeable": placeable,
 		"poster": poster,
 		"ad": ad,
-		"market_category": market_category
+		"market_category": market_category,
+		"code": code,
+		"scam": scam,
+		"scam_type": scam_type
 	}
 
 func load_data(data: Dictionary) -> void:
@@ -1031,7 +1070,10 @@ func load_data(data: Dictionary) -> void:
 	poster = data.get("poster",false)
 	spice_factor = data.get("spice_factor",1)
 	ad = data.get("ad",false)
-	market_category = data.get("markey_category","")
+	market_category = data.get("market_category","")
+	code = data.get("code","NO CODE")
+	scam = data.get("scam",false)
+	scam_type = data.get("scam_type","none")
 	set_item_type(type)
 
 	if sprites.has(type):
@@ -1066,7 +1108,36 @@ func display_thing():
 func star_rating_bell_curve() -> float:
 	var value: float
 	while true:
-		value = randfn(4.0, 0.8)
+		value = randfn(3.65, 1.0)
 		if value >= 0.5 and value <= 5.0:
 			break
 	return round(value * 2) / 2
+
+func scam_chance(rating):
+	var scam_chance = 0
+	if rating <= 0.5:
+		scam_chance = 0.99
+	elif rating <= 1:
+		scam_chance = 0.9
+	elif rating <= 1.5:
+		scam_chance = 0.8
+	elif rating <= 2:
+		scam_chance = 0.7
+	elif rating <= 2.5:
+		scam_chance = 0.55
+	elif rating <= 3:
+		scam_chance = 0.4
+	elif rating <= 3.5:
+		scam_chance = 0.2
+	elif rating <= 4:
+		scam_chance = 0.02
+	else:
+		scam_chance = 0
+	
+	return scam_chance >= rng.randf()
+
+func update_type():
+	set_item_type(type)
+	for child in get_tree().get_nodes_in_group("clothes"):
+		if child.visible and child is AnimatedSprite2D and child.owner == self:
+			child.frame = 0

@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://msqt2kk1lk8h" path="res://assets/delte_button.png" id="18_ry7r3"]
 [ext_resource type="Texture2D" uid="uid://d0gfmu5iqpyy" path="res://assets/secondary_action_button.png" id="19_0l2t5"]
 [ext_resource type="Texture2D" uid="uid://cqm2ueyow8ds2" path="res://assets/hotbar/rent_day_title_template.png" id="21_0l2t5"]
+[ext_resource type="Texture2D" uid="uid://cjftbccknabr" path="res://assets/hotbar/item_code.png" id="22_u287m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_my6qv"]
 atlas = ExtResource("4_t0011")
@@ -647,19 +648,6 @@ theme_override_fonts/font = ExtResource("16_eu0tx")
 theme_override_font_sizes/font_size = 10
 text = "EJECT"
 
-[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=952239220]
-layout_mode = 0
-offset_right = 36.0
-offset_bottom = 40.0
-scale = Vector2(4, 4)
-texture = ExtResource("3_6tkj6")
-region_rect = Rect2(15, 7, 33, 43)
-patch_margin_left = 4
-patch_margin_top = 5
-patch_margin_right = 4
-patch_margin_bottom = 5
-axis_stretch_horizontal = 2
-
 [node name="hitbox" type="Button" parent="." unique_id=1950537254]
 visible = false
 z_index = 1000
@@ -672,6 +660,51 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_1j1t4")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_er7ca")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_xfqyr")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_mfkka")
+
+[node name="code" type="Control" parent="." unique_id=362525740]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = -181.0
+offset_top = 161.0
+offset_right = -141.0
+offset_bottom = 201.0
+
+[node name="seller_container" type="NinePatchRect" parent="code" unique_id=825281515]
+layout_mode = 0
+offset_left = 193.0
+offset_top = -37.0
+offset_right = 223.0
+offset_bottom = -17.25
+scale = Vector2(4, 4)
+texture = ExtResource("22_u287m")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="sellerName_text" type="Label" parent="code" unique_id=245217550]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 2.0
+offset_right = 742.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(0.22350258, 0, 0.032663982, 1)
+theme_override_fonts/font = ExtResource("16_eu0tx")
+theme_override_font_sizes/font_size = 10
+text = "seller_code"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=952239220]
+layout_mode = 0
+offset_right = 36.0
+offset_bottom = 40.0
+scale = Vector2(4, 4)
+texture = ExtResource("3_6tkj6")
+region_rect = Rect2(15, 7, 33, 43)
+patch_margin_left = 4
+patch_margin_top = 5
+patch_margin_right = 4
+patch_margin_bottom = 5
+axis_stretch_horizontal = 2
 
 [node name="sold_container" type="Control" parent="." unique_id=794295294]
 unique_name_in_owner = true
