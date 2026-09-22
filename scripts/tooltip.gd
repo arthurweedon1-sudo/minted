@@ -78,7 +78,7 @@ func show_tooltip(target):
 		rating_container.show()
 	else:
 		rating_container.hide()
-	
+
 	if item.item_category[0]:
 		$mouse_hitbox/TooltipPanel/tags2/item_type/type_tag.play(item.item_category[0].to_lower())
 	if item.cd:
