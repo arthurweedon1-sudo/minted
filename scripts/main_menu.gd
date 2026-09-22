@@ -25,3 +25,7 @@ func _on_new_game_button_pressed() -> void:
 	if SaveLoad.has_save():
 		SaveLoad._wipe()
 	get_tree().change_scene_to_file("res://scenes/room.tscn")
+
+
+func _on_credits_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/credits.tscn")

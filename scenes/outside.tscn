@@ -17,13 +17,13 @@
 [ext_resource type="Texture2D" uid="uid://w5vi05v5cwoc" path="res://assets/os/icons/down.png" id="13_pu366"]
 [ext_resource type="Texture2D" uid="uid://ch67o1t37wkhb" path="res://assets/os/icons/home_icon.png" id="13_x3una"]
 [ext_resource type="Texture2D" uid="uid://dkdfnn4jclghs" path="res://assets/os/icons/bank_icon.png" id="14_nxbbw"]
-[ext_resource type="Script" uid="uid://1wmbgh4ra155" path="res://scenes/clouds.gd" id="19_ni2yb"]
+[ext_resource type="Script" uid="uid://1wmbgh4ra155" path="res://scripts/clouds.gd" id="19_ni2yb"]
 [ext_resource type="Texture2D" uid="uid://cay8l7wyk36pw" path="res://assets/bank.png" id="19_xq4d2"]
 [ext_resource type="Texture2D" uid="uid://7yw2kkwty1dh" path="res://assets/clouds_real.png" id="20_ni2yb"]
 [ext_resource type="Texture2D" uid="uid://dgbn67xdp6o2r" path="res://assets/clouds_rain.png" id="20_pu366"]
 [ext_resource type="Texture2D" uid="uid://c4hgry67cq1fg" path="res://assets/lamp.png" id="22_s22lx"]
 [ext_resource type="Texture2D" uid="uid://moc5h0e8nysa" path="res://assets/white_circle.png" id="23_2xi43"]
-[ext_resource type="Script" uid="uid://cpdksehjprjmm" path="res://scenes/lamp.gd" id="23_xxkng"]
+[ext_resource type="Script" uid="uid://cpdksehjprjmm" path="res://scripts/lamp.gd" id="23_xxkng"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4c3da"]
 size = Vector2(26.89616, 18.6732)

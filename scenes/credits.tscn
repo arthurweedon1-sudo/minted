@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://d3t8ch1woljxu"]
+
+[ext_resource type="Script" uid="uid://cfdjgjhjuuoyv" path="res://scripts/credits.gd" id="1_0bpdh"]
+[ext_resource type="Texture2D" uid="uid://lbht0cr1yow4" path="res://assets/hotbar/hotbar_box_template.png" id="2_2ckv8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yeqti"]
+content_margin_left = 10.0
+content_margin_top = 5.0
+content_margin_right = 10.0
+content_margin_bottom = 5.0
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Credits" type="Control" unique_id=1411948852]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0bpdh")
+
+[node name="Close" type="Button" parent="." unique_id=394217028]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 59.0
+offset_right = 90.0
+offset_bottom = 138.0
+theme_override_colors/font_color = Color(0.7992127, 0.0019698713, 0.08457186, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_yeqti")
+text = "X"
+
+[node name="background" type="NinePatchRect" parent="." unique_id=1310655722]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 39.0
+offset_right = 411.75
+offset_bottom = 199.5
+scale = Vector2(4, 4)
+texture = ExtResource("2_2ckv8")
+region_rect = Rect2(11, 3, 41, 56)
+patch_margin_left = 9
+patch_margin_top = 13
+patch_margin_right = 9
+patch_margin_bottom = 13
+axis_stretch_horizontal = 1
+
+[node name="Label" type="Label" parent="." unique_id=589630954]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 216.0
+offset_right = 837.0
+offset_bottom = 454.0
+theme_override_font_sizes/font_size = 200
+text = "WIP"
+
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]

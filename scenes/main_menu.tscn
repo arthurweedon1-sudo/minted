@@ -290,4 +290,5 @@ text = "Minted is the best :)"
 [connection signal="pressed" from="button_container/Continue_Button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="button_container/New_game_Button" to="." method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="button_container/Options_Button" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="button_container/Credits_Button" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="button_container/Exit_game_Button" to="." method="_on_exit_game_button_pressed"]
