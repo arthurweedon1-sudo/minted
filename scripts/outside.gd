@@ -11,6 +11,11 @@ var left = true
 @onready var sleep_bar = $CanvasLayer/sleep/sleep_bar
 @onready var left_bar = $CanvasLayer/sleep
 
+var sky_gradient := Gradient.new()
+var gradient_tex := GradientTexture2D.new()
+@onready var sky_rect := TextureRect.new()
+
+
 func _ready() -> void:
 	$CanvasLayer.show()
 	building.modulate.a = 0.22
@@ -22,6 +27,20 @@ func _ready() -> void:
 		player.position = starting_position
 	else:
 		player.position = Global.outside_saved_position
+	
+	sky_gradient.set_color(0, Color("#1a162e"))
+	sky_gradient.set_color(1, Color("591a60ff"))
+
+	gradient_tex.gradient = sky_gradient
+	gradient_tex.fill_from = Vector2(0.5, 0.0) 
+	gradient_tex.fill_to = Vector2(0.5, 1.0) 
+	gradient_tex.height = 360
+	
+	sky_rect.texture = gradient_tex
+	sky_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	sky_rect.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	%outside.add_child(sky_rect)
+	
 
 func _process(delta: float) -> void:
 	if Global.current_interactable == self and Input.is_action_pressed("interact") and not Global.action_just_pressed and round_to_decimal(player.position) != starting_position and target_scene != "":
@@ -30,8 +49,21 @@ func _process(delta: float) -> void:
 		Global.outside = false
 		sleep_bar.value = Global.sleep
 		get_tree().change_scene_to_file(target_scene)
-		print(player.position)
+	
+	var time_factor : float = (Global.hour + Global.min / 60.0) / 25.0
+	var daylight : float = clamp(sin(PI * time_factor), 0.0, 1.0)
+	daylight = smoothstep(0.0, 1.0, daylight)
 
+	var night_top := Color("#1a162e")
+	var night_bottom := Color("a21b5aff") 
+
+	var day_top := Color("#3a6fa0")
+	var day_bottom := Color("#b2d8f8")
+
+	sky_gradient.set_color(0, night_top.lerp(day_top, daylight))
+	sky_gradient.set_color(1, night_bottom.lerp(day_bottom, daylight))
+	
+	
 func _on_building_area_area_entered(area: Area2D) -> void:
 	if area.name == "Player_Detector":
 		building.modulate.a = 0.01

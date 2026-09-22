@@ -98,7 +98,6 @@ var player_pos = Vector2(0,0)
 
 # Debug
 var debug_enabled: bool = false
-
 # Skill Tree
 var skill_tree_unlocked = [0]
 
