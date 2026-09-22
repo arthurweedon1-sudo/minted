@@ -38,7 +38,7 @@ func _on_button_pressed() -> void:
 	if parent_index == -1:
 		return
 
-	var node_to_show = ShippingHandler.mail_user_list[parent_index][1]
+	var node_to_show = ShippingHandler.mail_user_list[parent_index][1][-1]
 	show_only(node_to_show)
 
 func show_only(node_to_show: Control) -> void:

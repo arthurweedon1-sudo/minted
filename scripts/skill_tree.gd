@@ -5,7 +5,6 @@ var data = []
 @onready var title = get_node("/root/ActionPopup/CanvasLayer/info/title")
 @onready var description = get_node("/root/ActionPopup/CanvasLayer/info/description")
 @onready var price2 = get_node("/root/ActionPopup/CanvasLayer/info/price2")
-@onready var price = get_node("/root/ActionPopup/CanvasLayer/info/price")
 @onready var info = get_node("/root/ActionPopup/CanvasLayer/info")
 var current_id = 0
 var dragging: bool = false
@@ -108,17 +107,14 @@ func _show_skill(data2, bought):
 	info.show()
 	get_node("/root/ActionPopup/CanvasLayer/info/Buy").show()
 	price2.show()
-	price.show()
 	if data2["name"] == "Locked":
 		get_node("/root/ActionPopup/CanvasLayer/info/Buy").hide()
 		price2.hide()
-		price.hide()
 	title.text = data2["name"]
 	description.text = data2["desc"]
 	price2.text = str(data2["price"])
 	if bought:
 		price2.hide()
-		price.hide()
 		get_node("/root/ActionPopup/CanvasLayer/info/Buy").hide()
 		
 	

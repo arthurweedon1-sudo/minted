@@ -13,15 +13,16 @@ func _ready():
 	for child in message_container.get_children():
 		child.queue_free()
 	for entry in ShippingHandler.shipping_list:
-		_on_create_mail(entry)
+		for i in range (len(ShippingHandler.shipping_list)):
+			_on_create_mail(entry, i)
 
-func _on_create_mail(entry = null):
+func _on_create_mail(entry = null, index = 0):
 	Inventory.current_ui_type = "shipping"
 	if entry == null and not ShippingHandler.shipping_list.is_empty():
 		entry = ShippingHandler.shipping_list[-1]
 	var mail = mail_user_scene.instantiate()
 	user_container.add_child(mail)
-	var message = shipping_status.instantiate()
-	message.shipping_entry = entry
-	message_container.add_child(message)
-	ShippingHandler.mail_user_list.append([mail, message])
+	var messages = [shipping_status.instantiate()]
+	messages[index].shipping_entry = entry
+	message_container.add_child(messages[index])
+	ShippingHandler.mail_user_list.append([mail, messages])
