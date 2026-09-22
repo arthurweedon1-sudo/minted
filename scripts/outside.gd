@@ -43,6 +43,11 @@ func _ready() -> void:
 	
 
 func _process(delta: float) -> void:
+	if Global.hour >= 22 or Global.hour <= 5:
+		$player/Player/Camera2D/ColorRect.show()
+	else:
+		$player/Player/Camera2D/ColorRect.hide()
+	
 	if Global.current_interactable == self and Input.is_action_pressed("interact") and not Global.action_just_pressed and round_to_decimal(player.position) != starting_position and target_scene != "":
 		Global.action_just_pressed = true
 		Global.first_room = false

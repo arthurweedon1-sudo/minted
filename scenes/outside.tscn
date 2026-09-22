@@ -21,6 +21,9 @@
 [ext_resource type="Texture2D" uid="uid://cay8l7wyk36pw" path="res://assets/bank.png" id="19_xq4d2"]
 [ext_resource type="Texture2D" uid="uid://7yw2kkwty1dh" path="res://assets/clouds_real.png" id="20_ni2yb"]
 [ext_resource type="Texture2D" uid="uid://dgbn67xdp6o2r" path="res://assets/clouds_rain.png" id="20_pu366"]
+[ext_resource type="Texture2D" uid="uid://c4hgry67cq1fg" path="res://assets/lamp.png" id="22_s22lx"]
+[ext_resource type="Texture2D" uid="uid://moc5h0e8nysa" path="res://assets/white_circle.png" id="23_2xi43"]
+[ext_resource type="Script" uid="uid://cpdksehjprjmm" path="res://scenes/lamp.gd" id="23_xxkng"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4c3da"]
 size = Vector2(26.89616, 18.6732)
@@ -186,6 +189,14 @@ limit_right = 1709
 limit_bottom = 900
 position_smoothing_enabled = true
 position_smoothing_speed = 12.0
+
+[node name="ColorRect" type="ColorRect" parent="player/Player/Camera2D" unique_id=98379370]
+z_index = 10
+offset_left = -1087.0
+offset_top = -845.0
+offset_right = 965.0
+offset_bottom = 603.0
+color = Color(0, 0, 0, 0.63529414)
 
 [node name="Building" parent="." unique_id=2101118295 instance=ExtResource("2_nsm10")]
 visible = false
@@ -480,6 +491,51 @@ unique_name_in_owner = true
 position = Vector2(-136.75, -28.5)
 sprite_frames = SubResource("SpriteFrames_s7bd6")
 animation = &"sunny"
+
+[node name="lamp" type="Sprite2D" parent="." unique_id=1595110686]
+y_sort_enabled = true
+position = Vector2(10, -24)
+scale = Vector2(2, 2)
+texture = ExtResource("22_s22lx")
+script = ExtResource("23_xxkng")
+
+[node name="light" type="PointLight2D" parent="lamp" unique_id=1526367386]
+position = Vector2(-0.5, -34)
+scale = Vector2(3, 3)
+color = Color(1, 0.9137255, 0.7019608, 1)
+energy = 0.5
+shadow_enabled = true
+texture = ExtResource("23_2xi43")
+
+[node name="lamp2" type="Sprite2D" parent="." unique_id=1801260566]
+y_sort_enabled = true
+position = Vector2(1098, -19)
+scale = Vector2(2, 2)
+texture = ExtResource("22_s22lx")
+script = ExtResource("23_xxkng")
+
+[node name="light" type="PointLight2D" parent="lamp2" unique_id=1204049785]
+position = Vector2(-0.5, -34)
+scale = Vector2(3, 3)
+color = Color(1, 0.9137255, 0.7019608, 1)
+energy = 0.5
+shadow_enabled = true
+texture = ExtResource("23_2xi43")
+
+[node name="lamp3" type="Sprite2D" parent="." unique_id=1388052617]
+y_sort_enabled = true
+position = Vector2(395, 431)
+scale = Vector2(2, 2)
+texture = ExtResource("22_s22lx")
+script = ExtResource("23_xxkng")
+
+[node name="light" type="PointLight2D" parent="lamp3" unique_id=1820853541]
+position = Vector2(-0.5, -34)
+scale = Vector2(3, 3)
+color = Color(1, 0.9137255, 0.7019608, 1)
+energy = 0.5
+shadow_enabled = true
+texture = ExtResource("23_2xi43")
 
 [connection signal="area_entered" from="building_area" to="." method="_on_building_area_area_entered"]
 [connection signal="area_exited" from="building_area" to="." method="_on_building_area_area_exited"]
