@@ -46,6 +46,7 @@ func _on_button_pressed() -> void:
 func _on_tab_container_tab_selected(tab: int) -> void:
 	if selected:
 		Inventory.current_market_type = selected.get_tab_title(tab)
+		Tooltip.hide()
 
 func _process(_delta: float) -> void:
 	if Global.refreshProgress >= 100:

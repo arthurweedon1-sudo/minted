@@ -1,11 +1,11 @@
 extends Control
 var landlord_quotes: Array = ["Time to pay up!", "Lucky day for me, eh!", "It's my favourite time of day!", "How is your reselling going?", "You're lucky that I'm your landlord!", "Look's like Minted won't work out for you...", "Hello again!", "My (least) favourite customer!", "You're on thin ice pal!", "Do I always look this stunning??", "Do you really class reselling as a job?", "Not even a miracle could change your mindset!","A dime higher and you'd be out of here."]
 var total_rent: float
-# Landlord speech
+
 @onready var landlord_text1: Label = $landlord_text/landlord_text
 @onready var landlord_text2: Label = $landlord_text/landlord_text2
 @onready var landlord_image: AnimatedSprite2D = $landlord_image
-# Price label
+
 @onready var building_label1: Label = $Building/price1
 @onready var building_label2: Label = $Building/price2
 @onready var electrical_label1: Label = $Electrical/price1
@@ -18,19 +18,33 @@ var total_rent: float
 @onready var broadband_label2: Label = $Broadband/price2
 @onready var total_label1: Label = $Total/price1
 @onready var total_label2: Label = $Total/price2
+
 func _ready() -> void:
 	visibility_changed.connect(_on_visibility_changed)
+	Global.playing_changed.connect(_on_playing_changed)
 	refresh_popup()
+	if not Global.playing:
+		hide()
+
 func _on_visibility_changed() -> void:
-	if visible:
+	if visible and not Global.playing:
+		hide()
+		return
+	if visible and Global.playing:
 		refresh_popup()
+
+func _on_playing_changed(is_playing: bool) -> void:
+	if not is_playing:
+		hide()
+	elif Global.rent_triggered:
+		show()
+
 func refresh_popup() -> void:
-	# Landlord Speech Bubble
 	var quote = landlord_quotes.pick_random()
 	landlord_text1.text = quote
 	landlord_text2.text = quote
 	landlord_image.play(str(randi_range(1, 7)))
-	# Price
+
 	var pay_current = 0
 	if Global.loan_info[1] == 0:
 		pay_current = (Global.loan_info[0]/1)*Global.loan_info[2]
@@ -55,10 +69,13 @@ func refresh_popup() -> void:
 	total_label2.text = "$" + "%.2f" % total_rent
 	%loanValue.text = "$" + str(pay_current)
 	%loanDaysLeft.text = str(Global.loan_info[1]-1) + " rent days left"
+
 func _on_pay_button_mouse_entered() -> void:
 	$pay_container.modulate.a = 0.7
+
 func _on_pay_button_mouse_exited() -> void:
 	$pay_container.modulate.a = 1
+
 func _on_pay_button_pressed() -> void:
 	if Global.money >= total_rent:
 		Global.money -= total_rent
@@ -78,4 +95,3 @@ func _on_pay_button_pressed() -> void:
 			Global.loan_info[1] -= 1
 	else:
 		print("Not enough - You lose!")
-	

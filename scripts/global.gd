@@ -114,7 +114,14 @@ var items_computer = 12
 var uncommon_frequency = 1
 var delivery_speed_mult = 1
 
-var playing = false
+signal playing_changed(value: bool)
+
+var playing: bool = false:
+	set(value):
+		if playing == value:
+			return
+		playing = value
+		playing_changed.emit(value)
 var mintora = false
 
 # item codes
