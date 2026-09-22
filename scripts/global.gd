@@ -700,6 +700,8 @@ func reset_to_defaults() -> void:
 	var codes = []
 	var suspicion = 1
 	
+	playing = true
+	
 
 func create_code(tries):
 	var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
