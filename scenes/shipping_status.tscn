@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dlomccpkdc0op"]
 
-[ext_resource type="FontFile" uid="uid://d27f0kxbi0qvo" path="res://fonts/Daydream.otf" id="1_8smkt"]
 [ext_resource type="Script" uid="uid://0m06q8pqlqg0" path="res://scripts/shipping_status.gd" id="1_ffs1v"]
+[ext_resource type="FontFile" uid="uid://gwi3hcl35u7m" path="res://fonts/Pixeled.ttf" id="2_cgwc4"]
 [ext_resource type="Texture2D" uid="uid://ddb62bvq6iexq" path="res://assets/shipping_stages.png" id="2_ffs1v"]
 [ext_resource type="PackedScene" uid="uid://dccm2cqx7r3hk" path="res://scenes/item_ui.tscn" id="4_cgwc4"]
 
@@ -60,10 +60,12 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -619.0
-offset_bottom = -486.0
+offset_top = -8.0
+offset_right = -639.0
+offset_bottom = -478.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.5, 0.5)
 script = ExtResource("1_ffs1v")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=115558442]
@@ -85,11 +87,11 @@ theme_override_constants/margin_bottom = 10
 [node name="Status_text" type="Label" parent="PanelContainer/VBoxContainer/Info" unique_id=930863382]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
-theme_override_fonts/font = ExtResource("1_8smkt")
+theme_override_fonts/font = ExtResource("2_cgwc4")
 text = "Your parcel is ______"
 
 [node name="Stages_image" type="AnimatedSprite2D" parent="PanelContainer/VBoxContainer" unique_id=1486609304]
-position = Vector2(317, 111)
+position = Vector2(238, 108)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_4c3da")
 
@@ -98,12 +100,12 @@ layout_mode = 2
 
 [node name="Estimate_text" type="Label" parent="PanelContainer/VBoxContainer/Estimate" unique_id=2095218717]
 layout_mode = 0
-offset_left = 30.0
-offset_top = 121.0
-offset_right = 566.0
-offset_bottom = 149.0
+offset_left = 32.0
+offset_top = 85.0
+offset_right = 568.0
+offset_bottom = 131.0
 theme_override_colors/font_color = Color(0.1728327, 0.17283267, 0.17283267, 1)
-theme_override_fonts/font = ExtResource("1_8smkt")
+theme_override_fonts/font = ExtResource("2_cgwc4")
 text = "Estimated delivery time: 10 hours"
 
 [node name="item_UI" parent="." unique_id=2005130059 instance=ExtResource("4_cgwc4")]
@@ -111,9 +113,9 @@ layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 548.0
-offset_top = -3.0
-offset_right = 1189.0
-offset_bottom = 217.0
+offset_left = 491.0
+offset_top = 7.0
+offset_right = 1132.0
+offset_bottom = 227.0
 grow_horizontal = 1
 grow_vertical = 1

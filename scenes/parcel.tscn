@@ -86,9 +86,9 @@ offset_bottom = 658.0
 [node name="Close" type="Button" parent="." unique_id=281439670]
 layout_mode = 0
 offset_left = -319.0
-offset_top = 197.0
+offset_top = 295.0
 offset_right = -268.0
-offset_bottom = 276.0
+offset_bottom = 374.0
 theme_override_colors/font_color = Color(0.7992127, 0.0019698713, 0.08457186, 1)
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_40veq")

@@ -123,3 +123,10 @@ func condition_mult_calc(condition: String) -> float:
 		return 0.9
 	else:
 		return 1.0
+
+func push_new_message(old_node, new_node) -> void:
+	for entry in mail_user_list:
+		var idx = entry[1].find(old_node)
+		if idx != -1:
+			entry[1].append(new_node)
+			return
