@@ -30,6 +30,7 @@ Tooltip="*uid://cx3ugramkbs1d"
 RentPopup="*uid://bf7klmhgpdjnt"
 SaveLoad="*uid://cee4tjy4boisu"
 ActionPopup="*uid://e63s4x5eyeed"
+TutorialManager="*uid://o2q0nmlu4jrt"
 
 [display]
 

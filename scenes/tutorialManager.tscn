@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://o2q0nmlu4jrt"]
+
+[ext_resource type="Script" uid="uid://do525dj5g6cuf" path="res://scenes/tutorial_manager.gd" id="1_upyeg"]
+[ext_resource type="PackedScene" uid="uid://u5u4fml3cx2h" path="res://scenes/minty.tscn" id="3_upyeg"]
+
+[node name="TutorialManager" type="CanvasLayer" unique_id=2128649913]
+layer = 5
+script = ExtResource("1_upyeg")
+
+[node name="minty" parent="." unique_id=941616838 instance=ExtResource("3_upyeg")]
+unique_name_in_owner = true
+offset_left = 573.0
+offset_top = 364.0
+offset_right = 573.0
+offset_bottom = 364.0

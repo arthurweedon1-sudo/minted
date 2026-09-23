@@ -159,12 +159,52 @@
 		"type": "line",
 		"next_id": "16"
 	},
-		{
+	{
 		"id": "16",
 		"speaker": "none",
 		"face": "none",
 		"text": "Here to help with all your shopping needs!",
 		"type": "line",
 		"next_id": "14"
+	},
+	{
+		"id": "t0",
+		"speaker": "none",
+		"face": "none",
+		"text": "This is the header bar! It contains all all the important information to start selling.",
+		"type": "line",
+		"next_id": "t1"
+	},
+	{
+		"id": "t1",
+		"speaker": "none",
+		"face": "none",
+		"text": "Here you can find your current level, username and rating.",
+		"type": "line",
+		"next_id": "t2"
+	},
+	{
+		"id": "t2",
+		"speaker": "none",
+		"face": "none",
+		"text": "This is your wallet!",
+		"type": "line",
+		"next_id": "t3"
+	},
+	{
+		"id": "t3",
+		"speaker": "none",
+		"face": "none",
+		"text": "The purple book shows all the items that you have discovered...",
+		"type": "line",
+		"next_id": "t4"
+	},
+	{
+		"id": "t4",
+		"speaker": "none",
+		"face": "none",
+		"text": "The clock and date are both located in the top right!",
+		"type": "end",
+		"next_id": "end"
 	},
 ]

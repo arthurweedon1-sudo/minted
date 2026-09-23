@@ -9,6 +9,8 @@
 [ext_resource type="FontFile" uid="uid://gwi3hcl35u7m" path="res://fonts/Pixeled.ttf" id="4_nuq0q"]
 [ext_resource type="Texture2D" uid="uid://dvg2caoxq86o1" path="res://assets/pixel_dolar_topbar.png" id="5_ucwmf"]
 [ext_resource type="PackedScene" uid="uid://bk6xu7dvbhxas" path="res://scenes/stars.tscn" id="6_0uyao"]
+[ext_resource type="Texture2D" uid="uid://c00cet1o0hcw1" path="res://assets/focus.png" id="10_l7xbi"]
+[ext_resource type="Texture2D" uid="uid://8480d74nkyxe" path="res://assets/arrow.png" id="11_k1jv6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nuq0q"]
 
@@ -348,6 +350,150 @@ offset_left = 113.0
 offset_top = 9.0
 offset_right = 276.0
 offset_bottom = 37.0
+
+[node name="focus" type="Control" parent="." unique_id=1268715067]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0.54901963)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="focus" unique_id=828842739]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6222.0
+offset_top = -1095.0
+offset_right = 6207.0
+offset_bottom = 917.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_l7xbi")
+
+[node name="arrow" type="TextureRect" parent="focus" unique_id=542903534]
+layout_mode = 0
+offset_left = 347.00003
+offset_top = 133.99998
+offset_right = 411.00003
+offset_bottom = 197.99998
+rotation = -0.31405282
+scale = Vector2(3, 3)
+texture = ExtResource("11_k1jv6")
+
+[node name="focus2" type="Control" parent="." unique_id=1743918481]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0.54901963)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="focus2" unique_id=544889574]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1460.0
+offset_top = -1095.0
+offset_right = 603.0
+offset_bottom = 917.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_l7xbi")
+
+[node name="arrow" type="TextureRect" parent="focus2" unique_id=120978954]
+layout_mode = 0
+offset_left = 126.0
+offset_top = 122.999985
+offset_right = 190.0
+offset_bottom = 186.99998
+rotation = -0.31405282
+scale = Vector2(3, 3)
+texture = ExtResource("11_k1jv6")
+
+[node name="focus3" type="Control" parent="." unique_id=1948358459]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0.54901963)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="focus3" unique_id=1515510747]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -935.0
+offset_top = -1098.0
+offset_right = 804.0
+offset_bottom = 914.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_l7xbi")
+
+[node name="arrow" type="TextureRect" parent="focus3" unique_id=476099378]
+layout_mode = 0
+offset_left = 274.0
+offset_top = 87.0
+offset_right = 338.0
+offset_bottom = 151.0
+rotation = 0.29224652
+scale = Vector2(3, 3)
+texture = ExtResource("11_k1jv6")
+
+[node name="focus4" type="Control" parent="." unique_id=25032184]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.54901963)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="focus4" unique_id=148540645]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -18.0
+offset_top = -1095.0
+offset_right = 368.0
+offset_bottom = 917.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_l7xbi")
+
+[node name="arrow" type="TextureRect" parent="focus4" unique_id=771725032]
+layout_mode = 0
+offset_left = 691.0
+offset_top = 67.0
+offset_right = 755.0
+offset_bottom = 131.0
+rotation = 0.29224652
+scale = Vector2(3, 3)
+texture = ExtResource("11_k1jv6")
+
+[node name="focus5" type="Control" parent="." unique_id=370940086]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0.54901963)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="focus5" unique_id=1523226968]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1053.0
+offset_top = -1101.0
+offset_right = 2065.0
+offset_bottom = 911.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_l7xbi")
+
+[node name="arrow" type="TextureRect" parent="focus5" unique_id=177477329]
+layout_mode = 0
+offset_left = 1029.0
+offset_top = 143.00003
+offset_right = 1093.0
+offset_bottom = 207.00003
+rotation = -0.3485636
+scale = Vector2(3, 3)
+texture = ExtResource("11_k1jv6")
 
 [connection signal="mouse_entered" from="back_nodes/CenterContainer/book_node/book_button" to="." method="_on_book_button_mouse_entered"]
 [connection signal="mouse_exited" from="back_nodes/CenterContainer/book_node/book_button" to="." method="_on_book_button_mouse_exited"]

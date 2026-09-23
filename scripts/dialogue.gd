@@ -169,6 +169,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if TutorialManager.current_focus != "none" or not Global.dialogue_ongoing:
+		hide()
+	else:
+		show()
 	if is_typing:
 		portrait.play() 
 	else:
@@ -185,6 +189,7 @@ func _process(delta: float) -> void:
 			return
 		if current_dialgoue_type == "line" or current_dialgoue_type == "end": 
 			_display_dialogue(dialogue_data,next_dialogue)
+			SignalBus.focus_change.emit()
 		elif current_dialgoue_type == "choice":
 			if option_selected < current_choices.size():
 				next_dialogue = current_choices[option_selected]
@@ -196,6 +201,10 @@ func _process(delta: float) -> void:
 			visible = false
 			Global.paused = false
 			SignalBus.dialogue_finished.emit()
+			SignalBus.focus_change.emit()
+			if not Global.tutorial_done:
+				SignalBus.emit_signal("start_tutorial")
+				Global.tutorial_done = true
 	
 	#highlight stuff
 	if Input.is_action_just_pressed("up"):

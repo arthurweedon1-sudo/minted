@@ -10,3 +10,7 @@ signal show_skill(data, bought)
 signal hide_zoom # bro why is this a thing
 signal show_zoom
 signal skill_bought # first time ever using signals bruh
+
+# Tutorial
+signal focus_change
+signal start_tutorial

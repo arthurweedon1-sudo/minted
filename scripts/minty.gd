@@ -10,6 +10,7 @@ var current_y = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	SignalBus.start_tutorial.connect(show_tutorial_dialogue)
 	current_y = sprite.position.y
 
 
@@ -24,5 +25,10 @@ func _process(delta: float) -> void:
 
 func _on_button_pressed() -> void:
 	SignalBus.display_dialogue.emit("find", 15)
+	movement = 5
+	sprite.position.y = current_y
+
+func show_tutorial_dialogue():
+	SignalBus.display_dialogue.emit("find", "t0")
 	movement = 5
 	sprite.position.y = current_y

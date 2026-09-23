@@ -125,6 +125,8 @@ var playing: bool = false:
 		playing_changed.emit(value)
 var mintora = false
 
+var tutorial_done = false
+
 # item codes
 var codes = []
 var suspicion = 1
@@ -548,7 +550,8 @@ func get_save_data() -> Dictionary:
 		"items_computer": items_computer,
 		"uncommon_frequency": uncommon_frequency,
 		"delivery_speed_mult": delivery_speed_mult,
-		"suspicion": suspicion
+		"suspicion": suspicion,
+		"tutorial_done": tutorial_done,
 	}
 
 func load_save_data(data: Dictionary) -> void:
@@ -627,6 +630,7 @@ func load_save_data(data: Dictionary) -> void:
 	likability_score = data.get("likability_score",likability_score)
 	uncommon_frequency = data.get("uncommon_frequency",uncommon_frequency)
 	delivery_speed_mult  = data.get("delivery_speed_mult",delivery_speed_mult)
+	tutorial_done = data.get("tutorial_done", tutorial_done)
 
 func reset_to_defaults() -> void:
 	money = 50.00
@@ -703,6 +707,7 @@ func reset_to_defaults() -> void:
 	var suspicion = 1
 	
 	playing = true
+	tutorial_done = false
 	
 
 func create_code(tries):

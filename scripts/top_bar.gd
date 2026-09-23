@@ -11,6 +11,43 @@ var money_string: String = ""
 
 
 func _process(delta):
+	if TutorialManager.current_focus == "top_bar":
+		%focus.show()
+		%focus2.hide()
+		%focus3.hide()
+		%focus4.hide()
+		%focus5.hide()
+	elif TutorialManager.current_focus == "top_bar_level":
+		%focus.hide()
+		%focus2.show()
+		%focus3.hide()
+		%focus4.hide()
+		%focus5.hide()
+	elif TutorialManager.current_focus == "top_bar_money":
+		%focus.hide()
+		%focus2.hide()
+		%focus3.show()
+		%focus4.hide()
+		%focus5.hide()
+	elif TutorialManager.current_focus == "top_bar_book":
+		%focus.hide()
+		%focus2.hide()
+		%focus3.hide()
+		%focus4.show()
+		%focus5.hide()
+	elif TutorialManager.current_focus == "top_bar_clock":
+		%focus.hide()
+		%focus2.hide()
+		%focus3.hide()
+		%focus4.hide()
+		%focus5.show()
+	else:
+		%focus.hide()
+		%focus2.hide()
+		%focus3.hide()
+		%focus4.hide()
+		%focus5.hide()
+		
 	if Global.mintora:
 		%background_mintora.show()
 		%background.hide()
