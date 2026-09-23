@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://cfdjgjhjuuoyv" path="res://scripts/credits.gd" id="1_0bpdh"]
 [ext_resource type="Texture2D" uid="uid://lbht0cr1yow4" path="res://assets/hotbar/hotbar_box_template.png" id="2_2ckv8"]
+[ext_resource type="Texture2D" uid="uid://cxaelqidjs36f" path="res://assets/hotbar/hotbar_item_template.png" id="3_0ctdu"]
+[ext_resource type="FontFile" uid="uid://gwi3hcl35u7m" path="res://fonts/Pixeled.ttf" id="4_2fbfq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yeqti"]
 content_margin_left = 10.0
@@ -45,13 +47,282 @@ patch_margin_right = 9
 patch_margin_bottom = 13
 axis_stretch_horizontal = 1
 
-[node name="Label" type="Label" parent="." unique_id=589630954]
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1008310290]
 layout_mode = 0
-offset_left = 484.0
-offset_top = 216.0
-offset_right = 837.0
-offset_bottom = 454.0
-theme_override_font_sizes/font_size = 200
-text = "WIP"
+offset_left = 170.0
+offset_top = 76.0
+offset_right = 428.0
+offset_bottom = 215.5
+scale = Vector2(4, 4)
+texture = ExtResource("3_0ctdu")
+region_rect = Rect2(15, 7, 33, 43)
+patch_margin_left = 4
+patch_margin_top = 5
+patch_margin_right = 4
+patch_margin_bottom = 5
+axis_stretch_horizontal = 2
+
+[node name="programming" type="Control" parent="." unique_id=1425641397]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="programmers_title" type="Label" parent="programming" unique_id=589630954]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 102.0
+offset_right = 452.0
+offset_bottom = 160.0
+theme_override_fonts/font = ExtResource("4_2fbfq")
+theme_override_font_sizes/font_size = 20
+text = "Programmers:"
+
+[node name="programmers2" type="Label" parent="programming" unique_id=1225558300]
+layout_mode = 0
+offset_left = 227.0
+offset_top = 148.0
+offset_right = 467.0
+offset_bottom = 206.0
+theme_override_fonts/font = ExtResource("4_2fbfq")
+theme_override_font_sizes/font_size = 15
+text = "Maximilian Misiurski"
+
+[node name="programmers3" type="Label" parent="programming" unique_id=1111623658]
+layout_mode = 0
+offset_left = 227.0
+offset_top = 178.0
+offset_right = 467.0
+offset_bottom = 236.0
+theme_override_fonts/font = ExtResource("4_2fbfq")
+theme_override_font_sizes/font_size = 15
+text = "Rohan Launer"
+
+[node name="music" type="Control" parent="." unique_id=1928411898]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="william" type="Control" parent="music" unique_id=1892664840]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="william_sheard" type="Label" parent="music/william" unique_id=869835107]
+layout_mode = 0
+offset_left = 227.0
+offset_top = 338.0
+offset_right = 467.0
+offset_bottom = 396.0
+theme_override_fonts/font = ExtResource("4_2fbfq")
+theme_override_font_sizes/font_size = 15
+text = "William Sheard"
+
+[node name="william_1" type="Label" parent="music/william" unique_id=2119344219]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 368.0
+offset_right = 479.0
+offset_bottom = 426.0
+theme_override_fonts/font = ExtResource("4_2fbfq")
+theme_override_font_sizes/font_size = 13
+text = "Main title theme"
+
+[node name="william_2" type="Label" parent="music/william" unique_id=1783144426]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 391.0
+offset_right = 479.0
+offset_bottom = 449.0
+theme_override_fonts/font = ExtResource("4_2fbfq")
+theme_override_font_sizes/font_size = 13
+text = "Sleep music"
+
+[node name="arthur" type="Control" parent="music" unique_id=628849931]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="arthur_weedon" type="Label" parent="music/arthur" unique_id=1151640701]
+layout_mode = 0
+offset_left = 227.0
+offset_top = 428.0
+offset_right = 467.0
+offset_bottom = 486.0
+theme_override_fonts/font = ExtResource("4_2fbfq")
+theme_override_font_sizes/font_size = 15
+text = "Arthur Weedon"
+
+[node name="arthur_1" type="Label" parent="music/arthur" unique_id=1297599781]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 458.0
+offset_right = 479.0
+offset_bottom = 516.0
+theme_override_fonts/font = ExtResource("4_2fbfq")
+theme_override_font_sizes/font_size = 13
+text = "The big mint"
+
+[node name="arthur_2" type="Label" parent="music/arthur" unique_id=1097555041]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 481.0
+offset_right = 479.0
+offset_bottom = 539.0
+theme_override_fonts/font = ExtResource("4_2fbfq")
+theme_override_font_sizes/font_size = 13
+text = "Three jelly"
+
+[node name="arthur_3" type="Label" parent="music/arthur" unique_id=512132621]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 504.0
+offset_right = 479.0
+offset_bottom = 562.0
+theme_override_fonts/font = ExtResource("4_2fbfq")
+theme_override_font_sizes/font_size = 13
+text = "Jungle"
+
+[node name="arthur_4" type="Label" parent="music/arthur" unique_id=1522532574]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 527.0
+offset_right = 479.0
+offset_bottom = 585.0
+theme_override_fonts/font = ExtResource("4_2fbfq")
+theme_override_font_sizes/font_size = 13
+text = "Evil pulsation"
+
+[node name="arthur_5" type="Label" parent="music/arthur" unique_id=1168139396]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 550.0
+offset_right = 486.0
+offset_bottom = 608.0
+theme_override_fonts/font = ExtResource("4_2fbfq")
+theme_override_font_sizes/font_size = 13
+text = "Red nose pop (rapping)"
+
+[node name="max" type="Control" parent="music" unique_id=1185523038]
+anchors_preset = 0
+offset_left = 267.0
+offset_top = -90.0
+offset_right = 307.0
+offset_bottom = -50.0
+
+[node name="maximilian_misiurski" type="Label" parent="music/max" unique_id=1061466340]
+layout_mode = 0
+offset_left = 227.0
+offset_top = 428.0
+offset_right = 467.0
+offset_bottom = 486.0
+theme_override_fonts/font = ExtResource("4_2fbfq")
+theme_override_font_sizes/font_size = 15
+text = "Maximilian Misiurski"
+
+[node name="max_1" type="Label" parent="music/max" unique_id=1121875294]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 458.0
+offset_right = 479.0
+offset_bottom = 516.0
+theme_override_fonts/font = ExtResource("4_2fbfq")
+theme_override_font_sizes/font_size = 13
+text = "Bank background theme"
+
+[node name="max_2" type="Label" parent="music/max" unique_id=1775328955]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 481.0
+offset_right = 479.0
+offset_bottom = 539.0
+theme_override_fonts/font = ExtResource("4_2fbfq")
+theme_override_font_sizes/font_size = 13
+text = "Red nose pop"
+
+[node name="max_3" type="Label" parent="music/max" unique_id=1130170451]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 504.0
+offset_right = 479.0
+offset_bottom = 562.0
+theme_override_fonts/font = ExtResource("4_2fbfq")
+theme_override_font_sizes/font_size = 13
+text = "Skill tree ambience"
+
+[node name="max_4" type="Label" parent="music/max" unique_id=956580202]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 527.0
+offset_right = 479.0
+offset_bottom = 585.0
+theme_override_fonts/font = ExtResource("4_2fbfq")
+theme_override_font_sizes/font_size = 13
+text = "Smooth jazz vol.1"
+
+[node name="max_5" type="Label" parent="music/max" unique_id=428735102]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 550.0
+offset_right = 486.0
+offset_bottom = 608.0
+theme_override_fonts/font = ExtResource("4_2fbfq")
+theme_override_font_sizes/font_size = 13
+text = "Smooth jazz vol.2"
+
+[node name="music_title" type="Label" parent="music" unique_id=1453390681]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 292.0
+offset_right = 452.0
+offset_bottom = 350.0
+theme_override_fonts/font = ExtResource("4_2fbfq")
+theme_override_font_sizes/font_size = 20
+text = "Music:"
+
+[node name="game_testers" type="Control" parent="." unique_id=1189573812]
+anchors_preset = 0
+offset_left = 277.0
+offset_right = 317.0
+offset_bottom = 40.0
+
+[node name="game_test_title" type="Label" parent="game_testers" unique_id=1584952268]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 102.0
+offset_right = 452.0
+offset_bottom = 160.0
+theme_override_fonts/font = ExtResource("4_2fbfq")
+theme_override_font_sizes/font_size = 20
+text = "Game testers:"
+
+[node name="game_tester" type="Label" parent="game_testers" unique_id=338642685]
+layout_mode = 0
+offset_left = 227.0
+offset_top = 148.0
+offset_right = 467.0
+offset_bottom = 206.0
+theme_override_fonts/font = ExtResource("4_2fbfq")
+theme_override_font_sizes/font_size = 15
+text = "Maximilian Misiurski"
+
+[node name="game_tester2" type="Label" parent="game_testers" unique_id=256615950]
+layout_mode = 0
+offset_left = 227.0
+offset_top = 178.0
+offset_right = 467.0
+offset_bottom = 236.0
+theme_override_fonts/font = ExtResource("4_2fbfq")
+theme_override_font_sizes/font_size = 15
+text = "Oliver Misiurski"
+
+[node name="game_tester3" type="Label" parent="game_testers" unique_id=650202540]
+layout_mode = 0
+offset_left = 227.0
+offset_top = 206.0
+offset_right = 467.0
+offset_bottom = 264.0
+theme_override_fonts/font = ExtResource("4_2fbfq")
+theme_override_font_sizes/font_size = 15
+text = "Rohan Launer"
 
 [connection signal="pressed" from="Close" to="." method="_on_close_pressed"]

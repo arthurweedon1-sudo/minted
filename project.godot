@@ -42,6 +42,10 @@ window/stretch/aspect="expand"
 
 project/assembly_name="Vinted Simulator"
 
+[editor]
+
+movie_writer/movie_file="/Users/maxtherock/Documents/minted.avi"
+
 [gui]
 
 theme/custom_font="uid://ckeqknjiw1h7m"

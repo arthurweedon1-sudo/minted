@@ -1,5 +1,7 @@
 extends Node
 
+var gooning: bool = true
+
 var money: float = 50.00
 var bank_money: float = 0.0
 var username: String = "margthehagler34"
