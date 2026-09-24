@@ -56,7 +56,6 @@ offset_right = -196.0
 offset_bottom = 247.0
 
 [node name="dialogue" parent="." unique_id=2010025206 instance=ExtResource("5_jxe34")]
-visible = false
 z_index = 10
 anchors_preset = 0
 anchor_right = 0.0
@@ -646,6 +645,7 @@ horizontal_alignment = 2
 unique_name_in_owner = true
 visible = false
 modulate = Color(1, 1, 1, 0.54901963)
+clip_children = 2
 layout_mode = 3
 anchors_preset = 0
 
@@ -663,11 +663,12 @@ grow_vertical = 2
 texture = ExtResource("14_3j2fx")
 
 [node name="arrow" type="TextureRect" parent="focus" unique_id=1005934880]
+z_index = 10
 layout_mode = 0
-offset_left = 265.0
-offset_top = -62.0
-offset_right = 329.0
-offset_bottom = 2.0
+offset_left = 329.00003
+offset_top = -110.000015
+offset_right = 393.00003
+offset_bottom = -46.000015
 rotation = 0.58371294
 scale = Vector2(3, 3)
 texture = ExtResource("15_dynfe")
@@ -754,11 +755,11 @@ texture = ExtResource("14_3j2fx")
 
 [node name="arrow" type="TextureRect" parent="focus4" unique_id=1727389220]
 layout_mode = 0
-offset_left = 96.000015
-offset_top = -323.0
-offset_right = 160.00002
-offset_bottom = -259.0
-rotation = 1.9146278
+offset_left = 95.0
+offset_top = -226.0
+offset_right = 159.0
+offset_bottom = -162.0
+rotation = 1.5134205
 scale = Vector2(3, 3)
 texture = ExtResource("15_dynfe")
 
@@ -814,10 +815,10 @@ texture = ExtResource("14_3j2fx")
 
 [node name="arrow" type="TextureRect" parent="focus6" unique_id=356657782]
 layout_mode = 0
-offset_left = 203.00002
-offset_top = -38.99999
-offset_right = 267.0
-offset_bottom = 25.000011
+offset_left = 219.0
+offset_top = -17.000004
+offset_right = 283.0
+offset_bottom = 46.999996
 rotation = -3.5220263
 scale = Vector2(3, 3)
 texture = ExtResource("15_dynfe")
@@ -848,10 +849,10 @@ texture = ExtResource("14_3j2fx")
 
 [node name="arrow" type="TextureRect" parent="focus7" unique_id=80393479]
 layout_mode = 0
-offset_left = 312.0
-offset_top = 291.0
-offset_right = 376.0
-offset_bottom = 355.0
+offset_left = 247.0
+offset_top = 252.00003
+offset_right = 311.0
+offset_bottom = 316.00003
 rotation = -0.5284815
 scale = Vector2(3, 3)
 texture = ExtResource("15_dynfe")
@@ -882,10 +883,10 @@ texture = ExtResource("14_3j2fx")
 
 [node name="arrow" type="TextureRect" parent="focus8" unique_id=792401274]
 layout_mode = 0
-offset_left = 34.0
-offset_top = 171.0
-offset_right = 98.00003
-offset_bottom = 235.0
+offset_left = 52.0
+offset_top = 146.0
+offset_right = 116.00003
+offset_bottom = 210.0
 rotation = 0.7682841
 scale = Vector2(3, 3)
 texture = ExtResource("15_dynfe")

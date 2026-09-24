@@ -34,7 +34,6 @@ func _ready() -> void:
 	
 func _process(delta:float) -> void:
 	sleep_bar.value = Global.sleep
-	time_ui.text = Global.get_time_text()
 	sleep_needed_int = sleep_vals[slider.value-2]
 	if Global.hour >= 6 and Global.hour <= 10:
 		sleep_needed_int += 20
@@ -44,14 +43,44 @@ func _process(delta:float) -> void:
 		sleep_needed_int += 10
 	sleep_needed.value = sleep_needed_int
 	sleep_gained.value = round(min(sleep_gained_int*Global.sleep_mult,sleep_gained_int*Global.sleep_mult-(sleep_gained_int+Global.sleep-100)))
-	time_ui.text = Global.get_time_text()
+	#time_ui.text = Global.get_time_text()
 	sleep_gained.rotation_degrees = Global.sleep * 3.6
 	
+	var time = slider.value
+	if (Global.hour + int(time)) %24 < 10:
+		var hour = (Global.hour + int(time)) %24
+		var min = Global.min
+		if min < 10:
+			time_ui.text = "0" + str(hour) + ":" + "0" + str(min)
+		else:
+			time_ui.text = "0" + str(hour) + ":" + str(min)
+	else:
+		var hour = (Global.hour + int(time)) %24
+		var min = Global.min
+		if min < 10:
+			time_ui.text = str(hour) + ":" + "0" + str(min)
+		else:
+			time_ui.text = str(hour) + ":" + str(min)
+			
 func get_sleep_text(time):
 	var format_string = "(%s hours)"
 	sleep_text.text = sleep_name + " " + format_string % time
 	$text2.text = "Gaining " + str(sleep_gained_int) +"% sleep"
-	
+	if (Global.hour + int(time)) %24 < 10:
+		var hour = (Global.hour + int(time)) %24
+		var min = Global.min
+		if min < 10:
+			time_ui.text = "0" + str(hour) + ":" + "0" + str(min)
+		else:
+			time_ui.text = "0" + str(hour) + ":" + str(min)
+	else:
+		var hour = (Global.hour + int(time)) %24
+		var min = Global.min
+		if min < 10:
+			time_ui.text = str(hour) + ":" + "0" + str(min)
+		else:
+			time_ui.text = str(hour) + ":" + str(min)
+		
 func _on_h_slider_value_changed(value: float) -> void:
 	if slider.value == 16:
 		sleep_name = "Hibernate"

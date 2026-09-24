@@ -176,20 +176,20 @@ texture = ExtResource("6_uvjmt")
 [node name="Time" type="Label" parent="sleep/timer" unique_id=1237825272]
 layout_mode = 0
 offset_left = -65.0
-offset_top = 11.0
+offset_top = 9.0
 offset_right = 15.0
-offset_bottom = 37.0
-theme_override_colors/font_color = Color(0.99454254, 0.27276024, 0.29930428, 1)
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(0.3635353, 0.6639608, 0.29249614, 1)
 theme_override_fonts/font = ExtResource("2_16o1l")
 theme_override_font_sizes/font_size = 35
 text = "15:52"
 
 [node name="Close" type="Button" parent="." unique_id=921462057]
 layout_mode = 0
-offset_left = 21.0
-offset_top = 23.0
-offset_right = 72.0
-offset_bottom = 102.0
+offset_left = 99.0
+offset_top = 134.0
+offset_right = 150.0
+offset_bottom = 213.0
 theme_override_colors/font_color = Color(0.7992127, 0.0019698713, 0.08457186, 1)
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_svgiq")
@@ -227,7 +227,6 @@ visible = false
 layout_mode = 1
 
 [node name="dialogue" parent="." unique_id=2010025206 instance=ExtResource("8_uvjmt")]
-visible = false
 layout_mode = 1
 offset_left = 74.0
 offset_top = 228.0

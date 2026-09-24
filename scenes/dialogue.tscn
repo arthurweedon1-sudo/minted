@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://dasxcj57x3w1g"]
 
 [ext_resource type="Script" uid="uid://8ks4cyrn35kd" path="res://scripts/dialogue.gd" id="1_jwyou"]
-[ext_resource type="FontFile" uid="uid://ckeqknjiw1h7m" path="res://fonts/Aller_Rg.ttf" id="2_bfpow"]
 [ext_resource type="Texture2D" uid="uid://cc3vkacie3oae" path="res://assets/tab_background.png" id="2_x1cjp"]
-[ext_resource type="FontFile" uid="uid://dkvrhel3prpcm" path="res://fonts/Aller_Bd.ttf" id="3_fyky8"]
 [ext_resource type="Texture2D" uid="uid://l2l113rwynal" path="res://assets/face_sprites/margaret.png" id="4_fyky8"]
+[ext_resource type="FontFile" uid="uid://gwi3hcl35u7m" path="res://fonts/Pixeled.ttf" id="4_tp716"]
 [ext_resource type="Texture2D" uid="uid://cs3vixntdy0vx" path="res://assets/face_sprites/john.png" id="4_vogiq"]
 [ext_resource type="Texture2D" uid="uid://b61a4kspoqbgb" path="res://assets/brand_icons/none.png" id="5_led2e"]
 
@@ -356,6 +355,7 @@ animations = [{
 }]
 
 [node name="dialogue" type="Control" unique_id=2010025206]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -387,15 +387,15 @@ texture = ExtResource("2_x1cjp")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect" unique_id=1614527342]
 layout_mode = 0
-offset_left = 286.0
-offset_top = 32.0
-offset_right = 733.0
-offset_bottom = 220.0
+offset_left = 268.0
+offset_top = 40.0
+offset_right = 715.0
+offset_bottom = 228.0
 mouse_force_pass_scroll_events = false
-theme_override_fonts/normal_font = ExtResource("2_bfpow")
-theme_override_fonts/bold_font = ExtResource("3_fyky8")
-theme_override_font_sizes/normal_font_size = 30
-theme_override_font_sizes/bold_font_size = 30
+theme_override_fonts/normal_font = ExtResource("4_tp716")
+theme_override_fonts/bold_font = ExtResource("4_tp716")
+theme_override_font_sizes/normal_font_size = 15
+theme_override_font_sizes/bold_font_size = 15
 bbcode_enabled = true
 text = "lurp"
 autowrap_mode = 2
@@ -413,7 +413,8 @@ offset_left = 4.0
 offset_top = 10.0
 offset_right = 52.0
 offset_bottom = 83.0
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("4_tp716")
+theme_override_font_sizes/font_size = 19
 text = "lerp
 "
 
@@ -423,17 +424,19 @@ offset_left = 3.0
 offset_top = 89.0
 offset_right = 51.0
 offset_bottom = 162.0
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("4_tp716")
+theme_override_font_sizes/font_size = 19
 text = "larp
 "
 
 [node name="Label" type="Label" parent="." unique_id=1747820778]
 layout_mode = 0
-offset_left = 746.0
-offset_top = 191.0
-offset_right = 790.0
-offset_bottom = 241.0
-theme_override_font_sizes/font_size = 36
+offset_left = 749.0
+offset_top = 163.0
+offset_right = 830.0
+offset_bottom = 251.0
+theme_override_fonts/font = ExtResource("4_tp716")
+theme_override_font_sizes/font_size = 19
 text = "[F]"
 
 [node name="portrait" type="AnimatedSprite2D" parent="." unique_id=97119813]

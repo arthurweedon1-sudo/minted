@@ -34,6 +34,7 @@ func _ready() -> void:
 
 		
 # i know this is a pants way of doing this but i cant be bothered shortening ts
+# nah what is this bro. -_-
 func _process(float) -> void:
 	if TutorialManager.current_focus == "sleep_meter":
 		%focus.show()

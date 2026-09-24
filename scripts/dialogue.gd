@@ -169,6 +169,9 @@ func _ready() -> void:
 	SignalBus.display_dialogue.connect(_display_dialogue)
 	dialogue_data = load_json_file("res://dialogue/test.json")
 	#_display_dialogue(dialogue_data,17)
+	choiceA.text = ""
+	choiceB.text = ""
+	$ColorRect/RichTextLabel.text = ""
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

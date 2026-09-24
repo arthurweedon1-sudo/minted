@@ -251,7 +251,7 @@
 		"id": "t10",
 		"speaker": "none",
 		"face": "none",
-		"text": "Sleeping can be done by interacting with the bed. Don't forget to take a nap otherwise there might be consequences!!",
+		"text": "Sleeping can be done by interacting with the bed.",
 		"type": "line",
 		"next_id": "t11"
 	},
@@ -259,12 +259,21 @@
 		"id": "t11",
 		"speaker": "none",
 		"face": "none",
-		"text": "This wall can have a poster. Yay!",
+		"text": "Don't forget to take a nap otherwise there might be consequences!",
 		"type": "line",
 		"next_id": "t12"
 	},
+	
 	{
 		"id": "t12",
+		"speaker": "none",
+		"face": "none",
+		"text": "This wall can have a poster. Yay!",
+		"type": "line",
+		"next_id": "t13"
+	},
+	{
+		"id": "t13",
 		"speaker": "none",
 		"face": "none",
 		"text": "Outside is where this door leads...",

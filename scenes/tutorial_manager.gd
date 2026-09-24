@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 var current_focus = "none"
+var bed_dialogue_count = 0 
 
 func _ready() -> void:
 	hide()
@@ -15,7 +16,10 @@ func _process(delta: float) -> void:
 func setup(minty_old_position, minty_position, focus):
 	%minty.position = minty_old_position
 	var tween = create_tween()
-	tween.tween_property(%minty, "position", minty_position, 0.5)
+	tween.tween_property(%minty, "position", minty_position, 0.5,)\
+	.set_trans(Tween.TRANS_QUAD)\
+	.set_ease(Tween.EASE_IN_OUT)
+	
 	current_focus = focus
 
 func main_tutorial():
@@ -44,7 +48,12 @@ func focus_changer():
 	elif current_focus == "shelf":
 		setup(Vector2(573.0,464.0), Vector2(373.0,564.0), "bed")
 	elif current_focus == "bed":
-		setup(Vector2(373.0,464.0), Vector2(773.0,364.0), "poster")
+		bed_dialogue_count += 1
+		if bed_dialogue_count >= 2:
+			setup(Vector2(373.0,564.0), Vector2(773.0,364.0), "poster")
+		else:
+			setup(Vector2(373.0,564.0), Vector2(373.0,564.0), "bed")
+
 	elif current_focus == "poster":
 		setup(Vector2(773.0,464.0), Vector2(900.0,364.0), "door")
 	elif current_focus == "door":
