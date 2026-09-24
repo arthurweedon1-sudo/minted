@@ -53,7 +53,6 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_dwrc3")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_fih1l")
 
 [node name="dialogue" parent="." unique_id=2010025206 instance=ExtResource("3_jeq38")]
-visible = false
 layout_mode = 1
 offset_left = -64.0
 offset_top = -290.0
@@ -66,7 +65,7 @@ offset_right = 299.0
 offset_bottom = 151.0
 color = Color(0.14090776, 0.40691423, 0.31100366, 1)
 
-[node name="NinePatchRect" type="NinePatchRect" parent="dialogue/ColorRect" index="0" unique_id=22902221]
+[node name="NinePatchRect2" type="NinePatchRect" parent="dialogue/ColorRect" index="0" unique_id=22902221]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -79,7 +78,11 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_pdb0s")
 
-[node name="RichTextLabel" parent="dialogue/ColorRect" index="1" unique_id=1614527342]
+[node name="NinePatchRect" parent="dialogue/ColorRect" index="1" unique_id=666275732]
+offset_right = -328.0
+offset_bottom = -151.0
+
+[node name="RichTextLabel" parent="dialogue/ColorRect" index="2" unique_id=1614527342]
 offset_left = 24.0
 offset_top = 27.0
 offset_right = 274.0
@@ -89,7 +92,7 @@ theme_override_fonts/bold_font = ExtResource("6_mut1l")
 theme_override_font_sizes/normal_font_size = 10
 theme_override_font_sizes/bold_font_size = 10
 
-[node name="choices" parent="dialogue/ColorRect" index="2" unique_id=1412240598]
+[node name="choices" parent="dialogue/ColorRect" index="3" unique_id=1412240598]
 offset_left = 26.0
 offset_top = 8.0
 offset_right = 66.0

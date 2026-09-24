@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://8ks4cyrn35kd" path="res://scripts/dialogue.gd" id="1_jwyou"]
 [ext_resource type="FontFile" uid="uid://ckeqknjiw1h7m" path="res://fonts/Aller_Rg.ttf" id="2_bfpow"]
+[ext_resource type="Texture2D" uid="uid://cc3vkacie3oae" path="res://assets/tab_background.png" id="2_x1cjp"]
 [ext_resource type="FontFile" uid="uid://dkvrhel3prpcm" path="res://fonts/Aller_Bd.ttf" id="3_fyky8"]
 [ext_resource type="Texture2D" uid="uid://l2l113rwynal" path="res://assets/face_sprites/margaret.png" id="4_fyky8"]
 [ext_resource type="Texture2D" uid="uid://cs3vixntdy0vx" path="res://assets/face_sprites/john.png" id="4_vogiq"]
@@ -313,7 +314,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_l1nsy")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"margaret_tsun",
 "speed": 12.0
 }, {
@@ -369,7 +370,20 @@ script = ExtResource("1_jwyou")
 layout_mode = 0
 offset_right = 800.0
 offset_bottom = 250.0
-color = Color(0.25193202, 0.3847354, 0.35099882, 1)
+color = Color(0.25278953, 0.38410568, 0.35086948, 0)
+
+[node name="NinePatchRect" type="NinePatchRect" parent="ColorRect" unique_id=666275732]
+self_modulate = Color(0.56201816, 0.8361926, 0.7541437, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -29.0
+offset_right = 71.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_x1cjp")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect" unique_id=1614527342]
 layout_mode = 0
@@ -426,6 +440,5 @@ text = "[F]"
 position = Vector2(108, 121)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_6snss")
-animation = &"margaret_neutral"
+animation = &"margaret_tsun"
 autoplay = "none"
-frame_progress = 0.01940435

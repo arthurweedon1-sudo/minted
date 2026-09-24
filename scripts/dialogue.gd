@@ -97,7 +97,7 @@ func _display_dialogue(data, id):
 
 func display_type_dialogue(length):
 	var regex = RegEx.new()
-	regex.compile("<p[0-9.]*>|<at>|<af>")
+	regex.compile("<p[0-9.]*>|<at>|<af>|<st>")
 	text_display.text = regex.sub(raw_text_string, "", true)
 	text_display.visible_characters = 0
 	text_timer = 0.0
@@ -130,6 +130,8 @@ func process_dialogic(delta: float): #dialogue logic
 				play_animation = true
 			elif raw_text_string.substr(index,4) == "<af>":
 				play_animation = false
+			elif raw_text_string.substr(index,4) == "<st>":
+				display_portrait("margaret","tsun_speak")
 			text_display.visible_characters += 1
 		else:
 			is_typing = false
@@ -166,7 +168,8 @@ func highlight_text():
 func _ready() -> void:
 	SignalBus.display_dialogue.connect(_display_dialogue)
 	dialogue_data = load_json_file("res://dialogue/test.json")
-
+	#_display_dialogue(dialogue_data,17)
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if TutorialManager.current_focus != "none" or not Global.dialogue_ongoing:
@@ -174,7 +177,10 @@ func _process(delta: float) -> void:
 	else:
 		show()
 	if is_typing:
-		portrait.play() 
+		if portrait.animation == "margaret_tsun" and portrait.frame == 5:
+			portrait.frame = 5
+		else:
+			portrait.play() 
 	else:
 		portrait.stop() 
 		portrait.frame = 0

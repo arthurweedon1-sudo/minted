@@ -207,4 +207,60 @@
 		"type": "end",
 		"next_id": "end"
 	},
+	{
+		"id": "17",
+		"speaker": "landlord",
+		"face": "smug",
+		"text": "Hey, so you actually paid rent.",
+		"type": "line",
+		"next_id": "18"
+	},
+		{
+		"id": "18",
+		"speaker": "margaret",
+		"face": "neutral",
+		"text": "Yeah, it wan't much.",
+		"type": "line",
+		"next_id": "19"
+	},
+		{
+		"id": "19",
+		"speaker": "landlord",
+		"face": "neutral",
+		"text": "I guess that's how it is, it's not like this place is a masterpiece.",
+		"type": "line",
+		"next_id": "20"
+	},
+	{
+		"id": "20",
+		"speaker": "landlord",
+		"face": "smug",
+		"text": "That actually reminds me, I'm raising the rent.",
+		"type": "line",
+		"next_id": "21"
+	},
+	{
+		"id": "21",
+		"speaker": "margaret",
+		"face": "tsun",
+		"text": "<p1> <st> Fine, it's not like I want to live here anyway!",
+		"type": "line",
+		"next_id": "22"
+	},
+		{
+		"id": "22",
+		"speaker": "landlord",
+		"face": "smug",
+		"text": "Maybe get a real job then.",
+		"type": "line",
+		"next_id": "23"
+	},
+			{
+		"id": "23",
+		"speaker": "none",
+		"face": "none",
+		"text": "The Landlord hung up.",
+		"type": "end",
+		"next_id": "end"
+	},
 ]
