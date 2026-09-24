@@ -228,6 +228,46 @@
 		"speaker": "none",
 		"face": "none",
 		"text": "Here is your computer, you will use this to buy, sell and bid products.",
+		"type": "line",
+		"next_id": "t8"
+	},
+	{
+		"id": "t8",
+		"speaker": "none",
+		"face": "none",
+		"text": "This is your storage, you can use this to store some of your items if you don't want them gone.",
+		"type": "line",
+		"next_id": "t9"
+	},
+	{
+		"id": "t9",
+		"speaker": "none",
+		"face": "none",
+		"text": "The shelf can be used for many things e.g. playing music or taking a quick selfie!",
+		"type": "line",
+		"next_id": "t10"
+	},
+	{
+		"id": "t10",
+		"speaker": "none",
+		"face": "none",
+		"text": "Sleeping can be done by interacting with the bed. Don't forget to take a nap otherwise there might be consequences!!",
+		"type": "line",
+		"next_id": "t11"
+	},
+	{
+		"id": "t11",
+		"speaker": "none",
+		"face": "none",
+		"text": "This wall can have a poster. Yay!",
+		"type": "line",
+		"next_id": "t12"
+	},
+	{
+		"id": "t12",
+		"speaker": "none",
+		"face": "none",
+		"text": "Outside is where this door leads...",
 		"type": "end",
 		"next_id": "end"
 	},

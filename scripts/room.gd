@@ -33,24 +33,89 @@ func _ready() -> void:
 	
 
 		
-
+# i know this is a pants way of doing this but i cant be bothered shortening ts
 func _process(float) -> void:
 	if TutorialManager.current_focus == "sleep_meter":
 		%focus.show()
 		%focus2.hide()
 		%focus3.hide()
+		%focus4.hide()
+		%focus5.hide()
+		%focus6.hide()
+		%focus7.hide()
+		%focus8.hide()
 	elif TutorialManager.current_focus == "rent_slip":
 		%focus.hide()
 		%focus2.show()
 		%focus3.hide()
+		%focus4.hide()
+		%focus5.hide()
+		%focus6.hide()
+		%focus7.hide()
+		%focus8.hide()
 	elif TutorialManager.current_focus == "computer":
 		%focus.hide()
 		%focus2.hide()
 		%focus3.show()
+		%focus4.hide()
+		%focus5.hide()
+		%focus6.hide()
+		%focus7.hide()
+		%focus8.hide()
+	elif TutorialManager.current_focus == "storage":
+		%focus.hide()
+		%focus2.hide()
+		%focus3.hide()
+		%focus4.show()
+		%focus5.hide()
+		%focus6.hide()
+		%focus7.hide()
+		%focus8.hide()
+	elif TutorialManager.current_focus == "shelf":
+		%focus.hide()
+		%focus2.hide()
+		%focus3.hide()
+		%focus4.hide()
+		%focus5.show()
+		%focus6.hide()
+		%focus7.hide()
+		%focus8.hide()
+	elif TutorialManager.current_focus == "bed":
+		%focus.hide()
+		%focus2.hide()
+		%focus3.hide()
+		%focus4.hide()
+		%focus5.hide()
+		%focus6.show()
+		%focus7.hide()
+		%focus8.hide()
+	elif TutorialManager.current_focus == "poster":
+		%focus.hide()
+		%focus2.hide()
+		%focus3.hide()
+		%focus4.hide()
+		%focus5.hide()
+		%focus6.hide()
+		%focus7.show()
+		%focus8.hide()
+	elif TutorialManager.current_focus == "door":
+		%focus.hide()
+		%focus2.hide()
+		%focus3.hide()
+		%focus4.hide()
+		%focus5.hide()
+		%focus6.hide()
+		%focus7.hide()
+		%focus8.show()
 	else:
 		%focus.hide()
 		%focus2.hide()
 		%focus3.hide()
+		%focus4.hide()
+		%focus5.hide()
+		%focus6.hide()
+		%focus7.hide()
+		%focus8.hide()
 	sleep_bar.value = Global.sleep
 	Global.player_saved_x = player.global_position.x
 	Global.player_saved_y = player.global_position.y

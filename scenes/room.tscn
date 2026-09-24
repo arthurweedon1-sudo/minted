@@ -858,6 +858,7 @@ texture = ExtResource("15_dynfe")
 
 [node name="focus8" type="Control" parent="." unique_id=1523938509]
 unique_name_in_owner = true
+visible = false
 modulate = Color(1, 1, 1, 0.54901963)
 layout_mode = 3
 anchors_preset = 0
@@ -881,11 +882,11 @@ texture = ExtResource("14_3j2fx")
 
 [node name="arrow" type="TextureRect" parent="focus8" unique_id=792401274]
 layout_mode = 0
-offset_left = 399.0
-offset_top = 59.99997
-offset_right = 463.0
-offset_bottom = 123.99997
-rotation = -2.2744694
+offset_left = 34.0
+offset_top = 171.0
+offset_right = 98.00003
+offset_bottom = 235.0
+rotation = 0.7682841
 scale = Vector2(3, 3)
 texture = ExtResource("15_dynfe")
 
