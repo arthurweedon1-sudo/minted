@@ -13,6 +13,8 @@
 [ext_resource type="FontFile" uid="uid://gwi3hcl35u7m" path="res://fonts/Pixeled.ttf" id="11_w68ji"]
 [ext_resource type="Texture2D" uid="uid://ckfaa8maa1gw6" path="res://assets/hotbar/dor.png" id="12_23wr2"]
 [ext_resource type="Texture2D" uid="uid://w5vi05v5cwoc" path="res://assets/os/icons/down.png" id="12_tk5fv"]
+[ext_resource type="Texture2D" uid="uid://c00cet1o0hcw1" path="res://assets/focus.png" id="14_3j2fx"]
+[ext_resource type="Texture2D" uid="uid://8480d74nkyxe" path="res://assets/arrow.png" id="15_dynfe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6snss"]
 bg_color = Color(0, 0.1764706, 0, 1)
@@ -639,5 +641,95 @@ theme_override_fonts/font = ExtResource("11_w68ji")
 theme_override_font_sizes/font_size = 10
 text = "0"
 horizontal_alignment = 2
+
+[node name="focus" type="Control" parent="." unique_id=1398825268]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0.54901963)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="focus" unique_id=1189732822]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1061.0
+offset_top = -1169.0
+offset_right = 2115.0
+offset_bottom = 843.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_3j2fx")
+
+[node name="arrow" type="TextureRect" parent="focus" unique_id=1005934880]
+layout_mode = 0
+offset_left = 265.0
+offset_top = -62.0
+offset_right = 329.0
+offset_bottom = 2.0
+rotation = 0.58371294
+scale = Vector2(3, 3)
+texture = ExtResource("15_dynfe")
+
+[node name="focus2" type="Control" parent="." unique_id=428436296]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0.54901963)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="focus2" unique_id=827017885]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -887.0
+offset_top = -1773.0
+offset_right = 2003.0
+offset_bottom = 2114.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_3j2fx")
+
+[node name="arrow" type="TextureRect" parent="focus2" unique_id=1235216118]
+layout_mode = 0
+offset_left = 394.0
+offset_top = -17.000008
+offset_right = 458.0
+offset_bottom = 46.999992
+rotation = 1.9613879
+scale = Vector2(3, 3)
+texture = ExtResource("15_dynfe")
+
+[node name="focus3" type="Control" parent="." unique_id=456474249]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0.54901963)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="focus3" unique_id=1206540308]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -966.0
+offset_top = -750.0
+offset_right = 949.0
+offset_bottom = 1030.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_3j2fx")
+
+[node name="arrow" type="TextureRect" parent="focus3" unique_id=1788094445]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 90.00001
+offset_right = 255.0
+offset_bottom = 154.0
+rotation = 3.909545
+scale = Vector2(3, 3)
+texture = ExtResource("15_dynfe")
 
 [connection signal="pressed" from="left_bar/sleep/slide" to="." method="_on_slide_pressed"]

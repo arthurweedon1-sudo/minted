@@ -204,6 +204,30 @@
 		"speaker": "none",
 		"face": "none",
 		"text": "The clock and date are both located in the top right!",
+		"type": "line",
+		"next_id": "t5"
+	},
+	{
+		"id": "t5",
+		"speaker": "none",
+		"face": "none",
+		"text": "Here you can see your sleep meter, don't forget to recharge!",
+		"type": "line",
+		"next_id": "t6"
+	},
+	{
+		"id": "t6",
+		"speaker": "none",
+		"face": "none",
+		"text": "This is the rent slip, don't forget to pay up! Please don't forget... please.",
+		"type": "line",
+		"next_id": "t7"
+	},
+	{
+		"id": "t7",
+		"speaker": "none",
+		"face": "none",
+		"text": "Here is your computer, you will use this to buy, sell and bid products.",
 		"type": "end",
 		"next_id": "end"
 	},

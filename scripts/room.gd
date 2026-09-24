@@ -35,6 +35,22 @@ func _ready() -> void:
 		
 
 func _process(float) -> void:
+	if TutorialManager.current_focus == "sleep_meter":
+		%focus.show()
+		%focus2.hide()
+		%focus3.hide()
+	elif TutorialManager.current_focus == "rent_slip":
+		%focus.hide()
+		%focus2.show()
+		%focus3.hide()
+	elif TutorialManager.current_focus == "computer":
+		%focus.hide()
+		%focus2.hide()
+		%focus3.show()
+	else:
+		%focus.hide()
+		%focus2.hide()
+		%focus3.hide()
 	sleep_bar.value = Global.sleep
 	Global.player_saved_x = player.global_position.x
 	Global.player_saved_y = player.global_position.y

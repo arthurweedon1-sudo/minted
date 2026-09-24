@@ -32,5 +32,12 @@ func focus_changer():
 	elif current_focus == "top_bar_book":
 		setup(Vector2(473.0,364.0), Vector2(833.0,364.0), "top_bar_clock")
 	elif current_focus == "top_bar_clock":
-		setup(Vector2(833.0,364.0), Vector2(573.0,364.0), "none")
+		setup(Vector2(833.0,364.0), Vector2(700.0,550.0), "sleep_meter")
+	elif current_focus == "sleep_meter":
+		setup(Vector2(700.0,500.0), Vector2(673.0,364.0), "rent_slip")
+	elif current_focus == "rent_slip":
+		setup(Vector2(673.0,364.0), Vector2(973.0,464.0), "computer")
+	elif current_focus == "computer":
+		setup(Vector2(973.0,464.0), Vector2(873.0,364.0), "none")
 		hide()
+	
