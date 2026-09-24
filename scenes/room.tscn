@@ -732,4 +732,161 @@ rotation = 3.909545
 scale = Vector2(3, 3)
 texture = ExtResource("15_dynfe")
 
+[node name="focus4" type="Control" parent="." unique_id=2084363017]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0.54901963)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="focus4" unique_id=580581209]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -761.0
+offset_top = -1016.0
+offset_right = 1154.0
+offset_bottom = 764.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_3j2fx")
+
+[node name="arrow" type="TextureRect" parent="focus4" unique_id=1727389220]
+layout_mode = 0
+offset_left = 96.000015
+offset_top = -323.0
+offset_right = 160.00002
+offset_bottom = -259.0
+rotation = 1.9146278
+scale = Vector2(3, 3)
+texture = ExtResource("15_dynfe")
+
+[node name="focus5" type="Control" parent="." unique_id=1143902010]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0.54901963)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="focus5" unique_id=31828081]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1267.0
+offset_top = -835.0
+offset_right = 648.0
+offset_bottom = 945.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_3j2fx")
+
+[node name="arrow" type="TextureRect" parent="focus5" unique_id=93614464]
+layout_mode = 0
+offset_left = -158.99998
+offset_top = -30.000008
+offset_right = -94.999985
+offset_bottom = 33.999992
+rotation = -2.5529914
+scale = Vector2(3, 3)
+texture = ExtResource("15_dynfe")
+
+[node name="focus6" type="Control" parent="." unique_id=649196410]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0.54901963)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="focus6" unique_id=1088216110]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -706.0
+offset_top = -763.0
+offset_right = 1209.0
+offset_bottom = 1017.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_3j2fx")
+
+[node name="arrow" type="TextureRect" parent="focus6" unique_id=356657782]
+layout_mode = 0
+offset_left = 203.00002
+offset_top = -38.99999
+offset_right = 267.0
+offset_bottom = 25.000011
+rotation = -3.5220263
+scale = Vector2(3, 3)
+texture = ExtResource("15_dynfe")
+
+[node name="focus7" type="Control" parent="." unique_id=284860537]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0.54901963)
+layout_mode = 3
+anchors_preset = 0
+offset_left = -445.0
+offset_top = -271.0
+offset_right = -445.0
+offset_bottom = -271.0
+
+[node name="TextureRect" type="TextureRect" parent="focus7" unique_id=1319907091]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -706.0
+offset_top = -763.0
+offset_right = 1209.0
+offset_bottom = 1017.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_3j2fx")
+
+[node name="arrow" type="TextureRect" parent="focus7" unique_id=80393479]
+layout_mode = 0
+offset_left = 312.0
+offset_top = 291.0
+offset_right = 376.0
+offset_bottom = 355.0
+rotation = -0.5284815
+scale = Vector2(3, 3)
+texture = ExtResource("15_dynfe")
+
+[node name="focus8" type="Control" parent="." unique_id=1523938509]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.54901963)
+layout_mode = 3
+anchors_preset = 0
+offset_left = -252.0
+offset_top = -266.0
+offset_right = -252.0
+offset_bottom = -266.0
+
+[node name="TextureRect" type="TextureRect" parent="focus8" unique_id=1266904575]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -706.0
+offset_top = -763.0
+offset_right = 1209.0
+offset_bottom = 1017.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_3j2fx")
+
+[node name="arrow" type="TextureRect" parent="focus8" unique_id=792401274]
+layout_mode = 0
+offset_left = 399.0
+offset_top = 59.99997
+offset_right = 463.0
+offset_bottom = 123.99997
+rotation = -2.2744694
+scale = Vector2(3, 3)
+texture = ExtResource("15_dynfe")
+
 [connection signal="pressed" from="left_bar/sleep/slide" to="." method="_on_slide_pressed"]
