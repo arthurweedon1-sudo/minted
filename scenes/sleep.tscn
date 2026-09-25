@@ -51,11 +51,18 @@ grow_vertical = 2
 script = ExtResource("1_es3c8")
 
 [node name="HSlider" type="HSlider" parent="." unique_id=1305652639]
-layout_mode = 0
-offset_left = 309.0
-offset_top = 228.0
-offset_right = 909.0
-offset_bottom = 328.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -87.0
+offset_right = 300.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/grabber_offset = -5
 theme_override_styles/slider = SubResource("StyleBoxFlat_16o1l")
 min_value = 2.0
@@ -65,51 +72,65 @@ tick_count = 15
 ticks_on_borders = true
 
 [node name="Sleep_duration" type="Label" parent="." unique_id=1726363375]
-layout_mode = 0
-offset_left = 362.0
-offset_top = 171.0
-offset_right = 866.0
-offset_bottom = 283.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -252.0
+offset_top = -162.0
+offset_right = 252.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_bgw1x")
 theme_override_font_sizes/font_size = 30
 text = "Sleep (8 Hours)"
 horizontal_alignment = 1
 
 [node name="text" type="Label" parent="." unique_id=796263184]
-layout_mode = 0
-offset_left = 301.0
-offset_top = 32.0
-offset_right = 931.0
-offset_bottom = 172.0
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 82.0
+offset_bottom = 222.0
+grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_bgw1x")
 theme_override_font_sizes/font_size = 50
 text = "Sleep Duration:"
 horizontal_alignment = 1
 
 [node name="text2" type="Label" parent="." unique_id=211346955]
-layout_mode = 0
-offset_left = 404.0
-offset_top = 300.0
-offset_right = 776.0
-offset_bottom = 369.0
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -32.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_bgw1x")
 theme_override_font_sizes/font_size = 20
 text = "Gaining 50% sleep"
 horizontal_alignment = 1
 
 [node name="sleep" type="Control" parent="." unique_id=1327606332]
-anchors_preset = 0
-offset_left = 631.0
-offset_top = 380.0
-offset_right = 671.0
-offset_bottom = 420.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
 
 [node name="sleep_label" type="Label" parent="sleep" unique_id=1700294809]
 layout_mode = 0
-offset_left = 390.0
-offset_top = -357.0
-offset_right = 594.0
-offset_bottom = -288.0
+offset_left = -186.0
+offset_top = 109.0
+offset_right = 20.0
+offset_bottom = 178.0
 theme_override_fonts/font = ExtResource("3_e4u4x")
 theme_override_font_sizes/font_size = 40
 text = "Sleep:"
@@ -117,10 +138,10 @@ text = "Sleep:"
 [node name="sleep_bar" type="TextureProgressBar" parent="sleep" unique_id=767666219]
 custom_maximum_size = Vector2(64, 64)
 layout_mode = 0
-offset_left = 359.0
-offset_top = -294.0
-offset_right = 423.0
-offset_bottom = -230.0
+offset_left = -217.0
+offset_top = 172.0
+offset_right = -153.0
+offset_bottom = 236.0
 scale = Vector2(1.5, 1.5)
 step = 0.1
 value = 50.0
@@ -132,10 +153,10 @@ texture_progress = ExtResource("3_16o1l")
 [node name="sleep_needed" type="TextureProgressBar" parent="sleep" unique_id=1200186429]
 custom_maximum_size = Vector2(64, 64)
 layout_mode = 0
-offset_left = 359.0
-offset_top = -292.0
-offset_right = 423.0
-offset_bottom = -228.0
+offset_left = -217.0
+offset_top = 174.0
+offset_right = -153.0
+offset_bottom = 238.0
 scale = Vector2(1.5, 1.5)
 step = 0.1
 value = 20.0
@@ -146,10 +167,10 @@ texture_progress = ExtResource("6_svgiq")
 [node name="sleep_gained" type="TextureProgressBar" parent="sleep" unique_id=457329419]
 custom_maximum_size = Vector2(64, 64)
 layout_mode = 0
-offset_left = 374.0
-offset_top = -280.0
-offset_right = 438.0
-offset_bottom = -216.0
+offset_left = -202.0
+offset_top = 186.0
+offset_right = -138.0
+offset_bottom = 250.0
 scale = Vector2(1.5, 1.5)
 pivot_offset = Vector2(32, 32)
 step = 0.1
@@ -160,10 +181,10 @@ texture_progress = SubResource("GradientTexture2D_svgiq")
 
 [node name="timer" type="Control" parent="sleep" unique_id=307970043]
 anchors_preset = 0
-offset_left = 569.0
-offset_top = -267.0
-offset_right = 569.0
-offset_bottom = -267.0
+offset_left = -7.0
+offset_top = 199.0
+offset_right = -7.0
+offset_bottom = 199.0
 
 [node name="TextureRect" type="TextureRect" parent="sleep/timer" unique_id=353381532]
 layout_mode = 0
@@ -186,10 +207,10 @@ text = "15:52"
 
 [node name="Close" type="Button" parent="." unique_id=921462057]
 layout_mode = 0
-offset_left = 99.0
-offset_top = 134.0
-offset_right = 150.0
-offset_bottom = 213.0
+offset_left = 14.0
+offset_top = 116.0
+offset_right = 65.0
+offset_bottom = 195.0
 theme_override_colors/font_color = Color(0.7992127, 0.0019698713, 0.08457186, 1)
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_svgiq")
@@ -205,11 +226,18 @@ theme_override_colors/font_color = Color(1, 0.2, 0.32156864, 1)
 theme_override_font_sizes/font_size = 25
 
 [node name="Sleep_button" type="Button" parent="." unique_id=1002468513]
-layout_mode = 0
-offset_left = 487.0
-offset_top = 479.0
-offset_right = 687.0
-offset_bottom = 579.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -188.0
+offset_right = 100.0
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_fonts/font = ExtResource("2_bgw1x")
 theme_override_font_sizes/font_size = 40
 text = "Sleep"

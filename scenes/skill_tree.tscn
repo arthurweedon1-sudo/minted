@@ -50,21 +50,27 @@ stretch_mode = 1
 
 [node name="background" type="TextureRect" parent="." unique_id=1033599515]
 material = SubResource("ShaderMaterial_h52vt")
-layout_mode = 0
-offset_left = -135.0
-offset_top = -3.0
-offset_right = 665.0
-offset_bottom = 357.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -640.5
+offset_bottom = -360.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(2, 2)
 texture = ExtResource("2_51bdh")
 
 [node name="background2" type="TextureRect" parent="." unique_id=1154256556]
 material = SubResource("ShaderMaterial_6awrb")
-layout_mode = 0
-offset_left = -224.0
-offset_top = -3.0
-offset_right = 576.0
-offset_bottom = 357.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -642.0
+offset_bottom = -357.5
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(2, 2)
 texture = ExtResource("3_6awrb")
 
@@ -84,11 +90,17 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_51bdh")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_6awrb")
 
 [node name="SkillTreeContainer" type="Control" parent="." unique_id=622221306]
-anchors_preset = 0
-offset_left = 873.0
-offset_top = 838.0
-offset_right = 913.0
-offset_bottom = 878.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 221.0
+offset_top = -40.0
+offset_right = 261.0
+grow_horizontal = 2
+grow_vertical = 0
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=1076407597]
 z_index = 5

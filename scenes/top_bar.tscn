@@ -440,6 +440,7 @@ texture = ExtResource("11_k1jv6")
 
 [node name="focus4" type="Control" parent="." unique_id=25032184]
 unique_name_in_owner = true
+visible = false
 modulate = Color(1, 1, 1, 0.54901963)
 layout_mode = 2
 

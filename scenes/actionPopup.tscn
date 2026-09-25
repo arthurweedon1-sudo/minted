@@ -279,88 +279,6 @@ autowrap_mode = 2
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1782407012]
 
-[node name="info" type="NinePatchRect" parent="CanvasLayer" unique_id=1969408429]
-visible = false
-offset_left = 781.0
-offset_top = 43.0
-offset_right = 895.0
-offset_bottom = 188.25
-scale = Vector2(4, 4)
-texture = ExtResource("1_k56pl")
-region_rect = Rect2(11, 3, 41, 56)
-patch_margin_left = 9
-patch_margin_top = 13
-patch_margin_right = 9
-patch_margin_bottom = 13
-axis_stretch_horizontal = 1
-
-[node name="Close" type="Button" parent="CanvasLayer/info" unique_id=2016661960]
-layout_mode = 0
-offset_left = 5.25
-offset_top = 6.500001
-offset_right = 55.25
-offset_bottom = 76.5
-scale = Vector2(0.2, 0.2)
-theme_override_colors/font_color = Color(0.7992127, 0.0019698713, 0.08457186, 1)
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_kq67g")
-text = "X"
-
-[node name="Buy" type="Button" parent="CanvasLayer/info" unique_id=547084622]
-layout_mode = 0
-offset_left = 70.5
-offset_top = 112.0
-offset_right = 183.5
-offset_bottom = 191.0
-scale = Vector2(0.3, 0.3)
-theme_override_colors/font_color = Color(0.72156864, 0.8117647, 0, 1)
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_kq67g")
-text = "BUY"
-
-[node name="title" type="Label" parent="CanvasLayer/info" unique_id=316702435]
-unique_name_in_owner = true
-custom_maximum_size = Vector2(300, -1)
-layout_mode = 0
-offset_left = 17.75
-offset_top = 7.5
-offset_right = 317.75
-offset_bottom = 55.5
-scale = Vector2(0.3, 0.3)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-text = "Title"
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="description" type="RichTextLabel" parent="CanvasLayer/info" unique_id=886171596]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(300, 200)
-custom_maximum_size = Vector2(300, 200)
-layout_mode = 0
-offset_left = 10.25
-offset_top = 33.75
-offset_right = 310.25
-offset_bottom = 233.75
-scale = Vector2(0.3, 0.3)
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/normal_font_size = 20
-text = "Description"
-
-[node name="price2" type="Label" parent="CanvasLayer/info" unique_id=1430999769]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 18.0
-offset_top = 110.75
-offset_right = 142.0
-offset_bottom = 166.75
-scale = Vector2(0.4, 0.4)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_bfc7f")
-theme_override_font_sizes/font_size = 20
-text = "$999"
-horizontal_alignment = 2
-
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=1097798514]
 z_index = 11
 custom_minimum_size = Vector2(1280, 720)
@@ -384,6 +302,97 @@ offset_right = 4.0
 offset_bottom = -653.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="info" type="Control" parent="CanvasLayer" unique_id=1165035958]
+visible = false
+layout_mode = 3
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="info" type="NinePatchRect" parent="CanvasLayer/info" unique_id=1969408429]
+layout_mode = 0
+offset_left = -440.0
+offset_top = -301.0
+offset_right = -326.0
+offset_bottom = -155.75
+scale = Vector2(4, 4)
+texture = ExtResource("1_k56pl")
+region_rect = Rect2(11, 3, 41, 56)
+patch_margin_left = 9
+patch_margin_top = 13
+patch_margin_right = 9
+patch_margin_bottom = 13
+axis_stretch_horizontal = 1
+
+[node name="Close" type="Button" parent="CanvasLayer/info" unique_id=2016661960]
+layout_mode = 0
+offset_left = -420.0
+offset_top = -257.0
+offset_right = -370.0
+offset_bottom = -187.0
+theme_override_colors/font_color = Color(0.7992127, 0.0019698713, 0.08457186, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_kq67g")
+text = "X"
+
+[node name="Buy" type="Button" parent="CanvasLayer/info" unique_id=547084622]
+layout_mode = 0
+offset_left = -133.0
+offset_top = 155.0
+offset_right = -20.0
+offset_bottom = 234.0
+theme_override_colors/font_color = Color(0.72156864, 0.8117647, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_kq67g")
+text = "BUY"
+
+[node name="title" type="Label" parent="CanvasLayer/info" unique_id=316702435]
+unique_name_in_owner = true
+custom_maximum_size = Vector2(300, -1)
+layout_mode = 0
+offset_left = -334.0
+offset_top = -248.0
+offset_right = -34.0
+offset_bottom = -200.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Title"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="description" type="RichTextLabel" parent="CanvasLayer/info" unique_id=886171596]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 200)
+custom_maximum_size = Vector2(300, 200)
+layout_mode = 0
+offset_left = -371.0
+offset_top = -141.0
+offset_right = -71.0
+offset_bottom = 59.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+text = "Description"
+
+[node name="price2" type="Label" parent="CanvasLayer/info" unique_id=1430999769]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -278.0
+offset_top = 168.0
+offset_right = -154.0
+offset_bottom = 224.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_bfc7f")
+theme_override_font_sizes/font_size = 20
+text = "$999"
+horizontal_alignment = 2
 
 [node name="Debug" parent="." unique_id=1680222546 instance=ExtResource("11_kq67g")]
 visible = false
